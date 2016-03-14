@@ -1,0 +1,88 @@
+@import "main.scss";
+
+/** Demo styles */
+html,
+body {
+  background-color: $main-background-color;
+}
+
+.header {
+  height: 64px;
+  background-color: $primary-color;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  @include _(full-width);
+  @include _(flex);
+  @include _(align-items-center);
+  @include _(justify-content-start);
+
+  &__title {
+    padding: 0 $gutter;
+    color: $primary-color-text;
+
+    @include _(limited-full-width);
+    @include _(title);
+  }
+}
+
+.main {
+  padding: $gutter 0;
+  @include _(limited-full-width);
+
+  .row {
+    margin-bottom: $gutter;
+    &--category {
+      border-bottom: 1px solid #ddd;
+      h3 {
+        margin: $gutter * 2 0;
+      }
+    }
+  }
+}
+
+.description,
+.example {
+  margin-bottom: $gutter;
+  @include column(6);
+}
+
+[class^=col-] {
+  @include padding();
+
+  border: 1px solid $input-border-color;
+  background-color: #fff;
+}
+
+.col-1 {
+  @include column(1);
+}
+.col-2 {
+  @include column(2);
+}
+.col-3 {
+  @include column(3);
+}
+.col-4 {
+  @include column(4);
+}
+.col-5 {
+  @include column(5);
+}
+.col-6 {
+  @include column(6);
+}
+.col-7 {
+  @include column(7);
+}
+.col-8 {
+  @include column(8);
+}
+.col-9 {
+  @include column(9);
+}
+.col-10 {
+  @include column(10);
+}
+.col-11 {
+  @include column(11);
+}
+/** /Demo Styles */
