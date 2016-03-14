@@ -1,0 +1,37 @@
+{
+  "name": "uniq",
+  "version": "1.0.0",
+  "description": "Internal CSS framework used @ uniplaces",
+  "main": "uniq.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "grunt"
+  },
+  "keywords": [
+    "uniplaces",
+    "css",
+    "framework",
+    "performance",
+    "grid",
+    "animation"
+  ],
+  "author": "mmelo",
+  "license": "ISC",
+  "maintainers": [
+    {
+      "name": "mmelo",
+      "email": "miguel.melo@uniplaces.com"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.4.1",
+    "node-sass": "^3.4.2",
+    "time-grunt": "^1.3.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-concurrent": "~0.5.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-watch": "0.6.1"
+  }
+}
