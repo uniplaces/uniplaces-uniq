@@ -58,6 +58,7 @@ body {
 @include placeholder(body-1) {
   font-size: 13px;
   font-weight: 300;
+  line-height: 22px;
   margin-bottom: 20px;
 
   @include breakpoint(medium) {
@@ -111,7 +112,6 @@ h6 {
 }
 
 p {
-  line-height: 22px;
   @include _(body-1);
 }
 
