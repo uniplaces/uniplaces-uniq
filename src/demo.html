@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniQ</title>
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <link rel="stylesheet" href="styles/demo.css" />
+</head>
+<body>
+  <header class="header row">
+      <div class="header__title">UniQ - Style Guide</div>
+  </header>
+
+  <main class="main">
+    <!-- TYPOGRAPHY -->
+    <div class="row row--category">
+      <h3 id="typography">Typography</h3>
+    </div>
+    <div class="row">
+      <div class="description">
+        <h6>Typeface</h6>
+        <p>Museo Sans Rounded has been choosen as it provides an elegant yet readable typeface for both headlines and body text.</p>
+      </div>
+      <div class="example">
+        <h4>Lorem Ipsum dolor</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi molestias officiis, est voluptatibus. Dignissimos non,
+          eos. Magni explicabo odit quidem quod nostrum non laborum! Obcaecati, aperiam, necessitatibus. Animi, reiciendis, officiis?
+        </p>
+      </div>
+      <div class="description">
+        <h6>Styles</h6>
+
+        <p>
+          Too many type sizes and styles at once can wreck any layout.
+          A typographic scale has a limited set of type sizes that work well together along with the layout grid.
+          These sizes and styles were developed to balance content density and reading comfort under typical usage conditions.
+          Type sizes are specified with px.
+        </p>
+      </div>
+      <div class="example">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Paragraph</p>
+        <a href="#">Link</a>
+      </div>
+    </div>
+    <!-- /TYPOGRAPHY -->
+
+    <!-- LAYOUT -->
+    <div class="row row--category">
+      <h3 id="layout">Layout</h3>
+    </div>
+    <div class="row">
+      <div class="description">
+        <h5>Grid</h5>
+
+        <p>
+          All elements align to a 12 column baseline grid that ajusts based on the viewport it's being presented on.
+          Components should inherid (via @mixin) column styles, so the DOM stays as DRY and semantic as possible.
+        </p>
+      </div>
+      <div class="example">
+        <div class="row">
+          <div class="col-1">col-1</div>
+          <div class="col-11">col-11</div>
+
+          <div class="col-2">col-2</div>
+          <div class="col-10">col-10</div>
+
+          <div class="col-3">col-3</div>
+          <div class="col-9">col-9</div>
+
+          <div class="col-4">col-4</div>
+          <div class="col-8">col-8</div>
+
+          <div class="col-5">col-5</div>
+          <div class="col-7">col-7</div>
+
+          <div class="col-6">col-6</div>
+          <div class="col-6">col-6</div>
+        </div>
+      </div>
+    </div>
+    <!-- /LAYOUT -->
+
+    <!-- BUTTONS -->
+    <div class="row row--category">
+      <h3 id="buttons">Buttons</h3>
+    </div>
+    <div class="row">
+      <div class="description">
+        <h5>Styles</h5>
+      </div>
+      <div class="example">
+        <div class="button">Click me!</div>
+        <div class="button button--success">Great Success!</div>
+        <div class="button button--error">Oops :(</div>
+        <div class="button button--warning">Careful...</div>
+        <div class="button button--disabled">I don't even</div>
+      </div>
+    </div>
+    <!-- /BUTTONS -->
+  </main>
+
+</body>
+</html>
