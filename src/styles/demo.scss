@@ -29,6 +29,7 @@ body {
   @include _(limited-full-width);
 
   .row {
+    @include row();
     margin-bottom: $gutter;
     &--category {
       border-bottom: 1px solid #ddd;
