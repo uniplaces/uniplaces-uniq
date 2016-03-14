@@ -1,0 +1,17 @@
+.panel {
+  @include padding();
+  &__header {
+    background-color: $dark-blue;
+    @include _(full-width);
+
+    &__title {
+      padding: $gutter / 2 $gutter;
+      color: $primary-color-text;
+    }
+  }
+
+  &__content {
+    @include padding();
+    background-color: #fff;
+  }
+}

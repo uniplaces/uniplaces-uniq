@@ -1,0 +1,42 @@
+.button {
+  position: relative;
+  display: table;
+  margin: $gutter;
+  background-color: $primary-color;
+  border-radius: 2px;
+  text-align: center;
+  color: $primary-color-text;
+  @include padding();
+  @include _(button-text);
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+
+  &--success,
+  &--error,
+  &--warning,
+  &--disabled {
+    color: #fff;
+    //border: 1px solid $input-border-color;
+  }
+
+  &--success {
+    background-color: $success-green;
+  }
+  &--error {
+    background-color: $error-red;
+  }
+  &--warning {
+    background-color: $warning-yellow;
+  }
+  &--disabled {
+    background-color: $disabled-background-color;
+
+    &:hover {
+      cursor: not-allowed;
+      opacity: 1;
+    }
+  }
+}
