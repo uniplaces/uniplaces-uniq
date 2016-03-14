@@ -1,7 +1,7 @@
 .tooltip {
   content: "i";
   position: relative;
-  display: block;
+  display: inline-block;
   width: 32px;
   height: 32px;
   margin: $gutter;
@@ -45,12 +45,23 @@
     top: 0;
     left: 40px;
     z-index: 2;
-    
+    background-color: #fff;
+
     padding: 56px 24px 24px;
     border: 2px solid $input-border-color;
     @include _(body-1);
   }
 
+  &--left {
+    &:before {
+      left: auto;
+      right: 48px;
+    }
+    &:after {
+      left: auto;
+      right: 40px;
+    }
+  }
 
   // alternate styles
   &--alternate {
