@@ -1,0 +1,13 @@
+// VARIABLES
+$cubic-bezier: cubic-bezier(0,0,0.21,1);
+$swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$animation-duration: .4s;
+
+$gutter: 16px;
+$max-columns: 12;
+$input-border: #{2px solid};
+
+// hack - improve scrolling performance on mobile android browsers and mobile safari
+@include placeholder('backface-hack') {
+	backface-visibility: hidden;
+}

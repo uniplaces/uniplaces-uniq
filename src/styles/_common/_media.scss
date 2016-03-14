@@ -1,0 +1,94 @@
+// -----------------------------------------------------------------------------
+// Set up
+// -----------------------------------------------------------------------------
+
+// A list of breakpoints
+// When generating a placeholder,
+// The same placeholder will be generated in every breakpoint
+$breakpoints: (
+  "x-small" : 400px,
+  "small"  : 600px,
+  "medium" : 900px,
+  "large": 2560px,
+  "x-large": 3440px
+);
+
+// -----------------------------------------------------------------------------
+// Core
+// -----------------------------------------------------------------------------
+
+// Caching current breakpoint
+// Not meant to be manually edited
+$default-breakpoint: root;
+$current-breakpoint: $default-breakpoint;
+
+// Caching existing placeholders
+// Not meant to be manually edited
+$placeholders: ();
+
+// The usual breakpoint mixin
+// Except it updates the $current-breakpoint variable
+// 1. If breakpoint name exists in map
+// 2. Update $current-breakpoint
+// 3. Open a media query
+// 4. Let the user dump content
+// 5. Then reset $current-breakpoint
+// 6. If breakpoint name doesn't exist in map, warn the user
+@mixin breakpoint($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+
+  @if $value != null {                                    // 1
+    $current-breakpoint: $breakpoint         !global;     // 2
+    @media (max-width: $value) { @content; }              // 3
+    $current-breakpoint: $default-breakpoint !global;     // 5
+  }
+
+  @else {
+    @warn "Invalid breakpoint `#{$breakpoint}`.";         // 6
+  }
+}
+
+// Generating placeholders
+// actually generating one placeholder per breakpoint
+// 1. If placeholder doesn't exist yet
+// 2. Store the name
+// 3. Looping through all the breakpoints
+// 4. Opening a media query
+// 5. Generating a placeholder at root level
+// 6. With desired content
+// 7. And dumping a placeholder out of any media query
+// 8. If placeholder already exist, warn the user
+@mixin placeholder($name) {
+  @if not index($placeholders, $name) {                  // 1
+    $placeholders: append($placeholders, $name) !global; // 2
+
+    @at-root {
+      @each $breakpoint, $value in $breakpoints {        // 3
+        @media screen and (max-width: $value) {                     // 4
+          %#{$name}-#{$breakpoint} {                     // 5
+            @content;                                    // 6
+          }
+        }
+      }
+
+      %#{$name}-#{$default-breakpoint} {                 // 7
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @warn "Placeholder `#{$name}` already exists.";      // 8
+  }
+}
+
+// Extend the accurate placeholder
+// according to the current scope
+// Basically instead of doing:
+//    @extend %clear;
+// You go:
+//    @include _(clear);
+// Not much longer, is it?
+@mixin _($name) {
+  @extend %#{$name}-#{$current-breakpoint} !optional;
+}
