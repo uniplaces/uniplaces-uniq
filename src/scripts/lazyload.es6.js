@@ -27,6 +27,7 @@ class LazyLoad {
       if ( this.timmer ) {
         clearTimeout(this.timmer)
       }
+      // use a timer so we do not fire _testLazyLoad on each scroll tick
       this.timmer = setTimeout(() => {
         requestAnimationFrame(() => {
           this._testLazyLoad()
