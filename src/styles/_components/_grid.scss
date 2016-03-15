@@ -1,62 +1,17 @@
 // GRID
-@include placeholder('full-screen') {
-	width: 100%;
-	height: 100%;
-}
-@include placeholder('full-width') {
-	width: 100%;
-}
 @include placeholder('limited-full-width') {
 	width: 100%;
 	max-width: 1200px;
 	//max-width: (100% / 1.61803398875);// use golden ratio? =)
 	margin: 0 auto;
 }
-@include placeholder('flex') {
-	display: flex;
-}
-@mixin flex($values) {
-	flex:  $values;
-}
-@mixin order($val) {
-	order: $val;
-}
-@mixin flex-grow($val) {
-	flex-grow: $val;
-}
-@include placeholder('flex-column') {
-	flex-direction: column;
-}
-@include placeholder('justify-content-center') {
-	justify-content: center;
-}
-@include placeholder('space-between') {
-	justify-content: space-between;
-}
-@include placeholder('justify-content-start') {
-	justify-content: flex-start;
-}
-@include placeholder('justify-content-end') {
-	justify-content: flex-end;
-}
-@include placeholder('align-items-center') {
-	align-items: center;
-}
-@include placeholder('align-items-top') {
-	align-items: flex-start;
-}
-@include placeholder('align-items-baseline') {
-	align-items: baseline;
-}
-@include placeholder('align-items-bottom') {
-	align-items: flex-end;
-}
-@include placeholder('flex-wrap') {
-	flex-wrap: wrap;
+
+@mixin padding() {
+	padding: $gutter;
 }
 
 // GRID ELEMENTS
-.row {
+@mixin row() {
 	@include _(flex);
   @include _(flex-wrap);
 	margin: 0 auto;
@@ -66,7 +21,7 @@
 	position: relative;
   // IE10 does not honnor "row wrap" unless child elements are displayed inline-block
   display: inline-block;
-	padding: $gutter;
+	@include padding();
 
 	@include breakpoint(medium) {
 		width: 100%;
@@ -92,8 +47,4 @@
 }
 
 @include breakpoint(x-large) {
-}
-
-@mixin padding() {
-	padding: $gutter;
 }
