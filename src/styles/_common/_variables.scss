@@ -15,42 +15,55 @@ $input-border: #{2px solid};
 @include placeholder('flex') {
 	display: flex;
 }
+
 @mixin flex($values) {
 	flex:  $values;
 }
+
 @mixin order($val) {
 	order: $val;
 }
+
 @mixin flex-grow($val) {
 	flex-grow: $val;
 }
+
 @include placeholder('flex-column') {
 	flex-direction: column;
 }
+
 @include placeholder('justify-content-center') {
 	justify-content: center;
 }
+
 @include placeholder('space-between') {
 	justify-content: space-between;
 }
+
 @include placeholder('justify-content-start') {
 	justify-content: flex-start;
 }
+
 @include placeholder('justify-content-end') {
 	justify-content: flex-end;
 }
+
 @include placeholder('align-items-center') {
 	align-items: center;
 }
+
 @include placeholder('align-items-top') {
 	align-items: flex-start;
 }
+
 @include placeholder('align-items-baseline') {
 	align-items: baseline;
 }
+
 @include placeholder('align-items-bottom') {
 	align-items: flex-end;
 }
+
 @include placeholder('flex-wrap') {
 	flex-wrap: wrap;
 }
