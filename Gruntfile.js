@@ -26,6 +26,10 @@ module.exports = function (grunt) {
       sass: {
         files: ['<%= uniq.app %>/styles/**/*.{scss,sass}'],
         tasks: ['sass:server']
+      },
+      babel: {
+        files: ['<%= uniq.app %>/scripts/**/*.js'],
+        tasks: ['babel:dist']
       }
     },
     browserSync: {
@@ -139,6 +143,19 @@ module.exports = function (grunt) {
           dest: '<%= uniq.dist %>'
         }]
       }
+    },
+    babel: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= uniq.app %>/scripts/src',
+                src: ['**/*.js', '!src/*.js'],
+                dest: '<%= uniq.dist %>/scripts/'
+            }]
+        }
     },
     concurrent: {
       server: [

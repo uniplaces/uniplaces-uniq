@@ -1,0 +1,62 @@
+label,
+input {
+  margin: ($gutter / 2) 0;
+}
+
+label {
+  display: block;
+  @include _(body-2);
+  font-weight: 700;
+
+  &.validation {
+    @include _(caption);
+    font-weight: 300 !important;
+
+    &--success {
+      color: $success-text;
+    }
+    &--error {
+      color: $error-text;
+    }
+    &--warning {
+      color: $warning-text;
+    }
+  }
+}
+
+input {
+  display: inline-block;
+  height: 32px;
+  padding: 0 ($gutter / 2);
+  border: 2px solid $input-border-color;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $input-border-color-hover;
+    outline: 0;
+  }
+
+  &.validation {
+    &--success {
+      border-color: $success;
+    }
+    &--error {
+      border-color: $error;
+    }
+    &--warning {
+      border-color: $warning;
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    border-color: $input-border-color;
+    color: $input-border-color;
+    cursor: not-allowed;
+  }
+
+  & + .tooltip {
+    display: inline-block;
+  }
+}

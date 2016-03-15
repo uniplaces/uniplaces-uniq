@@ -74,6 +74,20 @@ body {
   font-weight: 500;
   text-transform: uppercase;
 }
+@include placeholder(link) {
+  font-size: inherit;
+  font-weight: inherit;
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: $allports;
+    text-decoration: none;
+  }
+}
 
 h1,
 h2,
@@ -116,8 +130,5 @@ p {
 }
 
 a {
-  font-size: inherit;
-  font-weight: inherit;
-  color: $primary-color;
-  text-decoration: underline;
+  @include _(link);
 }

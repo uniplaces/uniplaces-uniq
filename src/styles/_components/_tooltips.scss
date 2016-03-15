@@ -73,4 +73,8 @@
       background-color: $primary-text-color;
     }
   }
+
+  & + input {
+    display: inline-block;
+  }
 }

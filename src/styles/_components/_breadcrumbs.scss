@@ -1,0 +1,23 @@
+.breadcrumbs {
+
+  &__item {
+    display: inline-block;
+    color: $primary-color;
+    @include _(caption);
+
+    &:last-child {
+      color: $primary-text-color;
+    }
+
+    &:after {
+      content: "/";
+      display: inline-block;
+      margin: 0 ($gutter / 2);
+      color: $disabled-text-color;
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+  }
+}

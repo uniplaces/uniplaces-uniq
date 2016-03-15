@@ -1,7 +1,7 @@
 .panel {
   @include padding();
   &__header {
-    background-color: $dark-blue;
+    background-color: $allports;
     @include _(full-width);
 
     &__title {

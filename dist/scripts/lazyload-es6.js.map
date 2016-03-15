@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/scripts/lazyload-es6.js"],"names":[],"mappings":"AAAA,CAAC,YAAY;AACX,UAAQ,GAAR,CAAY,OAAZ,EADW;CAAZ,CAAD","file":"lazyload-es6.js","sourcesContent":["(function () {\n  console.log('cenas');\n})();\n"]}

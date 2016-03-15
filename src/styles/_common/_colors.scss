@@ -1,23 +1,41 @@
+// Primary Color Pallette
 $uniplaces-blue: #00adef;
-$dark-blue: #0076a3;
+$allports: #0076a3;
+$prussian-blue: #003b52;
+$tropical-blue: #C6EAF8;
 
-$success-green: #8bc34a;
-$error-red: #f44336;
-$error-red-text: #ff7473;
-$warning-yellow: #ffc107;
+// Secondary Color Pallette
+$golden-tanoi: #ffc952;
+$salmon: #fa7c71;
+$portage: #918fef;
 
+// Text Color Pallete
+$shark: #1d2022;
+$rolling-stone: #6e7c81;
+$regent-gray: #8c999d;
+
+// UniQ
 $primary-color: $uniplaces-blue;
 $main-background-color: #fafafa;
 
 $primary-color-text: #fff;
-//$text-color: #212121;
 $primary-text-color: rgba(0,0,0,0.87);
 $secondary-text-color: rgba(0,0,0,0.54);
 $disabled-text-color: rgba(0,0,0,0.38);
 
 $label-text-color: #5a6672;
-$input-border-color: #d9e1e8;
+$input-border-color: #E1E4E6;
+$input-border-color-hover: $tropical-blue;
 $button-hover-background-color: #91d7f2;
 
 $disabled-background-color: #a9bbcb;
 $dialog-text-color: #4e4e4e;
+
+$success: #c1e7cd;
+$success-text: #7fcf98;
+
+$error: #ffd5d5;
+$error-text: #ef5b5b;
+
+$warning: #ffe8b4;
+$warning-text: $golden-tanoi;

@@ -53,6 +53,15 @@ body {
   background-color: #fff;
 }
 
+img {
+  width: calc(50% - 16px);
+  margin-right: 16px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
 .col-1 {
   @include column(1);
 }
