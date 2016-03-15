@@ -28,7 +28,7 @@ module.exports = function (grunt) {
         tasks: ['sass:server']
       },
       babel: {
-        files: ['<%= uniq.app %>/scripts/**/*.js'],
+        files: ['!<%= uniq.app %>/scripts/**/*.js', '<%=  uniq.app %>/scripts/**/*.es6.js'],
         tasks: ['babel:dist']
       }
     },
@@ -39,7 +39,8 @@ module.exports = function (grunt) {
             '<%= uniq.app %>/*.html',
             '<%= uniq.app %>/styles/**/*.{css}',
             '.tmp/css/**/*.css',
-            '{.tmp,<%= uniq.app %>}/scripts/**/*.js',
+            '!<%= uniq.app %>/scripts/*.es6.js',
+            '<%= uniq.app %>/scripts/*.js',
             '<%= uniq.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -151,9 +152,10 @@ module.exports = function (grunt) {
         dist: {
             files: [{
                 expand: true,
-                cwd: '<%= uniq.app %>/scripts/src',
-                src: ['**/*.js', '!src/*.js'],
-                dest: '<%= uniq.dist %>/scripts/'
+                cwd: '<%= uniq.app %>/scripts/',
+                src: ['**/*.es6.js'],
+                dest: '<%= uniq.app %>/scripts/',
+                ext: '.js'
             }]
         }
     },

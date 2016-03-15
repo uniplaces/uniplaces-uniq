@@ -259,18 +259,17 @@
         <p>
           Images can and should be used directly, but lazy-load support is
           provided.
-        </p>
-        <p>
           Image lazy-loading works by have a "lightweight" placeholder image
           loading by and one the target image comes into the users viewport the
           correct image loading is triggered. detection occours by binding a
           javascript event to the scroll and using the BoundingClientRect()
           to detect wether the image should be shown or not.
         </p>
+        <p>Javascript source code can be found at lazyload.js</p>
       </div>
       <div class="example">
-        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image">
-        <img src="images/example.jpg" data-src="images/example.jpg" alt="Default image">
+        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
+        <img src="images/example.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
       </div>
     </div>
     <!-- /IMAGES -->
