@@ -8,16 +8,17 @@ body {
 
 .header {
   height: 64px;
-  background-color: $primary-color;
+  vertical-align: middle;
+  background-color: color('primary');
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  @include _(full-width);
+  width: 100%;
   @include _(flex);
   @include _(align-items-center);
   @include _(justify-content-start);
 
   &__title {
     padding: 0 $gutter;
-    color: $primary-color-text;
+    color: color('primary', 'contrast');
 
     @include _(limited-full-width);
     @include _(title);
@@ -61,6 +62,15 @@ img {
   &:nth-of-type(2n) {
     margin-right: 0;
   }
+}
+
+.breadcrumbs {
+  margin-bottom: $gutter / 2;
+}
+
+.button.badge {
+  display: inline-block;
+  margin: 0 $gutter $gutter 0;
 }
 
 .col-1 {

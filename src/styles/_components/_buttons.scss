@@ -1,61 +1,60 @@
 .button {
   position: relative;
   display: table;
-  background-color: $primary-color;
+  background-color: color('primary');
   border-radius: 4px;
   text-align: center;
-  color: $primary-color-text;
+  color: color('primary', 'contrast');
   @include padding();
   @include _(button-text);
 
   &:hover {
     cursor: pointer;
-    background-color: $allports;
+    background-color: color('primary', 'medium');
   }
   &:active {
-    background-color: $prussian-blue;
+    background-color: color('primary', 'dark');
   }
 
   &--success,
   &--error,
   &--warning,
   &--disabled {
-    color: #fff;
+    color: color('primary', 'contrast');
   }
 
   &--success {
-    background-color: $success-text;
-    color: #fff;
+    background-color: color('success', 'light');
+    color: color('success');
 
     &:hover {
-      color: $success-text;
-      background-color: $success;
+      background-color: color('success');
+      color: color('primary', 'contrast');
     }
   }
   &--error {
-    background-color: $error-text;
-    color: #fff;
+    background-color: color('error', 'light');
+    color: color('error');
 
     &:hover {
-      color: $error-text;
-      background-color: $error;
+      background-color: color('error');
+      color: color('error', 'contrast');
     }
   }
   &--warning {
-    background-color: $warning-text;
-    color: #fff;
+    background-color: color('warning', 'light');
+    color: color('warning');
 
     &:hover {
-      color: $warning-text;
-      background-color: $warning;
+      background-color: color('warning');
+      color: color('warning', 'contrast');
     }
   }
   &--disabled,
   &--disabled:hover {
     cursor: not-allowed;
 
-    background-color: #fff;
-    border: 2px solid $input-border-color;
-    color: $input-border-color;
+    background-color: color('gray', 'disabled_light');
+    color: color('primary', 'contrast');
   }
 }

@@ -7,7 +7,7 @@
   margin: $gutter;
   z-index: 1;
 
-  background-color: $primary-text-color;
+  background-color: color('text', 'primary');
   border-radius: 50%;
   line-height: 32px;
   text-align: center;
@@ -25,7 +25,7 @@
   &:after {
     position: absolute;
     display: none;
-    color: $primary-text-color;
+    color: color('text', 'primary');
   }
 
   &:before {
@@ -70,7 +70,7 @@
       color: #fff;
     }
     &:after {
-      background-color: $primary-text-color;
+      background-color: color('text', 'primary');
     }
   }
 

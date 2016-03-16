@@ -13,13 +13,13 @@ label {
     font-weight: 300 !important;
 
     &--success {
-      color: $success-text;
+      color: color('success', 'text');
     }
     &--error {
-      color: $error-text;
+      color: color('error', 'text');
     }
     &--warning {
-      color: $warning-text;
+      color: color('warning', 'text');
     }
   }
 }
@@ -39,18 +39,19 @@ input {
 
   &.validation {
     &--success {
-      border-color: $success;
+      border-color: color('success', 'primary');
     }
     &--error {
-      border-color: $error;
+      border-color: color('error', 'primary');
     }
     &--warning {
-      border-color: $warning;
+      border-color: color('warning', 'primary');
     }
   }
 
   &:disabled,
   &:disabled:hover {
+    background-color: color('gray', 'disabled_input');
     border-color: $input-border-color;
     color: $input-border-color;
     cursor: not-allowed;

@@ -4,7 +4,8 @@ $main-font-size: 16px;
 body {
   font-family: $primary-font-family;
   font-size: $main-font-size;
-  color: $primary-text-color;
+  color: color('text', 'primary');
+  text-rendering: optimizeLegibility;
 }
 
 @include placeholder(display-4) {
@@ -59,7 +60,6 @@ body {
   font-size: 13px;
   font-weight: 300;
   line-height: 22px;
-  margin-bottom: 20px;
 
   @include breakpoint(medium) {
     font-size: 14px;
@@ -77,14 +77,14 @@ body {
 @include placeholder(link) {
   font-size: inherit;
   font-weight: inherit;
-  color: $primary-color;
+  color: color('primary');
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
   &:active {
-    color: $allports;
+    color: color('primary', 'medium');
     text-decoration: none;
   }
 }
@@ -127,6 +127,7 @@ h6 {
 
 p {
   @include _(body-1);
+  margin-bottom: 20px;
 }
 
 a {

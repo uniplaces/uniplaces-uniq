@@ -1,41 +1,63 @@
-// Primary Color Pallette
-$uniplaces-blue: #00adef;
-$allports: #0076a3;
-$prussian-blue: #003b52;
-$tropical-blue: #C6EAF8;
+// Color Pallette
+$palette: (
+  'primary': (
+    'primary': #00adef,// uniplaces_blue
+    'light': #c6eaf8,// tropical_blue
+    'medium': #0076a3,// allports
+    'dark': #003b52,// prussian_blue
+    'contrast': #fff// contrast_white
+  ),
+  'text': (
+    'primary': rgba(0,0,0,0.87),
+    'secondary': rgba(0,0,0,0.54),
+    'disabled': rgba(0,0,0,0.38),
+    'dialog': #4e4e4e
+  ),
+  'error': (
+    'primary': #ef5b5b,
+    'medium': #fa7c71,
+    'light': #ffd5d5,
+    'contrast': #fff
+  ),
+  'success': (
+    'primary': #7fcf98,
+    'light': #c1e7cd,
+    'contrast': #fff
+  ),
+  'warning': (
+    'primary': #ffc952,
+    'light': #ffe8b4,
+    'contrast': #fff
+  ),
+  'gray': (
+    'primary': #4e4e4e,
+    'disabled': #5a6672,
+    'disabled_light': #a9bbcb,
+    'disabled_input': #efefef,
+    'medium': #e1e4e6,
+    'border': #e1e4e6,
+    'light': #fafafa
+  )
+);
 
-// Secondary Color Pallette
-$golden-tanoi: #ffc952;
-$salmon: #fa7c71;
-$portage: #918fef;
+$primary-color-key: 'primary' !default;
 
-// Text Color Pallete
-$shark: #1d2022;
-$rolling-stone: #6e7c81;
-$regent-gray: #8c999d;
+@function color($name: 'primary', $variant: $primary-color-key) {
+  $color: null;
+  // Get the color spectrum
+  $color-spectrum: map-get($palette, $name);
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}
 
 // UniQ
-$primary-color: $uniplaces-blue;
-$main-background-color: #fafafa;
+$main-background-color: color('gray', 'light');
 
-$primary-color-text: #fff;
-$primary-text-color: rgba(0,0,0,0.87);
-$secondary-text-color: rgba(0,0,0,0.54);
-$disabled-text-color: rgba(0,0,0,0.38);
-
-$label-text-color: #5a6672;
-$input-border-color: #E1E4E6;
-$input-border-color-hover: $tropical-blue;
-$button-hover-background-color: #91d7f2;
-
-$disabled-background-color: #a9bbcb;
-$dialog-text-color: #4e4e4e;
-
-$success: #c1e7cd;
-$success-text: #7fcf98;
-
-$error: #ffd5d5;
-$error-text: #ef5b5b;
-
-$warning: #ffe8b4;
-$warning-text: $golden-tanoi;
+$label-text-color: color('gray', 'disabled');
+$input-border-color: color('gray', 'border');
+$input-border-color-hover: color('primary', 'light');
+$button-hover-background-color: color('primary', 'light');

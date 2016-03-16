@@ -15,7 +15,8 @@
   &__item {
     position: relative;
     height: 32px;
-    margin: 0 $gutter;
+    margin: 0 ($gutter / 2);
+    padding: 0 ($gutter);
     @include _(flex);
     @include _(align-items-center);
     @include _(button-text);
@@ -23,18 +24,18 @@
     &:hover,
     &--active {
       cursor: pointer;
-      color: $primary-color;
+      color: color('primary');
     }
 
     &--active {
       &:before {
         content: " ";
         position: absolute;
-        width: 100%;
+        width: calc(100% - 32px);
         height: 4px;
         bottom: (-$gutter / 2);
-        left: 0;
-        background-color: $primary-color;
+        left: 16px;
+        background-color: color('primary');
       }
     }
   }

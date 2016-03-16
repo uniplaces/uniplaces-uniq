@@ -1,18 +1,18 @@
 .breadcrumbs {
   &__item {
     display: inline-block;
-    color: $primary-color;
+    color: color('primary');
     @include _(caption);
 
     &:last-child {
-      color: $primary-text-color;
+      color: color('text', 'primary');
     }
 
     &:after {
       content: "/";
       display: inline-block;
       margin: 0 ($gutter / 2);
-      color: $disabled-text-color;
+      color: color('text', 'disabled');
     }
 
     &:last-child:after {
