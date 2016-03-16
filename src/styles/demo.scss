@@ -7,7 +7,11 @@ body {
 }
 
 .header {
+  position: fixed;
   height: 64px;
+  top: 0;
+  left: 0;
+  z-index: 2;
   vertical-align: middle;
   background-color: color('primary');
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -15,6 +19,7 @@ body {
   @include _(flex);
   @include _(align-items-center);
   @include _(justify-content-start);
+  @include _(backface-hack);
 
   &__title {
     padding: 0 $gutter;
@@ -26,7 +31,9 @@ body {
 }
 
 .main {
+  margin-top: 56px;
   padding: $gutter 0;
+  z-index: 1;
   @include _(limited-full-width);
 
   .row {

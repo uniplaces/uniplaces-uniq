@@ -41,7 +41,6 @@ body {
 @include placeholder(subheading) {
   font-size: 15px;
   font-weight: 300;
-  margin-bottom: 24px;
 
   @include breakpoint(medium) {
     font-size: 15px;
@@ -50,7 +49,6 @@ body {
 @include placeholder(body-2) {
   font-size: 13px;
   font-weight: 500;
-  margin-bottom: 24px;
 
   @include breakpoint(medium) {
     font-size: 14px;
@@ -79,6 +77,10 @@ body {
   font-weight: inherit;
   color: color('primary');
   text-decoration: none;
+  will-change: color;
+  transition: color $animation-duration $cubic-bezier;
+
+  @include _(backface-hack);
 
   &:hover {
     text-decoration: underline;

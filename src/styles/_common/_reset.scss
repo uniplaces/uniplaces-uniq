@@ -39,3 +39,8 @@ ul {
 blockquote, q {
     quotes: none;
 }
+
+.hidden,
+[hidden] {
+  display: none;
+}

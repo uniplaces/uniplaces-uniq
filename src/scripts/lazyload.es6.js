@@ -2,15 +2,15 @@
 const timeoutDuration = 100
 
 class LazyLoad {
-  constructor () {
-    this.images = document.getElementsByClassName('lazy-load')
+  constructor (images = document.getElementsByClassName('lazy-load')) {
+    this.images = images
     this.images = Array.prototype.slice.call(this.images)
 
     this._addEventListeners = this._addEventListeners.bind(this)
     this._testLazyLoad = this._testLazyLoad.bind(this)
 
-    this._addEventListeners()
     this.timmer = null
+    this._addEventListeners()
 
     // trigger a "lazyload tick" to show images already in the viewport
     this._testLazyLoad()
@@ -48,10 +48,13 @@ class LazyLoad {
     let images = this.images
     let i = images.length - 1
 
-
     for (; i >= 0; i--) {
-      if ( images[i].getBoundingClientRect().top < wHeight ) {
-        images[i].src = images[i].dataset.src// this is where the magic happens
+      let elem = images[i]
+      let y = elem.getBoundingClientRect().top
+
+      // test if the image is in the viewport (either comming from the top or below)
+      if ( y < wHeight && y > -elem.height ) {
+        elem.src = elem.dataset.src// this is where the magic happens
         this.images.splice(i, 1)//make the list tiny as we chug along
       }
     }

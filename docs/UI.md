@@ -185,6 +185,10 @@ Please refer to `_components/_pagination.scss` if you wish to change any of the 
 
 Easily highlight new or unread items by adding "badge" class and a data-count attribute to the desired element.
 
+**Usage**
+
+***Markup***
+
 ```html
 <div class="button badge" data-count="27">I have a badge!</div>
 ```
@@ -197,6 +201,10 @@ Please refer to `_components/_badges.scss` if you wish to change any of the defa
 
 List groups are a flexible and powerful component for displaying not only simple lists of elements, but complex ones with custom content.
 
+**Usage**
+
+***Markup***
+
 ```html
 <ul class="list">
   <li class="list__item">Lorem ipsum</li>
@@ -208,3 +216,29 @@ List groups are a flexible and powerful component for displaying not only simple
 ***Styles***
 
 Please refer to `_components/_lists.scss` if you wish to change any of the default list styles.
+
+
+### Messages/Alerts
+
+Wrap any text and an optional dismiss button in .alert and one of the four contextual classes (e.g., .alert--success) for basic alert messages.
+
+**Usage**
+
+***Markup***
+
+```html
+<div class="alert alert--success">
+  <div class="alert__title">Success message example.</div>
+  Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipisicing elit.
+</div>
+
+<div class="alert">
+  <div class="alert__title">Neutral/informational message example.</div>
+  Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.
+  <div class="alert__close">+</div>
+</div>
+```
+
+***Styles***
+
+Please refer to `_components/_alerts.scss` if you wish to change any of the message/alert styles.

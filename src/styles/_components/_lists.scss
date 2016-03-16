@@ -7,6 +7,10 @@
     width: 100%;
     padding: $gutter;
     border-bottom: 1px solid color('gray', 'border');
+    will-change: background-color;
+    transition: background-color $animation-duration $cubic-bezier;
+
+    @include _(backface-hack);
     @include _(flex);
     @include _(align-items-center);
     @include _(body-1);

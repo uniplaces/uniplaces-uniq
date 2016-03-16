@@ -1,0 +1,37 @@
+$cubic-bezier: cubic-bezier(0,0,0.21,1);
+$swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$animation-duration: .5s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include placeholder('fade-in') {
+  opacity: 0;
+  will-change: opacity;
+  animation: fadeIn $animation-duration $cubic-bezier forwards;
+
+  @include _(backface-hack);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@include placeholder('fade-in') {
+  opacity: 1;
+  will-change: opacity;
+  animation: fadeOut $animation-duration $cubic-bezier forwards;
+
+  @include _(backface-hack);
+}

@@ -2,7 +2,6 @@
 'use strict';
 
 // TODO: Add SCSS Linter
-// TODO: Add Autoprefixer
 
 // Directory reference:
 //   css: styles
@@ -25,7 +24,7 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['<%= uniq.app %>/styles/**/*.{scss,sass}'],
-        tasks: ['sass:server']
+        tasks: ['sass:server', 'autoprefixer:dev']
       },
       babel: {
         files: ['!<%= uniq.app %>/scripts/**/*.js', '<%=  uniq.app %>/scripts/**/*.es6.js'],
@@ -100,6 +99,27 @@ module.exports = function (grunt) {
         }]
       }
     },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
+			dev: {
+        files: [{
+          expand: true,
+          cwd: '<%= uniq.app %>/styles',
+          src: ['*.css'],
+          dest: '<%= uniq.app %>/styles',
+        }]
+			},
+			dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= uniq.dist %>/styles',
+          src: ['*.css'],
+          dest: '<%= uniq.dist %>/styles',
+        }]
+			}
+		},
     imagemin: {
       dist: {
         options: {
