@@ -116,19 +116,19 @@
       </div>
       <div class="example">
         <label for="">Default</label>
-        <div class="button">Click me!</div>
+        <div class="button" role="button">Click me!</div>
 
         <label for="">Success</label>
-        <div class="button button--success">Great Success!</div>
+        <div class="button button--success" role="button">Great Success!</div>
 
         <label for="">Error</label>
-        <div class="button button--error">Oops :(</div>
+        <div class="button button--error" role="button">Oops :(</div>
 
         <label for="">Warning</label>
-        <div class="button button--warning">Careful...</div>
+        <div class="button button--warning" role="button">Careful...</div>
 
         <label for="">Disabled</label>
-        <div class="button button--disabled">I don't even</div>
+        <div class="button button--disabled" role="button">I don't even</div>
       </div>
     </div>
     <!-- /BUTTONS -->
@@ -204,23 +204,23 @@
       <div class="example">
         <label for="">Tabs (default)</label>
         <ul class="tabs">
-          <li class="tabs__item tabs__item--active">Active Link</li>
-          <li class="tabs__item">Default Link</li>
-          <li class="tabs__item">Default Link</li>
+          <li class="tabs__item tabs__item--active" role="button">Active Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
         </ul>
         <br>
         <label for="">Tabs (.tabs--center)</label>
         <ul class="tabs tabs--center">
-          <li class="tabs__item">Default Link</li>
-          <li class="tabs__item">Default Link</li>
-          <li class="tabs__item">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
         </ul>
         <br>
         <label for="">Tabs (.tabs--end)</label>
         <ul class="tabs tabs--end">
-          <li class="tabs__item">Default Link</li>
-          <li class="tabs__item">Default Link</li>
-          <li class="tabs__item">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
         </ul>
       </div>
     </div>
@@ -345,14 +345,14 @@
         </p>
       </div>
       <div class="example">
-        <div class="button badge" data-count="27">I have a badge!</div>
-        <div class="button badge">I have a badge!</div>
-        <div class="button badge" data-count="235">I have a badge!</div>
+        <div class="button badge" data-count="27" role="button">I have a badge!</div>
+        <div class="button badge" role="button">I have a badge!</div>
+        <div class="button badge" data-count="235" role="button">I have a badge!</div>
 
         <ul class="tabs">
-          <li class="tabs__item tabs__item--active">Active Link</li>
-          <li class="tabs__item badge" data-count="2">Default Link</li>
-          <li class="tabs__item">Default Link</li>
+          <li class="tabs__item tabs__item--active" role="button">Active Link</li>
+          <li class="tabs__item badge" data-count="2" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
         </ul>
       </div>
     </div>
@@ -397,24 +397,62 @@
         <div class="alert alert--warning">
           <div class="alert__title">Warning message example.</div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          <div class="alert__close">+</div>
+          <div class="alert__close" aria-label="Close" role="button">+</div>
         </div>
         <div class="alert alert--error">
           <div class="alert__title">Error message example.</div>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          <div class="alert__close">+</div>
+          <div class="alert__close" aria-label="Close" role="button">+</div>
         </div>
-        <div class="alert">
+        <div class="alert" role="dialog">
           <div class="alert__title">Neutral/informational message example.</div>
           Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.
-          <div class="alert__close">+</div>
+          <div class="alert__close" aria-label="Close" role="button">+</div>
         </div>
       </div>
     </div>
     <!-- /ALERTS -->
 
+    <!-- TOAST -->
+    <div class="row">
+      <div class="description">
+        <h5>Toasts / Modals</h5>
+      </div>
+      <div class="example">
+        <div class="button show-toast" role="button" data-target="toast-1">Hum... toast...</div>
+        <div class="button show-modal" role="button" data-target="modal-1">Hum... modal...</div>
+
+        <div class="toast hidden"role="dialog" id="toast-1">
+          <div class="toast__body">
+            <div class="toast__body__title">I am toast</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+              voluptatum nisi!
+            </p>
+          </div>
+        </div>
+
+        <div class="modal hidden"role="dialog" id="modal-1">
+          <div class="modal__body">
+            <div class="modal__body__title">I am modal</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+              voluptatum nisi! Id, sint vero dignissimos nobis impedit, ullam
+              dicta eum! Esse similique necessitatibus perferendis facilis dicta,
+              nobis fugiat, dignissimos nam.
+            </p>
+            <div class="button button--success" role="button">Confirm</div>
+            <div class="button" role="button">Cancel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /TOAST -->
+
   </main>
 
   <script src="scripts/lazyload.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/toasts.js"></script>
 </body>
 </html>

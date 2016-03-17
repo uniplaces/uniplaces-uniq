@@ -41,6 +41,7 @@ blockquote, q {
 }
 
 .hidden,
-[hidden] {
-  display: none;
+[hidden],
+[aria-hidden="true"] {
+  display: none !important;
 }

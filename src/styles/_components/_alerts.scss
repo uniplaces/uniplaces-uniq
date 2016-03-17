@@ -9,7 +9,7 @@
 
   @include _(body-1);
   @include _(fade-in);
-
+  
   &--success {
     background-color: color('success', 'light');
     background-image: url('../images/warning.png');
