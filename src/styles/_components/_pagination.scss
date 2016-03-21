@@ -22,6 +22,12 @@
     @include col();
     padding: 0 $gutter;
 
+    @include breakpoint(medium) {
+      max-width: 64px;
+      height: 64px;
+      line-height: 64px;
+    }
+
     &:hover {
       cursor: pointer;
       text-decoration: underline;

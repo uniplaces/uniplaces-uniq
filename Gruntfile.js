@@ -150,9 +150,8 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '<%= uniq.app %>',
           src: [
-            // Processes and moves HTML and text files.
-            // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
+            '**/*.html',
             'images/**/*',
             'fonts/**/*',
             // Exclude files & folders prefixed with an underscore.
@@ -219,9 +218,8 @@ module.exports = function (grunt) {
     'clean',
     'imagemin',
     'svgmin',
-    'filerev',
-    'usemin',
-    'htmlmin'
+    'sass:dist',
+    'copy'
     ]);
 
   grunt.registerTask('deploy', [
