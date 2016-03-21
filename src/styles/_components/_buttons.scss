@@ -1,11 +1,14 @@
 @mixin button() {
   position: relative;
-  display: table;
-  background-color: color('primary');
+  display: inline-block;;
+  height: $gutter * 3;
+  line-height: $gutter * 3;
+  padding: 0 $gutter;
   border-radius: 4px;
+  background-color: color('primary');
   text-align: center;
+  vertical-align: middle;
   color: color('primary', 'contrast');
-  @include padding();
   @include button-text();
 
   will-change: background-color;
