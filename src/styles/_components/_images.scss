@@ -1,0 +1,7 @@
+img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 !important;
+  // since images can be lazy-loaded they must be in their own layer
+  @include backface-hack();
+}

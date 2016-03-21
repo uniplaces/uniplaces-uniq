@@ -1,0 +1,71 @@
+$cubic-bezier: cubic-bezier(0,0,0.21,1);
+$swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$animation-duration: .5s;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0,0);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate3d(100%, 0%, 0);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 0);
+  }
+}
+
+@mixin fade-in() {
+  opacity: 0;
+  will-change: opacity;
+  animation: fadeIn $animation-duration $cubic-bezier forwards;
+
+  @include backface-hack();
+}
+
+@mixin fade-out() {
+  opacity: 1;
+  will-change: opacity;
+  animation: fadeOut $animation-duration $cubic-bezier forwards;
+
+  @include backface-hack();
+}
+
+@mixin scale-in() {
+  perspective: 500px;
+  transform: scale3d(0,0,0);
+  will-change: transform;
+  animation: scaleIn $animation-duration $cubic-bezier forwards;
+
+  @include backface-hack();
+}
+
+@mixin slide-in() {
+  will-change: transform;
+  animation: slideIn $animation-duration $cubic-bezier forwards;
+
+  @include backface-hack();
+}

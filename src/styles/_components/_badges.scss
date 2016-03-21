@@ -1,0 +1,22 @@
+@mixin badge() {
+  position: relative;
+
+  &:before {
+    content: attr(data-count);
+    position: absolute;
+    display: block;
+    min-width: 24px;
+    min-height: 24px;
+    top: -($gutter / 2);
+    right: -($gutter / 2);
+    background-color: color('error', 'medium');
+    border-radius: 50%;
+
+    line-height: 24px;
+    text-align: center;
+    vertical-align: center;
+
+    color: color('error', 'contrast');
+    @include caption();
+  }
+}

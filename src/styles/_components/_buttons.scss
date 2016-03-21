@@ -1,42 +1,67 @@
-.button {
+@mixin button() {
   position: relative;
-  display: table;
-  margin: $gutter;
-  background-color: $primary-color;
-  border-radius: 2px;
+  display: inline-block;;
+  height: $gutter * 3;
+  line-height: $gutter * 3;
+  padding: 0 $gutter;
+  border-radius: 4px;
+  background-color: color('primary');
   text-align: center;
-  color: $primary-color-text;
-  @include padding();
-  @include _(button-text);
+  vertical-align: middle;
+  color: color('primary', 'contrast');
+  @include button-text();
+
+  will-change: background-color;
+  transition: background-color $animation-duration $swiftOut;
+  @include backface-hack();
 
   &:hover {
     cursor: pointer;
-    opacity: 0.5;
+    background-color: color('primary', 'medium');
+  }
+  &:active {
+    background-color: color('primary', 'dark');
   }
 
   &--success,
   &--error,
   &--warning,
   &--disabled {
-    color: #fff;
-    //border: 1px solid $input-border-color;
+    color: color('primary', 'contrast');
   }
 
   &--success {
-    background-color: $success-green;
-  }
-  &--error {
-    background-color: $error-red;
-  }
-  &--warning {
-    background-color: $warning-yellow;
-  }
-  &--disabled {
-    background-color: $disabled-background-color;
+    background-color: color('success');
+    color: color('primary', 'contrast');
 
     &:hover {
-      cursor: not-allowed;
-      opacity: 1;
+      background-color: color('success', 'light');
+      color: color('success');
     }
+  }
+  &--error {
+    background-color: color('error');
+    color: color('error', 'contrast');
+
+    &:hover {
+      background-color: color('error', 'light');
+      color: color('error');
+    }
+  }
+  &--warning {
+    background-color: color('warning');
+    color: color('warning', 'contrast');
+
+    &:hover {
+      background-color: color('warning', 'light');
+      color: color('warning');
+    }
+  }
+  &--disabled,
+  &--disabled:hover {
+    cursor: not-allowed;
+
+    background-color: color('gray', 'disabled_light');
+    color: color('primary', 'contrast');
   }
 }

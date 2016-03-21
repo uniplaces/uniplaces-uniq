@@ -39,3 +39,17 @@ ul {
 blockquote, q {
     quotes: none;
 }
+
+.hidden,
+[hidden],
+[aria-hidden="true"] {
+  display: none !important;
+}
+
+pre {
+  border: 1px solid #ccc !important;
+
+  p {
+    margin: 0 !important;
+  }
+}

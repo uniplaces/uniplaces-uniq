@@ -2,7 +2,6 @@
 'use strict';
 
 // TODO: Add SCSS Linter
-// TODO: Add Autoprefixer
 
 // Directory reference:
 //   css: styles
@@ -25,7 +24,11 @@ module.exports = function (grunt) {
     watch: {
       sass: {
         files: ['<%= uniq.app %>/styles/**/*.{scss,sass}'],
-        tasks: ['sass:server']
+        tasks: ['sass:server', 'autoprefixer:dev']
+      },
+      babel: {
+        files: ['!<%= uniq.app %>/scripts/**/*.js', '<%=  uniq.app %>/scripts/**/*.es6.js'],
+        tasks: ['babel:dist']
       }
     },
     browserSync: {
@@ -35,7 +38,8 @@ module.exports = function (grunt) {
             '<%= uniq.app %>/*.html',
             '<%= uniq.app %>/styles/**/*.{css}',
             '.tmp/css/**/*.css',
-            '{.tmp,<%= uniq.app %>}/scripts/**/*.js',
+            '!<%= uniq.app %>/scripts/*.es6.js',
+            '<%= uniq.app %>/scripts/*.js',
             '<%= uniq.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -95,6 +99,27 @@ module.exports = function (grunt) {
         }]
       }
     },
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
+			dev: {
+        files: [{
+          expand: true,
+          cwd: '<%= uniq.app %>/styles',
+          src: ['*.css'],
+          dest: '<%= uniq.app %>/styles',
+        }]
+			},
+			dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= uniq.dist %>/styles',
+          src: ['*.css'],
+          dest: '<%= uniq.dist %>/styles',
+        }]
+			}
+		},
     imagemin: {
       dist: {
         options: {
@@ -125,9 +150,8 @@ module.exports = function (grunt) {
           dot: true,
           cwd: '<%= uniq.app %>',
           src: [
-            // Processes and moves HTML and text files.
-            // Usemin moves CSS and javascript inside of Usemin blocks.
             // Copy moves asset files and directories.
+            '**/*.html',
             'images/**/*',
             'fonts/**/*',
             // Exclude files & folders prefixed with an underscore.
@@ -139,6 +163,21 @@ module.exports = function (grunt) {
           dest: '<%= uniq.dist %>'
         }]
       }
+    },
+    babel: {
+        options: {
+            sourceMap: true,
+            presets: ['es2015']
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= uniq.app %>/scripts/',
+                src: ['**/*.es6.js'],
+                dest: '<%= uniq.app %>/scripts/',
+                ext: '.js'
+            }]
+        }
     },
     concurrent: {
       server: [
@@ -179,9 +218,8 @@ module.exports = function (grunt) {
     'clean',
     'imagemin',
     'svgmin',
-    'filerev',
-    'usemin',
-    'htmlmin'
+    'sass:dist',
+    'copy'
     ]);
 
   grunt.registerTask('deploy', [

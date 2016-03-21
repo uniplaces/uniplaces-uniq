@@ -1,12 +1,12 @@
-.panel {
+@mixin panel() {
   @include padding();
   &__header {
-    background-color: $dark-blue;
-    @include _(full-width);
+    @include column(12);
+    background-color: color('primary', 'medium');
 
     &__title {
       padding: $gutter / 2 $gutter;
-      color: $primary-color-text;
+      color: color('primary', 'contrast');
     }
   }
 

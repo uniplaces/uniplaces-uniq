@@ -19,13 +19,18 @@
     <div class="row">
       <div class="description">
         <h6>Typeface</h6>
-        <p>Museo Sans Rounded has been choosen as it provides an elegant yet readable typeface for both headlines and body text.</p>
+        <p>
+          Museo Sans Rounded has been chosen as it provides an elegant yet
+          readable typeface for both headlines and body text.
+        </p>
       </div>
       <div class="example">
         <h4>Lorem Ipsum dolor</h4>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi molestias officiis, est voluptatibus. Dignissimos non,
-          eos. Magni explicabo odit quidem quod nostrum non laborum! Obcaecati, aperiam, necessitatibus. Animi, reiciendis, officiis?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+          molestias officiis, est voluptatibus. Dignissimos non,
+          eos. Magni explicabo odit quidem quod nostrum non laborum! Obcaecati,
+          aperiam, necessitatibus. Animi, reiciendis, officiis?
         </p>
       </div>
       <div class="description">
@@ -33,8 +38,9 @@
 
         <p>
           Too many type sizes and styles at once can wreck any layout.
-          A typographic scale has a limited set of type sizes that work well together along with the layout grid.
-          These sizes and styles were developed to balance content density and reading comfort under typical usage conditions.
+          A typographic scale has a limited set of type sizes that work well
+          together along with the layout grid. sizes and styles were developed
+          to balance content density and comfort under typical usage conditions.
           Type sizes are specified with px.
         </p>
       </div>
@@ -60,8 +66,10 @@
         <h5>Grid</h5>
 
         <p>
-          All elements align to a 12 column baseline grid that ajusts based on the viewport it's being presented on.
-          Components should inherid (via @mixin) column styles, so the DOM stays as DRY and semantic as possible.
+          All elements align to a 12 column baseline grid that ajusts based on
+          the viewport it's being presented on.
+          Components should inherid (via @mixin) column styles, so the DOM stays
+          as DRY and semantic as possible.
         </p>
       </div>
       <div class="example">
@@ -90,22 +98,361 @@
 
     <!-- BUTTONS -->
     <div class="row row--category">
-      <h3 id="buttons">Buttons</h3>
+      <h3 id="buttons">UI Elements</h3>
     </div>
     <div class="row">
       <div class="description">
-        <h5>Styles</h5>
+        <h5>Buttons</h5>
+
+        <p>
+          Call to action buttons, provide points of interaction with the webapp,
+          so they must on their own represent several states according to the
+          desired action.
+        </p>
+        <p>
+          Available states are: default (no class needed), success, error,
+          warning and disabled (with matching classes respectively).
+        </p>
       </div>
       <div class="example">
-        <div class="button">Click me!</div>
-        <div class="button button--success">Great Success!</div>
-        <div class="button button--error">Oops :(</div>
-        <div class="button button--warning">Careful...</div>
-        <div class="button button--disabled">I don't even</div>
+        <label for="">Default</label>
+        <div class="button" role="button">Click me!</div>
+
+        <label for="">Success</label>
+        <div class="button button--success" role="button">Great Success!</div>
+
+        <label for="">Error</label>
+        <div class="button button--error" role="button">Oops :(</div>
+
+        <label for="">Warning</label>
+        <div class="button button--warning" role="button">Careful...</div>
+
+        <label for="">Disabled</label>
+        <div class="button button--disabled" role="button">I don't even</div>
       </div>
     </div>
     <!-- /BUTTONS -->
+
+    <!-- TOOLTIPS -->
+    <div class="row">
+      <div class="description">
+        <h5>Tooltips</h5>
+
+        <p>
+          Tooltips can be placed along side any other elements to provide
+          contextual information or contextual help.</p>
+      </div>
+      <div class="example">
+        <input type="text" placeholder="Placeholder Text">
+        <div class="tooltip tooltip--left" data-type="i" data-title="Demo Title" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur suscipit, dolorum.">i</div>
+        <div class="tooltip tooltip--alternate" data-type="i" data-title="Demo Title" data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur suscipit, dolorum.">i</div>
+      </div>
+    </div>
+    <!-- /TOOLTIPS -->
+
+    <!-- INPUT -->
+    <div class="row">
+      <div class="description">
+        <h5>Input</h5>
+
+        <p>
+          Much like buttons input fields provide a point of data entry to the
+          user,  can also have several states representing all possible states
+          of success.
+        </p>
+        <p>
+          To simplify the usage of input fields in their various states the
+          default user-agent styles were overriden.
+        </p>
+      </div>
+      <div class="example">
+        <label for="demo">Input Label</label>
+        <input type="text" name="demo" placeholder="Placeholder Text">
+        <br>
+        <label for="error">Input Label</label>
+        <input type="text" name="error" placeholder="Placeholder Text" class="validation--error">
+        <label for="error" class="validation validation--error">This is an error message.</label>
+        <br>
+        <label for="success">Input Label</label>
+        <input type="text" name="success" placeholder="Placeholder Text" class="validation--success">
+        <label for="success" class="validation validation--success">This is a success message.</label>
+        <br>
+        <label for="warning">Input Label</label>
+        <input type="text" name="warning" placeholder="Placeholder Text" class="validation--warning">
+        <label for="warning" class="validation validation--warning">This is a warning message.</label>
+        <br>
+        <label for="disabled">Input Label</label>
+        <input type="text" name="disabled" placeholder="Placeholder Text" disabled>
+      </div>
+    </div>
+    <!-- /INPUT -->
+
+    <!-- TABS -->
+    <div class="row">
+      <div class="description">
+        <h5>Tabs</h5>
+
+        <p>
+          Coupled with JS Tabs provide a quick and easy way to switch content
+          visibility or to navigate between pages in the webapp.
+        </p>
+        <p>
+          Tabs can be aligned to left (default), center or right via moddifier
+          class.
+        </p>
+      </div>
+      <div class="example">
+        <label for="">Tabs (default)</label>
+        <ul class="tabs">
+          <li class="tabs__item tabs__item--active" role="button">Active Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+        </ul>
+        <br>
+        <label for="">Tabs (.tabs--center)</label>
+        <ul class="tabs tabs--center">
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+        </ul>
+        <br>
+        <label for="">Tabs (.tabs--end)</label>
+        <ul class="tabs tabs--end">
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /TABS -->
+
+    <!-- BREADCRUMBS -->
+    <div class="row">
+      <div class="description">
+        <h5>Breadcrumbs</h5>
+
+        <p>Indicate the current page's location within a navigational hierarchy</p>
+        <p>Separators are added via CSS through ':before' and content.</p>
+      </div>
+      <div class="example">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">Home</li>
+        </ul>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">Home</li>
+          <li class="breadcrumbs__item">Bookings</li>
+        </ul>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">Home</li>
+          <li class="breadcrumbs__item">Bookings</li>
+          <li class="breadcrumbs__item">Detail</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /BREADCRUMBS -->
+
+    <!-- IMAGES -->
+    <div class="row">
+      <div class="description">
+        <h5>Images</h5>
+
+        <p>
+          Images can and should be used directly, but lazy-load support is
+          provided.
+          Image lazy-loading works by have a "lightweight" placeholder image
+          loading by and one the target image comes into the users viewport the
+          correct image loading is triggered. detection occours by binding a
+          javascript event to the scroll and using the BoundingClientRect()
+          to detect wether the image should be shown or not.
+        </p>
+        <p>Javascript source code can be found at lazyload.js</p>
+      </div>
+      <div class="example">
+        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
+        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
+        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
+        <img src="images/placeholder.jpg" data-src="images/example.jpg" alt="Default image" class="lazy-load">
+      </div>
+    </div>
+    <!-- /IMAGES -->
+
+    <!-- PAGINATION -->
+    <div class="row">
+      <div class="description">
+        <h5>Pagination</h5>
+
+        <p>Easily scalable, and provides large click areas.</p>
+      </div>
+      <div class="example">
+        <label for="pagination">Pagination</label>
+        <ul class="pagination">
+          <li class="pagination__item">
+            <a href="#">&lt;</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">&gt;</a>
+          </li>
+        </ul>
+
+        <label for="pagination">Pagination</label>
+        <ul class="pagination">
+          <li class="pagination__item">
+            <a href="#"><</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">4</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">6</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">6</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /PAGINATION -->
+
+    <!-- BADGES -->
+    <div class="row">
+      <div class="description">
+        <h5>Badges</h5>
+
+        <p>
+          Easily highlight new or unread items by adding "badge" class and a
+          data-count attribute to the desired element.
+        </p>
+      </div>
+      <div class="example">
+        <div class="button badge" data-count="27" role="button">I have a badge!</div>
+        <div class="button badge" role="button">I have a badge!</div>
+        <div class="button badge" data-count="235" role="button">I have a badge!</div>
+
+        <ul class="tabs">
+          <li class="tabs__item tabs__item--active" role="button">Active Link</li>
+          <li class="tabs__item badge" data-count="2" role="button">Default Link</li>
+          <li class="tabs__item" role="button">Default Link</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /BADGES -->
+
+    <!-- LIST -->
+    <div class="row">
+      <div class="description">
+        <h5>List</h5>
+
+        <p>
+          List groups are a flexible and powerful component for displaying not
+          only simple lists of elements, but complex ones with custom content.
+        </p>
+      </div>
+      <div class="example">
+        <ul class="list">
+          <li class="list__item">Lorem ipsum</li>
+          <li class="list__item">Dolor sit amet</li>
+          <li class="list__item">don't read this</li>
+          <li class="list__item">if you can read this, you can read.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- /LIST -->
+
+    <!-- ALERTS -->
+    <div class="row">
+      <div class="description">
+        <h5>Messages</h5>
+
+        <p>
+          Wrap any text and an optional dismiss button in .alert and one of the
+          four contextual classes (e.g., .alert--success) for basic alert messages.
+        </p>
+      </div>
+      <div class="example">
+        <div class="alert alert--success">
+          <div class="alert__title">Success message example.</div>
+          Lorem ipsum dolor <a href="#">sit amet</a>, consectetur adipisicing elit.
+        </div>
+        <div class="alert alert--warning">
+          <div class="alert__title">Warning message example.</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <div class="alert__close" aria-label="Close" role="button">+</div>
+        </div>
+        <div class="alert alert--error">
+          <div class="alert__title">Error message example.</div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <div class="alert__close" aria-label="Close" role="button">+</div>
+        </div>
+        <div class="alert" role="dialog">
+          <div class="alert__title">Neutral/informational message example.</div>
+          Lorem ipsum dolor sit amet, consectetur <a href="#">adipisicing elit</a>.
+          <div class="alert__close" aria-label="Close" role="button">+</div>
+        </div>
+      </div>
+    </div>
+    <!-- /ALERTS -->
+
+    <!-- TOAST -->
+    <div class="row">
+      <div class="description">
+        <h5>Toasts / Modals</h5>
+      </div>
+      <div class="example">
+        <div class="button show-toast" role="button" data-target="toast-1">Hum... toast...</div>
+        <div class="button show-modal" role="button" data-target="modal-1">Hum... modal...</div>
+
+        <div class="toast hidden" role="dialog" id="toast-1">
+          <div class="toast__body">
+            <div class="toast__body__title">I am toast</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+              voluptatum nisi!
+            </p>
+          </div>
+        </div>
+
+        <div class="modal hidden" role="dialog" id="modal-1">
+          <div class="modal__body">
+            <div class="modal__body__title">I am modal</div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa,
+              voluptatum nisi! Id, sint vero dignissimos nobis impedit, ullam
+              dicta eum! Esse similique necessitatibus perferendis facilis dicta,
+              nobis fugiat, dignissimos nam.
+            </p>
+            <div class="button button--success" role="button">Confirm</div>
+            <div class="button" role="button">Cancel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /TOAST -->
+
   </main>
 
+  <script src="scripts/lazyload.js"></script>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/toasts.js"></script>
 </body>
 </html>

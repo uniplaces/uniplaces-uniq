@@ -4,74 +4,92 @@ $main-font-size: 16px;
 body {
   font-family: $primary-font-family;
   font-size: $main-font-size;
-  color: $primary-text-color;
+  color: color('text', 'primary');
+  text-rendering: optimizeLegibility;
 }
 
-@include placeholder(display-4) {
+@mixin display-4() {
   font-size: 112px;
   font-weight: 100;
   margin-bottom: $gutter;
 }
-@include placeholder(display-3) {
+@mixin display-3() {
   font-size: 56px;
   font-weight: 300;
   margin-bottom: $gutter;
 }
-@include placeholder(display-2) {
+@mixin display-2() {
   font-size: 45px;
   font-weight: 300;
   margin-bottom: 48px;
 }
-@include placeholder(display-1) {
+@mixin display-1() {
   font-size: 34px;
   font-weight: 300;
   margin-bottom: 40px;
 }
-@include placeholder(headline) {
+@mixin headline() {
   font-size: 24px;
   font-weight: 300;
   margin-bottom: 32px;
 }
-@include placeholder(title) {
+@mixin title() {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: $gutter;
 }
-@include placeholder(subheading) {
+@mixin subheading() {
   font-size: 15px;
   font-weight: 300;
-  margin-bottom: 24px;
 
   @include breakpoint(medium) {
     font-size: 15px;
   }
 }
-@include placeholder(body-2) {
+@mixin body-2() {
   font-size: 13px;
   font-weight: 500;
-  margin-bottom: 24px;
 
   @include breakpoint(medium) {
     font-size: 14px;
   }
 }
-@include placeholder(body-1) {
+@mixin body-1() {
   font-size: 13px;
   font-weight: 300;
-  margin-bottom: 20px;
+  line-height: 22px;
 
   @include breakpoint(medium) {
     font-size: 14px;
   }
 }
-@include placeholder(caption) {
+@mixin caption() {
   font-size: 12px;
   font-weight: 300;
 }
-@include placeholder(button-text) {
+@mixin button-text() {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
+}
+@mixin link() {
+  font-size: inherit;
+  font-weight: inherit;
+  color: color('primary');
+  text-decoration: none;
+  will-change: color;
+  transition: color $animation-duration $cubic-bezier;
+
+  @include backface-hack();
+  @include body-1();
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    color: color('primary', 'medium');
+    text-decoration: none;
+  }
 }
 
 h1,
@@ -87,37 +105,34 @@ p {
 }
 
 h1 {
-  @include _(display-4);
+  @include display-4();
 }
 
 h2 {
-  @include _(display-3);
+  @include display-3();
 }
 
 h3 {
-  @include _(display-2);
+  @include display-2();
 }
 
 h4 {
-  @include _(display-1);
+  @include display-1();
 }
 
 h5 {
-  @include _(headline);
+  @include headline();
 }
 
 h6 {
-  @include _(title);
+  @include title();
 }
 
 p {
-  line-height: 22px;
-  @include _(body-1);
+  @include body-1();
+  margin-bottom: 20px;
 }
 
 a {
-  font-size: inherit;
-  font-weight: inherit;
-  color: $primary-color;
-  text-decoration: underline;
+  @include link();
 }

@@ -1,0 +1,32 @@
+@mixin list() {
+  overflow: hidden;
+  border: 1px solid color('gray', 'border');
+  border-radius: 4px;
+
+  &__item {
+    width: 100%;
+    padding: $gutter;
+    border-bottom: 1px solid color('gray', 'border');
+    will-change: background-color;
+    transition: background-color $animation-duration $cubic-bezier;
+
+    @include backface-hack();
+    @include flex();
+    @include align-items-center();
+    @include body-1();
+
+    &:hover {
+      background-color: color('gray', 'medium');
+      cursor: pointer;
+    }
+
+    &:active {
+      background-color: color('primary', 'dark');
+      color: color('primary', 'contrast');
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}

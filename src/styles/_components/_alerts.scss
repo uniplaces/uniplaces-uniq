@@ -1,0 +1,50 @@
+@mixin alert() {
+  position: relative;
+  padding: $gutter $gutter $gutter ($gutter * 4);
+  background-color: color('primary', 'light');
+  background-image: url('../images/warning.png');
+  background-position: 16px 50%;
+  background-repeat: no-repeat;
+  margin: $gutter 0;
+
+  @include body-1();
+  @include fade-in();
+
+  &--success {
+    background-color: color('success', 'light');
+    background-image: url('../images/warning.png');
+  }
+  &--error {
+    background-color: color('error', 'light');
+    background-image: url('../images/warning.png');
+  }
+  &--warning {
+    background-color: color('warning', 'light');
+    background-image: url('../images/warning.png');
+  }
+
+  &__title {
+    @include subheading();
+    font-weight: 700;
+  }
+
+  &__close {
+    position: absolute;
+    display: block;
+    top: ($gutter / 4);
+    right: ($gutter / 2);
+    transform: rotate(45deg);
+
+    @include headline();
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-weight: 700;
+    color: inherit;
+  }
+}

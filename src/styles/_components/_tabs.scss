@@ -1,0 +1,42 @@
+@mixin tabs() {
+  padding: ($gutter / 2);
+  border: 1px solid $input-border-color;
+  border-radius: 2px;
+  @include flex();
+  @include align-items-center();
+
+  &--center {
+    @include justify-content-center();
+  }
+  &--end {
+    @include justify-content-end();
+  }
+
+  &__item {
+    position: relative;
+    height: 32px;
+    margin: 0 ($gutter / 2);
+    padding: 0 ($gutter);
+    @include flex();
+    @include align-items-center();
+    @include button-text();
+
+    &:hover,
+    &--active {
+      cursor: pointer;
+      color: color('primary');
+    }
+
+    &--active {
+      &:before {
+        content: " ";
+        position: absolute;
+        width: calc(100% - 32px);
+        height: 4px;
+        bottom: (-$gutter / 2);
+        left: 16px;
+        background-color: color('primary');
+      }
+    }
+  }
+}

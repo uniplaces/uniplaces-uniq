@@ -1,0 +1,277 @@
+@mixin label() {
+  display: block;
+  @include body-2();
+  font-weight: 700;
+
+  &.validation {
+    @include caption();
+    font-weight: 300 !important;
+
+    &--success {
+      color: color('success', 'text');
+    }
+    &--error {
+      color: color('error', 'text');
+    }
+    &--warning {
+      color: color('warning', 'text');
+    }
+  }
+}
+
+@mixin input() {
+  display: inline-block;
+  height: 32px;
+  padding: 0 ($gutter / 2);
+  border: 2px solid $input-border-color;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid $input-border-color-hover;
+    outline: 0;
+  }
+
+  &.validation {
+    &--success {
+      border-color: color('success', 'primary');
+    }
+    &--error {
+      border-color: color('error', 'primary');
+    }
+    &--warning {
+      border-color: color('warning', 'primary');
+    }
+  }
+
+  &:disabled,
+  &:disabled:hover {
+    background-color: color('gray', 'disabled_input');
+    border-color: $input-border-color;
+    color: $input-border-color;
+    cursor: not-allowed;
+  }
+
+  & + .tooltip {
+    display: inline-block;
+  }
+}
+
+label,
+input {
+  margin: ($gutter / 2) 0;
+}
+
+input {
+  @include input();
+}
+
+label {
+  @include label();
+}
+
+::-webkit-input-placeholder {
+  @include caption();
+}
+
+::-moz-placeholder {
+  @include caption();
+}
+
+:-ms-input-placeholder {
+  @include caption();
+}
+
+:-moz-placeholder {
+  @include caption();
+}
+
+.validation {
+	position: relative;
+
+	&:after {
+		position: absolute;
+		left: 0;
+		bottom: -18px;
+		content: ' ';
+		font-size: 13px;
+	}
+
+	&--error {
+
+		input[type="text"] {
+			border-color: color('error', 'primary');
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&:after {
+			color: color('error', 'primary');
+		}
+	}
+
+	&--success {
+
+		input[type="text"] {
+			border-color: color('success');
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+input[type="radio"] {
+	display: none;
+
+	& + label {
+		position: relative;
+		display: block;
+		height: 32px;
+		cursor: pointer;
+		padding-left: 40px;
+		line-height: 32px;
+		color: $label-text-color;
+		white-space: nowrap;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+
+    	&:before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin-right: 10px;
+				width: 32px;
+				height: 32px;
+				background-color: #fff;
+				border: 2px solid $input-border-color;
+				border-radius: 50%;
+			}
+	}
+
+	&:checked {
+
+		& + label {
+
+			&:before {
+				content: ' ';
+				display: inline-block;
+				position: absolute;
+				z-index: 1;
+				left: 0;
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				border: 2px solid color('primary');
+			}
+
+			&:after {
+				content: ' ';
+				position: absolute;
+				z-index: 2;
+				left: 11px;
+				top: calc(50% - 5px);
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: color('primary');
+			}
+		}
+	}
+
+	&:disabled {
+
+		& + label {
+			color: color('gray', 'disabled');
+			cursor: not-allowed;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				background-color: color('gray', 'disabled_input');
+				border: 2px solid $input-border-color;
+				border-radius: 50%;
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+}
+
+input[type="checkbox"] {
+	display: none;
+
+	& + label {
+		display: inline-block;
+		cursor: pointer;
+		padding-left: $gutter * 3;
+		line-height: 32px;
+		color: $label-text-color;
+		white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+
+  	&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin-right: $gutter;
+			width: 32px;
+			height: 32px;
+			background-color: #fff;
+			border: 2px solid $input-border-color;
+			border-radius: 4px;
+		}
+	}
+
+	&:checked {
+
+		& + label {
+
+			&:before {
+				content: ' ';
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin-right: 10px;
+				width: 32px;
+				height: 32px;
+				background: url('../images/checked-checkbox.svg') no-repeat 0 0;
+				border: none;
+			}
+		}
+	}
+
+	&:disabled {
+
+		& + label {
+			color: $input-border-color;
+			cursor: not-allowed;
+
+			&:before {
+				content: '';
+				display: inline-block;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin-right: 10px;
+				width: 32px;
+				height: 32px;
+				background-color: color('gray', 'disabled_input');
+				border: 2px solid $input-border-color;
+				border-radius: 4px;
+			}
+		}
+	}
+}

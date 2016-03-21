@@ -1,0 +1,28 @@
+@mixin loader() {
+  display: inline-block;
+  width: $gutter * 3;
+  height: $gutter * 3;
+  text-align: center;
+  margin: $gutter;
+
+  svg path,
+  svg rect{
+    fill: color('primary');
+  }
+
+  &--inv {
+    &,
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    & {
+      margin: 0;
+      margin-left: $gutter;
+    }
+    svg path,
+    svg rect{
+      fill: color('primary', 'contrast');
+    }
+  }
+}

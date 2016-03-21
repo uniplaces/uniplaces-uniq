@@ -1,0 +1,22 @@
+@mixin breadcrumbs() {
+  &__item {
+    display: inline-block;
+    color: color('primary');
+    @include caption();
+
+    &:last-child {
+      color: color('text', 'primary');
+    }
+
+    &:after {
+      content: "/";
+      display: inline-block;
+      margin: 0 ($gutter / 2);
+      color: color('text', 'disabled');
+    }
+
+    &:last-child:after {
+      content: none;
+    }
+  }
+}

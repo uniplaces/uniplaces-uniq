@@ -1,23 +1,64 @@
-$uniplaces-blue: #00adef;
-$dark-blue: #0076a3;
+// Color Pallette
+$palette: (
+  'primary': (
+    'primary': #00adef,// uniplaces_blue
+    'light': #c6eaf8,// tropical_blue
+    'medium': #0076a3,// allports
+    'dark': #003b52,// prussian_blue
+    'contrast': #fff// contrast_white
+  ),
+  'text': (
+    'primary': rgba(0,0,0,0.87),
+    'secondary': rgba(0,0,0,0.54),
+    'disabled': rgba(0,0,0,0.38),
+    'dialog': #4e4e4e
+  ),
+  'error': (
+    'primary': #ef5b5b,
+    'medium': #fa7c71,
+    'light': #ffd5d5,
+    'contrast': #fff
+  ),
+  'success': (
+    'primary': #7fcf98,
+    'light': #c1e7cd,
+    'contrast': #fff
+  ),
+  'warning': (
+    'primary': #ffc952,
+    'light': #ffe8b4,
+    'contrast': #fff
+  ),
+  'gray': (
+    'primary': #4e4e4e,
+    'dark': #212121,
+    'disabled': #5a6672,
+    'disabled_light': #a9bbcb,
+    'disabled_input': #efefef,
+    'medium': #e1e4e6,
+    'border': #e1e4e6,
+    'light': #fafafa
+  )
+);
 
-$success-green: #8bc34a;
-$error-red: #f44336;
-$error-red-text: #ff7473;
-$warning-yellow: #ffc107;
+$primary-color-key: 'primary' !default;
 
-$primary-color: $uniplaces-blue;
-$main-background-color: #fafafa;
+@function color($name: 'primary', $variant: $primary-color-key) {
+  $color: null;
+  // Get the color spectrum
+  $color-spectrum: map-get($palette, $name);
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
 
-$primary-color-text: #fff;
-//$text-color: #212121;
-$primary-text-color: rgba(0,0,0,0.87);
-$secondary-text-color: rgba(0,0,0,0.54);
-$disabled-text-color: rgba(0,0,0,0.38);
+  @return $color;
+}
 
-$label-text-color: #5a6672;
-$input-border-color: #d9e1e8;
-$button-hover-background-color: #91d7f2;
+// UniQ
+$main-background-color: color('gray', 'light');
 
-$disabled-background-color: #a9bbcb;
-$dialog-text-color: #4e4e4e;
+$label-text-color: color('gray', 'disabled');
+$input-border-color: color('gray', 'border');
+$input-border-color-hover: color('primary', 'light');
+$button-hover-background-color: color('primary', 'light');

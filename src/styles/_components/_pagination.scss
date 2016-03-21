@@ -1,0 +1,47 @@
+@mixin pagination() {
+  @include row();
+  @include align-items-center();
+
+  &--center {
+    @include justify-content-center();
+  }
+  &--end {
+    @include justify-content-end();
+  }
+
+  &__item {
+    height: 32px;
+
+    border: 1px solid $input-border-color;
+    border-left: 0;
+
+    line-height: 32px;
+    text-align: center;
+    color: color('primary');
+
+    @include col();
+    padding: 0 $gutter;
+
+    @include breakpoint(medium) {
+      max-width: 64px;
+      height: 64px;
+      line-height: 64px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    &:first-child {
+      border-left: 1px solid $input-border-color;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+  }
+}

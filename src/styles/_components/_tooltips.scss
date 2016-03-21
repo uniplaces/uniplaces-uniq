@@ -1,0 +1,80 @@
+@mixin tooltip() {
+  content: "i";
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: $gutter;
+  z-index: 1;
+
+  background-color: color('text', 'primary');
+  border-radius: 50%;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+
+  &:hover {
+    &:before,
+    &:after {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    display: none;
+    color: color('text', 'primary');
+  }
+
+  &:before {
+    content: attr(data-title);
+    width: 184px;
+    top: 16px;
+    left: 64px;
+    z-index: 3;
+
+    font-weight: bold;
+    @include title();
+  }
+
+  &:after {
+    content: attr(data-content);
+    width: 216px;
+    top: 0;
+    left: 40px;
+    z-index: 2;
+    background-color: #fff;
+
+    padding: 56px 24px 24px;
+    border: 2px solid $input-border-color;
+    @include body-1();
+  }
+
+  &--left {
+    &:before {
+      left: auto;
+      right: 48px;
+    }
+    &:after {
+      left: auto;
+      right: 40px;
+    }
+  }
+
+  // alternate styles
+  &--alternate {
+    &:before,
+    &:after {
+      color: #fff;
+    }
+    &:after {
+      background-color: color('text', 'primary');
+    }
+  }
+
+  & + input {
+    display: inline-block;
+  }
+}
