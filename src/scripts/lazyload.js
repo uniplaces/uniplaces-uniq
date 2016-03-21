@@ -27,7 +27,7 @@ var LazyLoad = function () {
   }
 
   /**
-  * _addEventListeners - inital event listener's binding
+  * _addEventListeners - initial event listener's binding
   *
   * @private
   * @function
