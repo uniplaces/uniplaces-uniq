@@ -37,7 +37,7 @@
     "test",
     "tests",
     "src/demo.html",
-    "src/styles/demo.*"
+    "src/styles/demo.*",
     "src/images/example.jpg",
     "src/images/placeholder.jpg",
     "package.json",
