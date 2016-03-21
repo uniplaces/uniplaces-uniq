@@ -10,10 +10,10 @@
     will-change: background-color;
     transition: background-color $animation-duration $cubic-bezier;
 
-    @include _(backface-hack);
-    @include _(flex);
-    @include _(align-items-center);
-    @include _(body-1);
+    @include backface-hack();
+    @include flex();
+    @include align-items-center();
+    @include body-1();
 
     &:hover {
       background-color: color('gray', 'medium');
@@ -29,8 +29,4 @@
       border-bottom: 0;
     }
   }
-}
-
-.list {
-  @include list();
 }

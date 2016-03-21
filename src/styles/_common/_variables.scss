@@ -5,16 +5,12 @@ $max-columns: 12;
 $input-border: #{2px solid};
 
 // hack - improve scrolling performance on mobile android browsers and mobile safari
-@include placeholder('backface-hack') {
+@mixin backface-hack() {
 	backface-visibility: hidden;
 }
 
-@include placeholder('flex') {
+@mixin flex() {
 	display: flex;
-}
-
-@mixin flex($values) {
-	flex:  $values;
 }
 
 @mixin order($val) {
@@ -25,42 +21,42 @@ $input-border: #{2px solid};
 	flex-grow: $val;
 }
 
-@include placeholder('flex-column') {
+@mixin flex-column() {
 	flex-direction: column;
 }
 
-@include placeholder('justify-content-center') {
+@mixin justify-content-center() {
 	justify-content: center;
 }
 
-@include placeholder('space-between') {
+@mixin space-between() {
 	justify-content: space-between;
 }
 
-@include placeholder('justify-content-start') {
+@mixin justify-content-start() {
 	justify-content: flex-start;
 }
 
-@include placeholder('justify-content-end') {
+@mixin justify-content-end() {
 	justify-content: flex-end;
 }
 
-@include placeholder('align-items-center') {
+@mixin align-items-center() {
 	align-items: center;
 }
 
-@include placeholder('align-items-top') {
+@mixin align-items-top() {
 	align-items: flex-start;
 }
 
-@include placeholder('align-items-baseline') {
+@mixin align-items-baseline() {
 	align-items: baseline;
 }
 
-@include placeholder('align-items-bottom') {
+@mixin align-items-bottom() {
 	align-items: flex-end;
 }
 
-@include placeholder('flex-wrap') {
+@mixin flex-wrap() {
 	flex-wrap: wrap;
 }

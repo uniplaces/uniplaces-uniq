@@ -8,9 +8,9 @@
 
   background-color: rgba(0,0,0,0.2);
 
-  @include _(flex);
-  @include _(align-items-center);
-  @include _(justify-content-center);
+  @include flex();
+  @include align-items-center();
+  @include justify-content-center();
 
   &__body {
     background-color: #fff;
@@ -18,15 +18,15 @@
     max-width: 400px;
     margin: 0 auto;
 
-    @include _(flex);
-    @include _(flex-wrap);
-    @include _(align-items-center);
-    @include _(justify-content-center);
+    @include flex();
+    @include flex-wrap();
+    @include align-items-center();
+    @include justify-content-center();
 
     &__title {
       width: 100%;
       margin-bottom: $gutter;
-      @include _(title);
+      @include title();
     }
 
     .button {
@@ -44,18 +44,18 @@
   background-color: rgba(0,0,0,0);
   overflow: hidden;
 
-  @include _(align-items-bottom);
-  @include _(justify-content-end);
+  @include align-items-bottom();
+  @include justify-content-end();
 
   &--top {
-    @include _(align-items-top);
+    @include align-items-top();
   }
 
   &__body {
     margin: $gutter;
     background-color: #fff;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
-    @include _(slide-in);
+    @include slide-in();
 
     p {
       margin: 0 auto;

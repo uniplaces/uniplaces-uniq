@@ -1,5 +1,5 @@
 // GRID
-@include placeholder('limited-full-width') {
+@mixin limited-full-width() {
 	width: 100%;
 	max-width: 1200px;
 	//max-width: (100% / 1.61803398875);// use golden ratio? =)
@@ -12,8 +12,8 @@
 
 // GRID ELEMENTS
 @mixin row() {
-	@include _(flex);
-  @include _(flex-wrap);
+	@include flex();
+  @include flex-wrap();
 	margin: 0 auto;
 }
 

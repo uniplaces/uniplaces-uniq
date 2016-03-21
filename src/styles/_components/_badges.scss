@@ -17,10 +17,6 @@
     vertical-align: center;
 
     color: color('error', 'contrast');
-    @include _(caption);
+    @include caption();
   }
-}
-
-.badge {
-  @include badge();
 }

@@ -36,7 +36,7 @@
     z-index: 3;
 
     font-weight: bold;
-    @include _(title);
+    @include title();
   }
 
   &:after {
@@ -49,7 +49,7 @@
 
     padding: 56px 24px 24px;
     border: 2px solid $input-border-color;
-    @include _(body-1);
+    @include body-1();
   }
 
   &--left {
@@ -77,8 +77,4 @@
   & + input {
     display: inline-block;
   }
-}
-
-.tooltip {
-  @include tooltip();
 }

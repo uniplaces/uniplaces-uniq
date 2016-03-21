@@ -2,7 +2,7 @@
   &__item {
     display: inline-block;
     color: color('primary');
-    @include _(caption);
+    @include caption();
 
     &:last-child {
       color: color('text', 'primary');
@@ -19,8 +19,4 @@
       content: none;
     }
   }
-}
-
-.breadcrumbs {
-  @include breadcrumbs();
 }

@@ -1,12 +1,12 @@
 @mixin pagination() {
   @include row();
-  @include _(align-items-center);
+  @include align-items-center();
 
   &--center {
-    @include _(justify-content-center);
+    @include justify-content-center();
   }
   &--end {
-    @include _(justify-content-end);
+    @include justify-content-end();
   }
 
   &__item {
@@ -44,8 +44,4 @@
       border-bottom-right-radius: 2px;
     }
   }
-}
-
-.pagination {
-  @include pagination();
 }

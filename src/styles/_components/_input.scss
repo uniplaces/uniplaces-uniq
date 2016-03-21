@@ -1,10 +1,10 @@
 @mixin label() {
   display: block;
-  @include _(body-2);
+  @include body-2();
   font-weight: 700;
 
   &.validation {
-    @include _(caption);
+    @include caption();
     font-weight: 300 !important;
 
     &--success {

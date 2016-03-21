@@ -7,8 +7,8 @@
   background-repeat: no-repeat;
   margin: $gutter 0;
 
-  @include _(body-1);
-  @include _(fade-in);
+  @include body-1();
+  @include fade-in();
 
   &--success {
     background-color: color('success', 'light');
@@ -24,7 +24,7 @@
   }
 
   &__title {
-    @include _(subheading);
+    @include subheading();
     font-weight: 700;
   }
 
@@ -35,7 +35,7 @@
     right: ($gutter / 2);
     transform: rotate(45deg);
 
-    @include _(headline);
+    @include headline();
 
     &:hover {
       cursor: pointer;
@@ -47,8 +47,4 @@
     font-weight: 700;
     color: inherit;
   }
-}
-
-.alert {
-  @include alert();
 }

@@ -1,0 +1,10 @@
+@mixin loader() {
+  display: block;
+  height: 100%;
+  text-align: center;
+
+  svg path,
+  svg rect{
+    fill: color('primary');
+  }
+}

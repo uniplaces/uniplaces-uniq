@@ -6,11 +6,11 @@
   text-align: center;
   color: color('primary', 'contrast');
   @include padding();
-  @include _(button-text);
+  @include button-text();
 
   will-change: background-color;
   transition: background-color $animation-duration $swiftOut;
-  @include _(backface-hack);
+  @include backface-hack();
 
   &:hover {
     cursor: pointer;
@@ -61,8 +61,4 @@
     background-color: color('gray', 'disabled_light');
     color: color('primary', 'contrast');
   }
-}
-
-.button {
-  @include button();
 }
