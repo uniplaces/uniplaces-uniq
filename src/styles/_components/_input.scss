@@ -1,9 +1,4 @@
-label,
-input {
-  margin: ($gutter / 2) 0;
-}
-
-label {
+@mixin label() {
   display: block;
   @include _(body-2);
   font-weight: 700;
@@ -24,7 +19,7 @@ label {
   }
 }
 
-input {
+@mixin input() {
   display: inline-block;
   height: 32px;
   padding: 0 ($gutter / 2);
@@ -60,4 +55,17 @@ input {
   & + .tooltip {
     display: inline-block;
   }
+}
+
+label,
+input {
+  margin: ($gutter / 2) 0;
+}
+
+input {
+  @include input();
+}
+
+label {
+  @include label();
 }

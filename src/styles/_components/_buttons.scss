@@ -1,4 +1,4 @@
-.button {
+@mixin button() {
   position: relative;
   display: table;
   background-color: color('primary');
@@ -61,4 +61,8 @@
     background-color: color('gray', 'disabled_light');
     color: color('primary', 'contrast');
   }
+}
+
+.button {
+  @include button();
 }

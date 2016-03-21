@@ -1,4 +1,4 @@
-.tooltip {
+@mixin tooltip() {
   content: "i";
   position: relative;
   display: inline-block;
@@ -77,4 +77,8 @@
   & + input {
     display: inline-block;
   }
+}
+
+.tooltip {
+  @include tooltip();
 }

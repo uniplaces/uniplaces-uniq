@@ -1,4 +1,4 @@
-.badge {
+@mixin badge() {
   position: relative;
 
   &:before {
@@ -19,4 +19,8 @@
     color: color('error', 'contrast');
     @include _(caption);
   }
+}
+
+.badge {
+  @include badge();
 }

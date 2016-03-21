@@ -1,4 +1,4 @@
-.panel {
+@mixin panel() {
   @include padding();
   &__header {
     @include column(12);
@@ -14,4 +14,8 @@
     @include padding();
     background-color: #fff;
   }
+}
+
+.panel {
+  @include panel();
 }

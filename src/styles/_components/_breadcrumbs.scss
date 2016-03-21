@@ -1,4 +1,4 @@
-.breadcrumbs {
+@mixin breadcrumbs() {
   &__item {
     display: inline-block;
     color: color('primary');
@@ -19,4 +19,8 @@
       content: none;
     }
   }
+}
+
+.breadcrumbs {
+  @include breadcrumbs();
 }

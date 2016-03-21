@@ -1,0 +1,43 @@
+{
+  "name": "uniq",
+  "description": "Internal CSS framework used @ uniplaces",
+  "main": [
+    "src/styles/**/*",
+    "src/scripts/**/*",
+    "images/**/*"
+  ],
+  "authors": [
+    "mmelo",
+    "niceoutup"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "uniplaces",
+    "css",
+    "framework",
+    "performance",
+    "grid",
+    "animation"
+  ],
+  "homepage": "https://github.com/uniplaces/uniplaces-uniq",
+  "dependencies": {
+    "repository": "git@github.com:uniplaces/uniplaces-uniq.git"
+  },
+  "moduleType": [
+    "globals",
+    "es6"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src/demo.html",
+    "src/styles/demo.*"
+    "src/images/example.jpg",
+    "src/images/placeholder.jpg",
+    "package.json",
+    "Gruntfile.js"
+  ]
+}

@@ -1,4 +1,4 @@
-.list {
+@mixin list() {
   overflow: hidden;
   border: 1px solid color('gray', 'border');
   border-radius: 4px;
@@ -29,4 +29,8 @@
       border-bottom: 0;
     }
   }
+}
+
+.list {
+  @include list();
 }

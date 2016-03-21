@@ -1,4 +1,4 @@
-.tabs {
+@mixin tabs() {
   padding: ($gutter / 2);
   border: 1px solid $input-border-color;
   border-radius: 2px;
@@ -39,4 +39,8 @@
       }
     }
   }
+}
+
+.tabs {
+  @include tabs();
 }

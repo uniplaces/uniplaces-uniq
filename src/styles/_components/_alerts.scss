@@ -1,4 +1,4 @@
-.alert {
+@mixin alert() {
   position: relative;
   padding: $gutter $gutter $gutter ($gutter * 4);
   background-color: color('primary', 'light');
@@ -9,7 +9,7 @@
 
   @include _(body-1);
   @include _(fade-in);
-  
+
   &--success {
     background-color: color('success', 'light');
     background-image: url('../images/warning.png');
@@ -47,4 +47,8 @@
     font-weight: 700;
     color: inherit;
   }
+}
+
+.alert {
+  @include alert();
 }
