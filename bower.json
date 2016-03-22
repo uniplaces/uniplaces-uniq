@@ -1,6 +1,6 @@
 {
   "name": "uniq",
-  "version": "1.0.2",
+  "version": "0.0.0",
   "description": "Internal CSS Framework/Toolkit used @ Uniplaces",
   "main": [
     "src/styles/**/*",
@@ -22,9 +22,6 @@
     "animation"
   ],
   "homepage": "https://github.com/uniplaces/uniplaces-uniq",
-  "dependencies": {
-    "repository": "git@github.com:uniplaces/uniplaces-uniq.git"
-  },
   "moduleType": [
     "globals",
     "es6"
@@ -38,8 +35,7 @@
     "tests",
     "src/demo.html",
     "src/styles/demo.*",
-    "src/images/example.jpg",
-    "src/images/placeholder.jpg",
+    "src/images/**/*.*",
     "package.json",
     "Gruntfile.js"
   ]
