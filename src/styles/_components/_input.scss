@@ -25,6 +25,7 @@
   padding: 0 ($gutter / 2);
   border: 2px solid $input-border-color;
   border-radius: 2px;
+  color: color('gray', 'input');
 
   &:hover,
   &:focus {

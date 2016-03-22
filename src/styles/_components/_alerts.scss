@@ -13,14 +13,17 @@
   &--success {
     background-color: color('success', 'light');
     background-image: url('../images/warning.png');
+    color: color('success', 'contrast');
   }
   &--error {
     background-color: color('error', 'light');
     background-image: url('../images/warning.png');
+    color: color('error', 'contrast');
   }
   &--warning {
     background-color: color('warning', 'light');
     background-image: url('../images/warning.png');
+    color: color('warning', 'contrast');
   }
 
   &__title {

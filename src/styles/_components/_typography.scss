@@ -69,8 +69,8 @@ body {
 }
 @mixin button-text() {
   font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-weight: 700;
+  //text-transform: uppercase;
 }
 @mixin link() {
   font-size: inherit;

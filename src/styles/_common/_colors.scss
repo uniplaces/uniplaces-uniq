@@ -1,11 +1,11 @@
 // Color Pallette
 $palette: (
   'primary': (
-    'primary': #00adef,// uniplaces_blue
-    'light': #c6eaf8,// tropical_blue
-    'medium': #0076a3,// allports
-    'dark': #003b52,// prussian_blue
-    'contrast': #fff// contrast_white
+    'primary': #00adef,// Uniplaces_Blue
+    'dark': #003b52,// Prussian_blue
+    'medium': #0076a3,// Allports
+    'light': #c6eaf8,// Tropical_Blue
+    'contrast': #fff// Contrast_White
   ),
   'text': (
     'primary': rgba(0,0,0,0.87),
@@ -14,31 +14,39 @@ $palette: (
     'dialog': #4e4e4e
   ),
   'error': (
-    'primary': #ef5b5b,
-    'medium': #fa7c71,
-    'light': #ffd5d5,
-    'contrast': #fff
+    'primary': #ef5b5b,// Burnt_Sienna
+    'light': #ffd5d5,// Cosmos
+    'contrast': #1d2022// Shark
   ),
   'success': (
-    'primary': #7fcf98,
-    'light': #c1e7cd,
-    'contrast': #fff
+    'primary': #7fcf98,// The_York
+    'light': #c1e7cd,// Fringy_Flower
+    'contrast': #1d2022// Shark
   ),
   'warning': (
-    'primary': #ffc952,
-    'light': #ffe8b4,
-    'contrast': #fff
+    'primary': #ffc952,// Golden_Tainoi
+    'light': #ffe8b4,// Peach
+    'contrast': #1d2022// Shark
+  ),
+  "neutral": (
+    'primary': #2F96B8,// Boston_Blue
+    'light': #dcf0f6// Link_Water
   ),
   'gray': (
     'primary': #4e4e4e,
-    'dark': #212121,
-    'disabled': #5a6672,
-    'disabled_light': #a9bbcb,
-    'disabled_input': #efefef,
-    'medium': #e1e4e6,
-    'border': #e1e4e6,
+    'dark': #1d2022,// Shark
+    'input': #535d61,// Rolling_Stone
+    'disabled': #8c999d,// Regent_Gray
+    'disabled_light': #ccd2d4,// Iron_1
+    'border': #ccd2d4,// Iron_1
+    'disabled_input': #f6f7f8,
     'light': #fafafa
-  )
+  ),
+  'secondary': (
+    'one': #ffc952,// Golden_Tainoi
+    'two': #fa7c71,// Salmon
+    'three': '#918fef'// Portage
+  ),
 );
 
 $primary-color-key: 'primary' !default;
@@ -58,7 +66,7 @@ $primary-color-key: 'primary' !default;
 // UniQ
 $main-background-color: color('gray', 'light');
 
-$label-text-color: color('gray', 'disabled');
+$label-text-color: color('gray', 'input');
 $input-border-color: color('gray', 'border');
 $input-border-color-hover: color('primary', 'light');
 $button-hover-background-color: color('primary', 'light');

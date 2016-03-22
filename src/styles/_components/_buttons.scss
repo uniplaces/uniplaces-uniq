@@ -3,7 +3,7 @@
   display: inline-block;;
   height: $gutter * 3;
   line-height: $gutter * 3;
-  padding: 0 $gutter;
+  padding: 0 ($gutter * 2);
   border-radius: 4px;
   background-color: color('primary');
   text-align: center;
@@ -19,49 +19,36 @@
     cursor: pointer;
     background-color: color('primary', 'medium');
   }
-  &:active {
+
+  &--secondary {
+    background-color: color('primary', 'contrast');
+    color: color('primary', 'medium');
+    border: 2px solid color('primary', 'medium');
+
+    &:hover {
+      background-color: color('primary');
+      color: color('primary', 'contrast');
+      border: 2px solid color('primary');
+    }
+  }
+
+  &:active,
+  &--secondary:active {
     background-color: color('primary', 'dark');
-  }
-
-  &--success,
-  &--error,
-  &--warning,
-  &--disabled {
+    border-color: color('primary', 'dark');
     color: color('primary', 'contrast');
   }
 
-  &--success {
-    background-color: color('success');
-    color: color('primary', 'contrast');
-
-    &:hover {
-      background-color: color('success', 'light');
-      color: color('success');
-    }
-  }
-  &--error {
-    background-color: color('error');
-    color: color('error', 'contrast');
-
-    &:hover {
-      background-color: color('error', 'light');
-      color: color('error');
-    }
-  }
-  &--warning {
-    background-color: color('warning');
-    color: color('warning', 'contrast');
-
-    &:hover {
-      background-color: color('warning', 'light');
-      color: color('warning');
-    }
-  }
   &--disabled,
   &--disabled:hover {
     cursor: not-allowed;
+    background-color: color('gray', 'disabled_input');
+    border: 2px solid color('gray', 'disabled_light');
+    color: color('gray', 'input');
+  }
 
-    background-color: color('gray', 'disabled_light');
-    color: color('primary', 'contrast');
+  .loader {
+    float: right;
+    margin-top: $gutter / 2;
   }
 }

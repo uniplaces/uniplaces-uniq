@@ -9,14 +9,14 @@
     min-height: 24px;
     top: -($gutter / 2);
     right: -($gutter / 2);
-    background-color: color('error', 'medium');
+    background-color: color('secondary', 'two');
     border-radius: 50%;
 
     line-height: 24px;
     text-align: center;
     vertical-align: center;
 
-    color: color('error', 'contrast');
+    color: color('primary', 'contrast');
     @include caption();
   }
 }
