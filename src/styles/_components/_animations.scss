@@ -38,34 +38,34 @@ $animation-duration: .5s;
   }
 }
 
-@mixin fade-in() {
+@mixin fade-in($duration: $animation-duration, $bezier: $cubic-bezier) {
   opacity: 0;
   will-change: opacity;
-  animation: fadeIn $animation-duration $cubic-bezier forwards;
+  animation: fadeIn $duration $bezier forwards;
 
   @include backface-hack();
 }
 
-@mixin fade-out() {
+@mixin fade-out($duration: $animation-duration, $bezier: $cubic-bezier) {
   opacity: 1;
   will-change: opacity;
-  animation: fadeOut $animation-duration $cubic-bezier forwards;
+  animation: fadeOut $duration $bezier forwards;
 
   @include backface-hack();
 }
 
-@mixin scale-in() {
+@mixin scale-in($duration: $animation-duration, $bezier: $cubic-bezier) {
   perspective: 500px;
   transform: scale3d(0,0,0);
   will-change: transform;
-  animation: scaleIn $animation-duration $cubic-bezier forwards;
+  animation: scaleIn $duration $bezier forwards;
 
   @include backface-hack();
 }
 
-@mixin slide-in() {
+@mixin slide-in($duration: $animation-duration, $bezier: $cubic-bezier) {
   will-change: transform;
-  animation: slideIn $animation-duration $cubic-bezier forwards;
+  animation: slideIn $duration $bezier forwards;
 
   @include backface-hack();
 }

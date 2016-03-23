@@ -10,12 +10,12 @@
     fill: color('primary');
   }
 
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
   &--inv {
-    &,
-    svg {
-      width: 24px;
-      height: 24px;
-    }
     & {
       margin: 0;
       margin-left: $gutter;

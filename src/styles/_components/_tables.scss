@@ -3,6 +3,7 @@ table {
     max-width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
+    border: 1px solid color('gray', 'border');
 }
 
 caption {
@@ -13,11 +14,9 @@ caption {
 }
 
 thead {
-
 	th {
-		padding: 10px;
-	    vertical-align: bottom;
-	    border-bottom: 2px solid $input-border-color;
+    padding: 10px;
+    vertical-align: bottom;
 	}
 }
 
@@ -25,22 +24,18 @@ tbody {
 
 	th {
     padding: 10px;
-    vertical-align: top;
-    border-top: 1px solid $input-border-color;
+    vertical-align: middle;
 	}
 
 	tr {
-		&:first-child {
-
-			th {
-				border-top: none;
-			}
-
-			td {
-				border-top: none;
-			}
-		}
+    border-bottom: 1px solid color('gray', 'border');
 	}
+}
+
+tr {
+  &:nth-child(2n) {
+    background-color: color('gray', 'disabled_input');
+  }
 }
 
 th {
@@ -48,7 +43,6 @@ th {
 }
 
 td {
-	padding: 10px;
-    vertical-align: top;
-    border-top: 1px solid $input-border-color;
+  padding: 10px;
+  vertical-align: middle;
 }

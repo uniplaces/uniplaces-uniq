@@ -10,21 +10,30 @@ Sass/SCSS built and lightly opinionated this style and JS bundle contains basic 
 ```shell
 bower install uniq
 ```
+
 or
 
 ```shell
 bower install uniq --save
 ```
 
-*Bear in mind that this framework/toolkit provides both a set of mixins as well as default global styles.*
+## Update
+
+```shell
+bower update uniq
+```
+
+Will update to the version present in the `bower.json` file.
 
 ## Documentation
 
 Documentation is available in our  [wiki](https://github.com/uniplaces/uniplaces-uniq-wiki).
 
+*Bear in mind that this framework/toolkit provides both a set of mixins as well as default global styles.*
+
 ## Feedback
 
-Please file issues and pull requests against that repo.
+Please file issues and pull requests against that repo. Only pull-requests that follow our styling guide will be accepted.
 
 --
 
