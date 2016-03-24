@@ -1,9 +1,9 @@
 @mixin button() {
   position: relative;
   display: inline-block;;
-  height: $gutter * 3;
-  line-height: $gutter * 3;
-  padding: 0 ($gutter * 2);
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
   border-radius: 4px;
   background-color: color('primary');
   text-align: center;

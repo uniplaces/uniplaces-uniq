@@ -38,6 +38,15 @@ $animation-duration: .5s;
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @mixin fade-in($duration: $animation-duration, $bezier: $cubic-bezier) {
   opacity: 0;
   will-change: opacity;
