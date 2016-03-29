@@ -20,12 +20,14 @@
 }
 
 @mixin input() {
+  appearance: none;
   display: inline-block;
-  height: 32px;
+  height: 40px;
   padding: 0 ($gutter / 2);
   border: 2px solid $input-border-color;
   border-radius: 2px;
   color: color('gray', 'input');
+  font-size: 17px;
 
   &:hover,
   &:focus {
