@@ -35,8 +35,8 @@
 
   &:active,
   &--secondary:active {
-    background-color: color('primary', 'dark');
-    border-color: color('primary', 'dark');
+    background-color: color('primary', 'active');
+    border-color: color('primary', 'active');
     color: color('primary', 'contrast');
   }
 
