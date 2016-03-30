@@ -74,8 +74,8 @@
 }
 
 @mixin link() {
-  font-size: inherit;
-  font-weight: inherit;
+  font-size: 14px;
+  font-weight: 500;
   color: color('primary');
   text-decoration: none;
   will-change: color;
