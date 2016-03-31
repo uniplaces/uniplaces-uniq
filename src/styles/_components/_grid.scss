@@ -33,7 +33,7 @@
 
 @mixin column($count, $total-columns:$max-columns) {
 	@include col();
-	flex: $count 0 ($count * 100% / $total-columns);
+	flex: 1 0 ($count * 100% / $total-columns);
 	width: $count * 100% / $total-columns;
 }
 
