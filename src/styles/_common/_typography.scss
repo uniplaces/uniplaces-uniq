@@ -82,7 +82,6 @@
   transition: color $animation-duration $cubic-bezier;
 
   @include backface-hack();
-  @include body-1();
 
   &:hover {
     text-decoration: underline;
