@@ -25,6 +25,7 @@
     background-color: color('primary', 'contrast');
     color: color('primary', 'medium');
     border: 2px solid color('primary', 'medium');
+    line-height: 38px;
 
     &:hover {
       background-color: color('primary');
@@ -43,6 +44,7 @@
   &--disabled,
   &--disabled:hover {
     cursor: not-allowed;
+    line-height: 38px;
     background-color: color('gray', 'disabled_input');
     border: 2px solid color('gray', 'disabled_light');
     color: color('gray', 'input');
