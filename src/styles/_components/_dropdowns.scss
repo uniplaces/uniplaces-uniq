@@ -1,3 +1,35 @@
+@mixin dropdown-arrow($color: color('gray', 'dark')) {
+  &:before,
+  &:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 2px;
+    top: 50%;
+    right: 0;
+    background-color: $color;
+
+    transition: transform $animation-duration $cubic-bezier;
+  }
+  &:before {
+    transform: rotate(45deg);
+    right: 5px;
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &--open {
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
 @mixin dropdown() {
 	position: relative;
 	width: 50%;
