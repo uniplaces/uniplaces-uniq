@@ -7,7 +7,7 @@
 }
 
 @mixin padding() {
-	padding: $gutter;
+	padding: #{$gutter/2};
 }
 
 // GRID ELEMENTS
