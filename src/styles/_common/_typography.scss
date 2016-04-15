@@ -1,42 +1,35 @@
 @mixin display-4() {
   font-size: 112px;
-  font-weight: 100;
   margin-bottom: $gutter;
 }
 
 @mixin display-3() {
   font-size: 56px;
-  font-weight: 300;
   margin-bottom: $gutter;
 }
 
 @mixin display-2() {
   font-size: 45px;
-  font-weight: 300;
   margin-bottom: 48px;
 }
 
 @mixin display-1() {
   font-size: 34px;
-  font-weight: 300;
   margin-bottom: 40px;
 }
 
 @mixin headline() {
   font-size: 24px;
-  font-weight: 300;
   margin-bottom: 32px;
 }
 
 @mixin title() {
   font-size: 20px;
-  font-weight: 500;
   margin-bottom: $gutter;
 }
 
 @mixin subheading() {
   font-size: 15px;
-  font-weight: 300;
 
   @include breakpoint(medium) {
     font-size: 15px;
@@ -45,7 +38,6 @@
 
 @mixin body-2() {
   font-size: 13px;
-  font-weight: 500;
 
   @include breakpoint(medium) {
     font-size: 14px;
@@ -54,7 +46,6 @@
 
 @mixin body-1() {
   font-size: 13px;
-  font-weight: 300;
   line-height: 22px;
 
   @include breakpoint(medium) {
@@ -64,18 +55,15 @@
 
 @mixin caption() {
   font-size: 12px;
-  font-weight: 300;
 }
 
 @mixin button-text() {
   font-size: 14px;
-  font-weight: 700;
   //text-transform: uppercase;
 }
 
 @mixin link() {
   font-size: 14px;
-  font-weight: 500;
   color: color('primary');
   text-decoration: none;
   will-change: color;
@@ -90,4 +78,23 @@
     color: color('primary', 'medium');
     text-decoration: none;
   }
+  &:focus {
+    color: color('primary', 'medium');
+  }
+}
+
+@mixin light() {
+  font-weight: 100;
+}
+
+@mixin normal() {
+  font-weight: 300;
+}
+
+@mixin medium() {
+  font-weight: 500;
+}
+
+@mixin bold() {
+  font-weight: 700;
 }

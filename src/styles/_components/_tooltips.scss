@@ -2,14 +2,15 @@
   content: "i";
   position: relative;
   display: inline-block;
-  width: 32px;
-  height: 32px;
+  width: 16px;
+  height: 16px;
   margin: $gutter;
   z-index: 1;
 
   background-color: color('text', 'primary');
   border-radius: 50%;
-  line-height: 32px;
+  line-height: 16px;
+  font-size: 8px;
   text-align: center;
   color: #fff;
 
@@ -76,5 +77,16 @@
 
   & + input {
     display: inline-block;
+  }
+}
+
+@mixin tooltip2() {
+  @include tooltip();
+
+  &:before {
+    display: none !important;
+  }
+  &:after {
+    padding-top: 24px !important;
   }
 }
