@@ -69,6 +69,6 @@ $primary-color-key: 'primary' !default;
 $main-background-color: color('gray', 'light');
 
 $label-text-color: color('gray', 'input');
-$input-border-color: color('gray', 'border');
+$input-border-color: #e0e0e0;//color('gray', 'border'); - to be fixed
 $input-border-color-hover: color('primary', 'light');
 $button-hover-background-color: color('primary', 'light');
