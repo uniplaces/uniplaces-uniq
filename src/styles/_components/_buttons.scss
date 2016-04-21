@@ -45,9 +45,9 @@
   &--disabled:hover {
     cursor: not-allowed;
     line-height: 38px;
-    background-color: color('gray', 'disabled_input');
+    background-color: #ccd2d4;// TODO: fix me
     border: 2px solid color('gray', 'disabled_light');
-    color: color('gray', 'disabled_light');
+    color: #888; // TODO: fix me
   }
 
   .loader {
