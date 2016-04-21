@@ -20,6 +20,7 @@
     @include flex();
     @include align-items-center();
     @include button-text();
+    font-weight: 500;
 
     &:hover,
     &--active {
@@ -36,6 +37,7 @@
         bottom: (-$gutter / 2);
         left: 16px;
         background-color: color('primary');
+        font-weight: 700;
       }
     }
   }
