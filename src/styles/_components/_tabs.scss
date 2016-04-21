@@ -29,6 +29,8 @@
     }
 
     &--active {
+      font-weight: 700;
+      
       &:before {
         content: " ";
         position: absolute;
@@ -37,7 +39,6 @@
         bottom: (-$gutter / 2);
         left: 16px;
         background-color: color('primary');
-        font-weight: 700;
       }
     }
   }
