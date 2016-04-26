@@ -16,7 +16,7 @@
     position: relative;
     height: 32px;
     margin: 0 ($gutter / 2);
-    padding: 0 ($gutter);
+    padding: 0 8px;
     @include flex();
     @include align-items-center();
     @include button-text();
@@ -30,14 +30,14 @@
 
     &--active {
       font-weight: 700;
-      
+
       &:before {
         content: " ";
         position: absolute;
-        width: calc(100% - 32px);
+        width: calc(100% - 16px);
         height: 4px;
         bottom: (-$gutter / 2);
-        left: 16px;
+        left: 8px;
         background-color: color('primary');
       }
     }

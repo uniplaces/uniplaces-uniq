@@ -36,8 +36,8 @@
     left: 64px;
     z-index: 3;
 
-    font-weight: bold;
     @include title();
+    font-weight: 500;
   }
 
   &:after {
