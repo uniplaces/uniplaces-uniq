@@ -20,6 +20,9 @@
       display: block;
       text-align: left;
     }
+    &:after {
+      display: table;
+    }
   }
 
   &:before,
