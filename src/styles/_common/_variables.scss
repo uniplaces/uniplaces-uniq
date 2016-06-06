@@ -3,6 +3,7 @@ $baseline: 8px;
 $gutter: ($baseline * 2);
 $max-columns: 12;
 $input-border: #{2px solid};
+$gutter2: 10px;
 
 // hack - improve scrolling performance on mobile android browsers and mobile safari
 @mixin backface-hack() {

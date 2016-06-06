@@ -1,5 +1,6 @@
 $primary-font-family: #{"museo-sans-rounded","RobotoDraft","Roboto",sans-serif};
 $main-font-size: 16px;
+$text-baseline: 8px;
 
 body {
   font-family: $primary-font-family;
@@ -47,6 +48,10 @@ h6 {
 p {
   @include body-1();
   margin-bottom: 20px;
+
+  &.limited {
+    max-width: 560px;
+  }
 }
 
 a {

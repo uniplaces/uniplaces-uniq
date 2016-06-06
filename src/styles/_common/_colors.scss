@@ -1,5 +1,5 @@
 // Color Pallette
-$palette: (
+palette: (
   'primary': (
     'primary': #00adef,// Uniplaces_Blue
     'dark': #003b52,// Prussian_blue
@@ -49,6 +49,45 @@ $palette: (
     'two': #fa7c71,// Salmon
     'three': #918fef// Portage
   ),
+);
+
+$palette2: (
+  'primary': (
+    'primary': #00adef, // Uniplaces_Blue,
+    'medium': #009fdb, // Pacific_Blue
+    'dark': #0076a3 // Allports
+  ),
+  'secondary': (
+    'primary': #66d5ff, // Malibu
+    'medium': #c8f0ff, // Onahau
+    'light': #dbf5ff // Pattens_Blue
+  ),
+  'gray': (
+    'primary': #1d2022, // Shark
+    'dark': #434343, // Tundora
+    'medium': #616161, // Dove Gray
+    'light': #888888, // Gray
+  ),
+  'medium-gray': (
+    'primary': #cccccc, // Silver
+    'medium': #e0e0e0, // ALto
+    'light': #eaeaea, // Gallery
+  ),
+  'light-gray': (
+    'primary': #f6f6f6, // Wildsand
+    'medium': #fafafa, // Alabaster
+    'light': #ffffffm // White
+  ),
+  'feedback': (
+    'primary': #2f96b8, // Boston_Blue
+    'light': #dceef5, // Link_Blue
+    'success': #7fcf98, // De_York
+    'light-success': #c1e7cd, // Fringy_Flower
+    'warning': #ffc952, // Golden_Tainoi
+    'light-warning': #ffe8b4, // Peach
+    'error': #ef5b5b, // Burst_Sienna
+    'light-error': #ffd5d5 // Cosmos
+  )
 );
 
 $primary-color-key: 'primary' !default;
