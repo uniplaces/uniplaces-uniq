@@ -55,7 +55,8 @@ $palette2: (
   'primary': (
     'primary': #00adef, // Uniplaces_Blue,
     'medium': #009fdb, // Pacific_Blue
-    'dark': #0076a3 // Allports
+    'dark': #0076a3, // Allports
+    'contrast': #fff
   ),
   'secondary': (
     'primary': #66d5ff, // Malibu
@@ -96,6 +97,18 @@ $primary-color-key: 'primary' !default;
   $color: null;
   // Get the color spectrum
   $color-spectrum: map-get($palette, $name);
+  // Get the color variant
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}
+
+@function color2($name: 'primary', $variant: $primary-color-key) {
+  $color: null;
+  // Get the color spectrum
+  $color-spectrum: map-get($palette2, $name);
   // Get the color variant
   @if $color-spectrum {
     $color: map-get($color-spectrum, $variant);

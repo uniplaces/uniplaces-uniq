@@ -8,13 +8,13 @@
     font-weight: 300 !important;
 
     &--success {
-      color: color('success', 'text');
+      color: color('feedback', 'success');
     }
     &--error {
-      color: color('error', 'text');
+      color: color('feedback', 'error');
     }
     &--warning {
-      color: color('warning', 'text');
+      color: color('feedback', 'warning');
     }
   }
 }
@@ -24,26 +24,29 @@
   display: inline-block;
   height: 40px;
   padding: 0 ($gutter / 2);
-  border: 2px solid $input-border-color;
-  border-radius: 2px;
+  border: 2px solid color2('medium-gray', 'medium');
+  border-radius: 4px;
   color: color('gray', 'input');
   font-size: 17px;
 
-  &:hover,
   &:focus {
-    border: 2px solid $input-border-color-hover;
+    border: 2px solid color2('gray', 'light');
     outline: 0;
+  }
+
+  &:hover {
+    border: 2px solid color2('secondary');
   }
 
   &.validation {
     &--success {
-      border-color: color('success', 'primary');
+      border-color: color('feedback', 'success');
     }
     &--error {
-      border-color: color('error', 'primary');
+      border-color: color('feedback', 'error');
     }
     &--warning {
-      border-color: color('warning', 'primary');
+      border-color: color('feedback', 'warning');
     }
   }
 

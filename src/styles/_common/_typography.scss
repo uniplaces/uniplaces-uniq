@@ -75,11 +75,19 @@
     text-decoration: underline;
   }
   &:active {
-    color: color('primary', 'medium');
+    color: color2('primary', 'dark');
     text-decoration: none;
   }
-  &:focus {
-    color: color('primary', 'medium');
+
+  &.inline {
+    color: color2('gray', 'medium');
+
+    &:hover {
+      text-decoration: underline;;
+    }
+    &:active {
+      text-decoration: none;
+    }
   }
 }
 
@@ -97,4 +105,41 @@
 
 @mixin bold() {
   font-weight: 700;
+}
+
+// Typography Basics
+@mixin main-heading() {
+  font-size: 28px;
+  line-height: 31px;
+  font-weight: 500;
+}
+
+@mixin subpage-title() {
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 500px;
+}
+
+@mixin section-heading() {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+}
+
+@mixin strong() {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@mixin body-content() {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@mixin meta-content() {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
 }

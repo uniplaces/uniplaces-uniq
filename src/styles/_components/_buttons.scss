@@ -6,10 +6,10 @@
   line-height: 40px;
   padding: 0 20px;
   border-radius: 4px;
-  background-color: color('primary');
+  background-color: color2('medium-gray', 'medium');
   text-align: center;
   vertical-align: middle;
-  color: color('primary', 'contrast');
+  color: color2('gray', 'dark');
   @include button-text();
 
   will-change: background-color;
@@ -18,36 +18,25 @@
 
   &:hover {
     cursor: pointer;
-    background-color: color('primary', 'hover');
+    background-color: color('medium-gray');
   }
 
-  &--secondary {
-    background-color: color('primary', 'contrast');
-    color: color('primary', 'medium');
-    border: 2px solid color('primary', 'medium');
+  &--primary {
+    background-color: color2('primary');
+    color: color2('primary', 'contrast');
     line-height: 38px;
 
     &:hover {
-      background-color: color('primary');
-      color: color('primary', 'contrast');
-      border: 2px solid color('primary');
+      background-color: color2('primary', 'dark');
     }
-  }
-
-  &:active,
-  &--secondary:active {
-    background-color: color('primary', 'active');
-    border-color: color('primary', 'active');
-    color: color('primary', 'contrast');
   }
 
   &--disabled,
   &--disabled:hover {
     cursor: not-allowed;
     line-height: 38px;
-    background-color: #ccd2d4;// TODO: fix me
-    border: 2px solid color('gray', 'disabled_light');
-    color: #888; // TODO: fix me
+    background-color: color2('medium-gray', 'light');
+    color: color2('medium-gray');
   }
 
   .loader {
