@@ -1,0 +1,21 @@
+@mixin label() {
+  padding: 3px 8px;
+  border-radius: 12px;
+  background-color: color2('secondary', 'light');
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+
+  &--pending {
+    background-color: color2('feedback', 'light-warning');
+  }
+
+  &--warning {
+    background-color: color2('feedback', 'warning');
+  }
+
+  &--success {
+    background-color: color2('feedback', 'success');
+  }
+}
