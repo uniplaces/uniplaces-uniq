@@ -208,7 +208,9 @@ input[type="checkbox"] {
   & + label {
     position: relative;
     display: block;
-    padding-left: 12px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 40px;
 
     &:hover {
       cursor: pointer;
