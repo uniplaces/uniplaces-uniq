@@ -131,77 +131,7 @@ label {
 	}
 }
 
-input[type="checkbox"] {
-	display: none;
-
-	& + label {
-		display: inline-block;
-		cursor: pointer;
-		padding-left: $gutter * 3;
-		line-height: 32px;
-		color: $label-text-color;
-		white-space: nowrap;
-  	overflow: hidden;
-  	text-overflow: ellipsis;
-
-  	&:before {
-			content: '';
-			display: inline-block;
-			position: absolute;
-			left: 0;
-			right: 0;
-			margin-right: $gutter;
-			width: 29px;
-			height: 29px;
-			background-color: #fff;
-			border: 2px solid $input-border-color;
-			border-radius: 4px;
-		}
-	}
-
-	&:checked {
-
-		& + label {
-
-			&:before {
-				content: ' ';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin-right: 10px;
-				width: 32px;
-				height: 32px;
-				background: url('../images/checked-checkbox.svg') no-repeat 0 0;
-				border: none;
-			}
-		}
-	}
-
-	&:disabled {
-
-		& + label {
-			color: $input-border-color;
-			cursor: not-allowed;
-
-			&:before {
-				content: '';
-				display: inline-block;
-				position: absolute;
-				left: 0;
-				right: 0;
-				margin-right: 10px;
-				width: 32px;
-				height: 32px;
-				background-color: color('gray', 'disabled_input');
-				border: 2px solid $input-border-color;
-				border-radius: 4px;
-			}
-		}
-	}
-}
-
-@mixin radio-button() {
+@mixin checkbox() {
   position: relative;
   display: none;
 
@@ -214,6 +144,7 @@ input[type="checkbox"] {
 
     &:hover {
       cursor: pointer;
+      border-color: color('gray', 'light');
     }
   }
 
@@ -228,7 +159,7 @@ input[type="checkbox"] {
 
     background-color: color2('primary', 'contrast');
     border: 2px solid color2('medium-gray', 'medium');
-    border-radius: 50%;
+    border-radius: 4px;
   }
 
   &:checked + label {
@@ -247,12 +178,28 @@ input[type="checkbox"] {
       height: 15px;
       top: 5px;
       left: 5px;
-      border-radius: 50%;
-      background-color: color2('primary');
+      background-image: url("../images/checked-checkbox.svg");
+      background-repeat: no-repeat;;
+      background-position: 50% 50%;
+      background-size: 15px 15px;
     }
   }
 
   &:invalid + label {
     border-color: color2('feedback', 'error');
+  }
+}
+
+@mixin radio-button() {
+  @include checkbox();
+
+  & + label{
+    &:before {
+      border-radius: 50%;
+    }
+    &:after {
+      background-color: color2('primary');
+      border-radius: 50%;
+    }
   }
 }
