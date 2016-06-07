@@ -18,6 +18,9 @@
     top: 5px;
     left: 5px;
 
+    will-change: left;
+    transition: left .3s ease;
+
     background-color: color2('primary', 'contrast');
     border-radius: 4px;
   }
@@ -26,8 +29,7 @@
     background-color: color2('feedback', 'success');
 
     &:before {
-      left: auto;
-      right: 5px;
+      left: calc(100% - 5px);
     }
   }
 }
