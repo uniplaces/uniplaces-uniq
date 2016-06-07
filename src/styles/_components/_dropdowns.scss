@@ -107,6 +107,23 @@
 // 	@include dropdown();
 // }
 
+@mixin newdropdown-button() {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 0 16px;
+  line-height: 45px;
+  font-size: 16px;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: color2('medium-gray', 'medium');
+  border: 1px solid color2('medium-gray', 'medium');
+  border-radius: 4px;
+}
+
 @mixin newdropdown() {
   position: relative;
   display: none;
@@ -120,7 +137,7 @@
     display: block;
   }
 
-  &--item {
+  &__item {
     position: relative;
     display: block;
     width: 100%;
