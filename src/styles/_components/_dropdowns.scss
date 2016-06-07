@@ -106,3 +106,38 @@
 // .dropdown {
 // 	@include dropdown();
 // }
+
+@mixin newdropdown() {
+  position: relative;
+  display: none;
+  overflow: hidden;
+  background-color: color2('medium-gray', 'medium');
+  box-shadow: 0 2px 4px 0 rgba(97, 97, 97, 0.19);
+  border: 1px solid color2('medium-gray', 'medium');
+  border-radius: 4px;
+
+  &.active {
+    display: block;
+  }
+
+  &--item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 0 16px;
+    line-height: 45px;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background-color: color2('secondary', 'medium');
+    }
+    &:active {
+      background-color: color2('secondary', 'light');
+    }
+  }
+}

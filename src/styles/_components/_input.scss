@@ -29,13 +29,14 @@
   color: color('gray', 'input');
   font-size: 17px;
 
-  &:focus {
+  &:hover {
     border: 2px solid color2('gray', 'light');
     outline: 0;
   }
 
-  &:hover {
+  &:focus {
     border: 2px solid color2('secondary');
+    outline: 0;
   }
 
   &.validation {
