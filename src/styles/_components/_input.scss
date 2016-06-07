@@ -144,7 +144,10 @@ label {
 
     &:hover {
       cursor: pointer;
-      border-color: color('gray', 'light');
+
+      &:before {
+        border-color: color('gray', 'light');
+      }
     }
   }
 
@@ -197,9 +200,14 @@ label {
     &:before {
       border-radius: 50%;
     }
+    
     &:after {
       background-color: color2('primary');
       border-radius: 50%;
+    }
+
+    &:checked:after {
+      background-image: none;
     }
   }
 }

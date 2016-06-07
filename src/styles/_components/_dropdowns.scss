@@ -118,6 +118,15 @@
   background-color: color2('light-gray');
   border: 2px solid color2('medium-gray', 'medium');
   border-radius: 4px;
+
+  &.active {
+    &:before {
+      transform: rotate(-45deg);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
 }
 
 @mixin newdropdown() {
