@@ -119,8 +119,8 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background-color: color2('medium-gray', 'medium');
-  border: 1px solid color2('medium-gray', 'medium');
+  background-color: color2('light-gray', 'medium');
+  border: 2px solid color2('medium-gray', 'medium');
   border-radius: 4px;
 }
 
@@ -128,7 +128,7 @@
   position: relative;
   display: none;
   overflow: hidden;
-  background-color: color2('medium-gray', 'medium');
+  background-color: color2('light-gray', 'medium');
   box-shadow: 0 2px 4px 0 rgba(97, 97, 97, 0.19);
   border: 1px solid color2('medium-gray', 'medium');
   border-radius: 4px;
