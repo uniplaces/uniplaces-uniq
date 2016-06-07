@@ -284,27 +284,30 @@ input[type="checkbox"] {
 }
 
 @mixin radio-button() {
+  position: relative;
   display: none;
 
-  & + label {
-    position: relative;
+  & + label:before {
+    content: "";
+    position: absolute;
     display: block;
     width: 25px;
     height: 25px;
-    border-radius: 25%;
+    top: 0;
+    left: 0;
     border: 2px solid color2('medium-gray', 'medium');
-
-    &:hover {
-      border-color: color2('gray', 'light');
-    }
+    border-radius: 50%;
   }
 
   &:checked + label {
     position: relative;
-    border: 2px solid color2('secondary');
-    background-color: color2('secondary', 'light');
 
     &:before {
+      border: 2px solid color2('secondary');
+      background-color: color2('secondary', 'light');
+    }
+
+    &:after {
       content: "";
       position: absolute;
       display: block;

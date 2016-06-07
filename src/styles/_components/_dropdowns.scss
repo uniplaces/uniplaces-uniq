@@ -103,10 +103,6 @@
 	}
 }
 
-// .dropdown {
-// 	@include dropdown();
-// }
-
 @mixin newdropdown-button() {
   position: relative;
   display: block;
@@ -119,7 +115,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  background-color: color2('light-gray', 'medium');
+  background-color: color2('light-gray');
   border: 2px solid color2('medium-gray', 'medium');
   border-radius: 4px;
 }
