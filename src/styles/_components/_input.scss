@@ -205,6 +205,16 @@ input[type="checkbox"] {
   position: relative;
   display: none;
 
+  & + label {
+    position: relative;
+    display: block;
+    padding-left: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   & + label:before {
     content: "";
     position: absolute;
@@ -213,10 +223,10 @@ input[type="checkbox"] {
     height: 25px;
     top: 0;
     left: 0;
+
+    background-color: color2('primary', 'contrast');
     border: 2px solid color2('medium-gray', 'medium');
     border-radius: 50%;
-
-    background-color: color2('primary');
   }
 
   &:checked + label {
@@ -236,6 +246,7 @@ input[type="checkbox"] {
       top: 5px;
       left: 5px;
       border-radius: 50%;
+      background-color: color2('primary');
     }
   }
 
