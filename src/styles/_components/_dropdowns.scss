@@ -131,15 +131,21 @@
 
 @mixin newdropdown() {
   position: relative;
-  display: none;
+  display: block;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
   background-color: color2('light-gray', 'medium');
-  box-shadow: 0 2px 4px 0 rgba(97, 97, 97, 0.19);
   border: 1px solid color2('medium-gray', 'medium');
   border-radius: 4px;
 
+  will-change: opacity;
+  transition: opacity .3s ease;
+
   &.active {
-    display: block;
+    height: auto;
+    opacity: 1;
+    box-shadow: 0 2px 4px 0 rgba(97, 97, 97, 0.19);
   }
 
   &__item {
