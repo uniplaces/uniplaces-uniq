@@ -9,6 +9,10 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:before {
     content: "";
     position: absolute;;
@@ -29,7 +33,7 @@
     background-color: color2('feedback', 'success');
 
     &:before {
-      left: calc(100% - 5px);
+      left: calc(100% - 30px);
     }
   }
 }
