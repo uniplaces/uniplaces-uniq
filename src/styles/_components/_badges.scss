@@ -2,21 +2,14 @@
   position: relative;
 
   &:before {
-    content: attr(data-count);
+    content: "";
     position: absolute;
     display: block;
-    min-width: 24px;
-    min-height: 24px;
-    top: -($gutter / 2);
-    right: -($gutter / 2);
-    background-color: color('secondary', 'two');
+    width: 8px;
+    height: 8px;
+    top: 0;
+    right: 0;
+    background-color: color2('feedback', 'warning');
     border-radius: 50%;
-
-    line-height: 24px;
-    text-align: center;
-    vertical-align: center;
-
-    color: color('primary', 'contrast');
-    @include caption();
   }
 }
