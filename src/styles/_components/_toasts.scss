@@ -13,21 +13,10 @@
   @include justify-content-center();
 
   &__body {
-    background-color: #fff;
-    padding: $gutter * 2;
-    max-width: 400px;
-    margin: 0 auto;
-
-    @include flex();
-    @include flex-wrap();
-    @include align-items-center();
-    @include justify-content-center();
-
-    &__title {
-      width: 100%;
-      margin-bottom: $gutter;
-      @include title();
-    }
+    @include uni-card();
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.25);
 
     .button {
       margin: 0 ($gutter / 2);
@@ -38,6 +27,35 @@
 .modal,
 .toast {
   @include modal();
+
+  &--information {
+    &__body {
+      @include column(4);
+      @include flex();
+      @include flex-wrap();
+      @include align-items-center();
+      @include justify-content-center();
+      background-color: color2('secondary', 'light');
+      padding: 64px;
+      border-radius: 4px;
+
+      &__title {
+        width: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+      }
+      &__message {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+
+        p {
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+  }
 }
 
 .toast {

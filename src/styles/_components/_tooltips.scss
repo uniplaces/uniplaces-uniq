@@ -39,8 +39,9 @@
     left: 64px;
     z-index: 3;
 
-    @include title();
+    font-size: 14px;
     font-weight: 500;
+    color: color2('gray', 'dark');
   }
 
   &:after {
@@ -49,11 +50,15 @@
     top: 0;
     left: 40px;
     z-index: 2;
-    background-color: #fff;
-
     padding: 56px 24px 24px;
+    background-color: #fff;
     border: 2px solid $input-border-color;
-    @include body-1();
+    box-shadow: 0 2px 4px 0 rgba(97, 97, 97, 0.19);
+
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    color: color2('gray', 'dark');
   }
 
   &--left {
@@ -68,6 +73,7 @@
   }
 
   // alternate styles
+  /*
   &--alternate {
     &:before,
     &:after {
@@ -81,6 +87,7 @@
   & + input {
     display: inline-block;
   }
+  */
 }
 
 @mixin tooltip2() {

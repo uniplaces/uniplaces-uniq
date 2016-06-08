@@ -1,9 +1,10 @@
 @mixin alert() {
   position: relative;
-  padding: $gutter $gutter $gutter ($gutter * 4);
+  padding: 20px 20px 20px 64px;
   background-color: color('primary', 'light');
   background-image: url('../images/warning.png');
-  background-position: 16px 50%;
+  background-position: 20px 20px;
+  background-size: 18px 18px;
   background-repeat: no-repeat;
   margin: $gutter 0;
 
@@ -27,8 +28,15 @@
   }
 
   &__title {
-    @include subheading();
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 500;
+    color: color2('gray');
+  }
+
+  &__message {
+    font-size: 15px;
+    font-weight: 300;
+    color: color2('gray');
   }
 
   &__close {
