@@ -119,6 +119,10 @@
   border: 2px solid color2('medium-gray', 'medium');
   border-radius: 4px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &.active {
     &:before {
       transform: rotate(-45deg);
@@ -163,6 +167,7 @@
 
     &:hover {
       background-color: color2('secondary', 'medium');
+      cursor: pointer;
     }
     &:active {
       background-color: color2('secondary', 'light');

@@ -1,15 +1,24 @@
 @mixin tabs() {
   padding: ($gutter / 2);
-  border: 1px solid $input-border-color;
   border-radius: 2px;
+  border-bottom: 1px solid $input-border-color;
   @include flex();
   @include align-items-center();
+
+  &--border {
+    border: 1px solid $input-border-color;
+  }
 
   &--center {
     @include justify-content-center();
   }
   &--end {
     @include justify-content-end();
+  }
+
+  &--spaced {
+    margin-top: 40px;
+    margin-bottom: 48px;
   }
 
   &__item {

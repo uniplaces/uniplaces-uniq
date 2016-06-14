@@ -112,12 +112,32 @@
   font-size: 28px;
   line-height: 31px;
   font-weight: 500;
+
+  &--spaced {
+    margin-top: 48px;
+    margin-bottom: 40px;
+  }
 }
 
 @mixin subpage-title() {
   font-size: 26px;
   line-height: 29px;
   font-weight: 500px;
+
+  &--spaced {
+    margin-top: 48px;
+    margin-bottom: 40px;
+  }
+}
+
+@mixin subsection-title() {
+  font-size: 20px;
+  font-weight: 500;
+
+  &--spaced {
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
 }
 
 @mixin section-heading() {
@@ -142,4 +162,13 @@
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
+}
+
+@mixin form-label() {
+  font-size: 16px;
+
+  &--spaced {
+    margin-top: 16px;
+    margin-bottom: 14px;
+  }
 }

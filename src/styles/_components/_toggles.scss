@@ -7,7 +7,9 @@
 
   background-color: color2('medium-gray', 'medium');
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-size: 13px 13px;
+  background-image: url("../images/toggle-off-icon.svg");
+  background-position: calc(100% - 10px) 9px;
 
   &:hover {
     cursor: pointer;
@@ -31,6 +33,9 @@
 
   &--active {
     background-color: color2('feedback', 'success');
+    background-image: url("../images/toggle-on-icon.svg");
+    background-size: 16px 13px;
+    background-position: 10px 8px;
 
     &:before {
       left: calc(100% - 30px);
