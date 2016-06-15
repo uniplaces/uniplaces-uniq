@@ -1,6 +1,6 @@
 $cubic-bezier: cubic-bezier(0,0,0.21,1);
 $swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-$animation-duration: .5s;
+$animation-duration: .3s;
 
 @keyframes fadeIn {
   0% {
@@ -48,19 +48,17 @@ $animation-duration: .5s;
 }
 
 @mixin fade-in($duration: $animation-duration, $bezier: $cubic-bezier) {
+  @include backface-hack();
   opacity: 0;
   will-change: opacity;
   animation: fadeIn $duration $bezier forwards;
-
-  @include backface-hack();
 }
 
 @mixin fade-out($duration: $animation-duration, $bezier: $cubic-bezier) {
+  @include backface-hack();
   opacity: 1;
   will-change: opacity;
   animation: fadeOut $duration $bezier forwards;
-
-  @include backface-hack();
 }
 
 @mixin scale-in($duration: $animation-duration, $bezier: $cubic-bezier) {
@@ -68,13 +66,9 @@ $animation-duration: .5s;
   transform: scale3d(0,0,0);
   will-change: transform;
   animation: scaleIn $duration $bezier forwards;
-
-  @include backface-hack();
 }
 
 @mixin slide-in($duration: $animation-duration, $bezier: $cubic-bezier) {
   will-change: transform;
   animation: slideIn $duration $bezier forwards;
-
-  @include backface-hack();
 }

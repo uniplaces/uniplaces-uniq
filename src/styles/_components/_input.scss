@@ -7,11 +7,11 @@
     @include caption();
     font-weight: 300 !important;
 
-    &--success {
-      color: color('feedback', 'success');
-    }
     &--error {
       color: color('feedback', 'error');
+    }
+    &--success {
+      color: color('feedback', 'success');
     }
     &--warning {
       color: color('feedback', 'warning');
@@ -40,11 +40,11 @@
   }
 
   &.validation {
-    &--success {
-      border-color: color('feedback', 'success');
-    }
     &--error {
       border-color: color('feedback', 'error');
+    }
+    &--success {
+      border-color: color('feedback', 'success');
     }
     &--warning {
       border-color: color('feedback', 'warning');
@@ -105,7 +105,6 @@ label {
 	}
 
 	&--error {
-
 		input[type="text"] {
 			border-color: color('error', 'primary');
 
@@ -120,7 +119,6 @@ label {
 	}
 
 	&--success {
-
 		input[type="text"] {
 			border-color: color('success');
 
@@ -139,15 +137,13 @@ label {
     position: relative;
     display: block;
     height: 25px;
+    margin-top: 16px;
     line-height: 25px;
     padding-left: 40px;
+    font-weight: 300;
 
     &:hover {
       cursor: pointer;
-
-      &:before {
-        border-color: color('gray', 'light');
-      }
     }
   }
 
@@ -181,14 +177,14 @@ label {
       height: 15px;
       top: 5px;
       left: 5px;
-      background-image: url("../images/checked-checkbox.svg");
+      background-image: url("../images/check-icon.svg");
       background-repeat: no-repeat;;
       background-position: 50% 50%;
       background-size: 15px 15px;
     }
   }
 
-  &:invalid + label {
+  &[invalid] + label:before {
     border-color: color2('feedback', 'error');
   }
 }
@@ -197,6 +193,8 @@ label {
   @include checkbox();
 
   & + label {
+    margin-top: 16px;
+
     &:before {
       border-radius: 50%;
     }
