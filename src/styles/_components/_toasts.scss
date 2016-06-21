@@ -24,8 +24,8 @@
   }
 }
 
-.modal,
-.toast {
+.uni-modal,
+.uni-toast {
   @include modal();
 
   &--information {
