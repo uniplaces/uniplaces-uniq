@@ -100,3 +100,46 @@
     padding-top: 24px !important;
   }
 }
+
+@mixin new-tooltip() {
+  &,
+  &__icon {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+  }
+
+  &__icon + &__content {
+    display: none;
+  }
+
+  &__icon:hover + &__content {
+    display: table;
+  }
+
+
+  &__icon {
+    background-color: color2('gray', 'medium');
+    border-radius: 50%;
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+
+  &__content {
+    position: absolute;
+    width: 216px;
+    max-width: 400px;
+    top: -2px;
+    left: 24px;
+    padding: 24px 20px;
+    border: 2px solid color2('medium-gray', 'medium');
+    background-color: #FFFFFF;
+    color: color2('gray', 'dark');
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+}

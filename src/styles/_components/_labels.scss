@@ -1,10 +1,10 @@
 @mixin label() {
-  padding: 3px 8px;
+  padding: 4px 8px 3px 8px;
   border-radius: 12px;
   background-color: color2('secondary', 'light');
   text-transform: uppercase;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
 
   &--pending {
