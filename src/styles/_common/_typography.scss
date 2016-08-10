@@ -58,8 +58,7 @@
 }
 
 @mixin button-text() {
-  font-size: 14px;
-  //text-transform: uppercase;
+  font-size: 15px;
 }
 
 @mixin link() {
@@ -114,8 +113,8 @@
   font-weight: 500;
 
   &--spaced {
-    margin-top: 48px;
-    margin-bottom: 40px;
+    margin-top: 44px;
+    margin-bottom: 36px;
   }
 }
 
@@ -128,6 +127,10 @@
     margin-top: 48px;
     margin-bottom: 40px;
   }
+
+  &--alt {
+    margin-bottom: 0 !important;
+  }
 }
 
 @mixin subsection-title() {
@@ -135,8 +138,12 @@
   font-weight: 500;
 
   &--spaced {
-    margin-top: 64px;
+    margin-top: 56px;
     margin-bottom: 16px;
+  }
+
+  &--alt {
+    margin-bottom: 0 !important;
   }
 }
 

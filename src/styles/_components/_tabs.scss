@@ -1,5 +1,5 @@
 @mixin tabs() {
-  padding: ($gutter / 2);
+  padding: 0 8px 6px 8px;
   border-radius: 2px;
   border-bottom: 1px solid $input-border-color;
   @include flex();
@@ -29,6 +29,7 @@
     @include flex();
     @include align-items-center();
     @include button-text();
+    color: color2('gray');
     font-weight: 500;
 
     &:hover,
@@ -49,6 +50,10 @@
         left: 0;
         background-color: color('primary');
       }
+    }
+
+    a {
+      color: color2('gray');
     }
   }
 }
