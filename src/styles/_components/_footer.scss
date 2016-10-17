@@ -1,0 +1,26 @@
+@mixin footer() {
+    @include flex();
+    @include align-items-center();
+    @include space-between();
+    @include backface-hack();
+    width: 100%;
+    height: 90px;
+    padding: 22px;
+    border-top: 1px solid color('borders');
+    background-color: color('background');
+    
+    &--overhangs {
+        box-shadow: 0 -2px 5px 0 rgba(210, 210, 210, 0.3);
+    }
+    &__wrapper {
+        @include flex();
+        @include space-between();
+        @include space-between();
+        @include limited-full-width();
+        height: 100%;
+    }
+    @include breakpoint(small) {
+        height: 58px;
+        padding: 0;
+    }
+}

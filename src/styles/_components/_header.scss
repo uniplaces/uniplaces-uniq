@@ -1,0 +1,184 @@
+$header-height: 60px;
+
+@mixin header() {
+    width: 100%;
+    height: $header-height;
+    border-bottom: 1px solid color('borders');
+    background-color: color('background');
+    @include backface-hack();
+    
+    &__wrapper {
+        @include flex();
+        @include align-items-center();
+        @include space-between();
+        position: relative;
+        height: $header-height;
+        
+        @include breakpoint(small) {
+            padding: 14px;
+        }
+        &__logo {
+            width: 140px;
+            height: 33px;
+            background-image: url("https://d1mivx2mj8sr2d.cloudfront.net/dist/54bc2e9e2ddefe611a1496fbf0cf339ed95f5934/img/uniplaces_logo.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &__breadcrumb {
+            margin-right: auto;
+            margin-left: 80px;
+            
+            @include breakpoint(small) {
+                display: none;
+            }
+            &__step,
+            &__description {
+                display: inline-table;
+                font-size: em(17px);
+            }
+            &__step {
+                font-weight: bold;
+            }
+        }
+        &__mobile-buttons {
+            display: none;
+            svg {
+                fill: color('primary');
+            }
+            @include breakpoint(small) {
+                display: block;
+            }
+        }
+        &__mobile-buttons--active + &__buttons {
+            @include flex();
+        }
+        &__buttons {
+            @include flex();
+            @include align-items-center();
+            position: relative;
+            height: 100%;
+            
+            @include breakpoint(small) {
+                display: none;
+                @include flex-column();
+                @include align-items-top();
+                @include justify-content-start();
+                position: fixed;
+                width: 100%;
+                top: $header-height;
+                left: 0;
+                background-color: color('background');
+            }
+            &__button {
+                @include button();
+                position: relative;
+                height: 100%;
+                font-size: em(16px);
+                text-transform: uppercase;
+                color: color('text', 'title');
+
+                @include breakpoint(small) {
+                    width: 100%;
+                    max-width: 100%;
+                    height: 55px !important;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+@mixin dropdown() {
+    position: relative;
+    height: 100%;
+    @include breakpoint(small) {
+        width: 100%;
+    }
+    &__wrapper {
+        position: absolute;
+        display: none;
+        min-width: 225px;
+        right: 0;
+        top: 59px;
+        z-index: 3;
+        box-shadow: 0 1px 2px 0 rgba(176, 176, 176, 0.21);
+        border: 1px solid color('borders');
+        @include breakpoint(small) {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            padding-left: 25px;
+            background-color: color('background');
+            border-top: 0;
+            overflow: hidden;
+            overflow-y: scroll;
+        }
+    }
+    &,
+    &-button {
+        position: relative;
+        height: 100%;
+        font-size: em(16px);
+        text-transform: uppercase;
+        color: color('text', 'title');
+    }
+    &-button {
+        padding-right: 40px;
+        @include breakpoint(small) {
+            width: 100%;
+            border: 1px solid color('borders');
+        }
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 7px;
+            height: 1px;
+            top: 50%;
+            background-color: color('text', 'title');
+        }
+        &:before {
+            right: 29px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            right: 24px;
+            transform: rotate(-45deg);
+        }
+        &--active {
+            background-color: color('background', 'modal');
+            border: 1px solid color('borders');
+            &:before {
+                transform: rotate(-45deg);
+            }
+            &:after {
+                transform: rotate(45deg);
+            }
+        }
+        @include breakpoint(small) {
+            background-color: transparent;
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__item {
+        height: 55px;
+        padding: 20px;
+        font-size: em(15px);
+        text-align: left;
+        background-color: color('background', 'modal');
+        &:hover {
+            cursor: pointer;
+            background-color: color('input', 'border');
+        }
+        @include breakpoint(small) {
+            background-color: color('background');
+            padding-left: 45px;
+        }
+    }
+    &-button--active + &__wrapper {
+        display: block;
+    }
+}

@@ -1,63 +1,53 @@
 // VARIABLES
-$baseline: 8px;
-$gutter: ($baseline * 2);
-$max-columns: 12;
-$input-border: #{2px solid};
-$gutter2: 10px;
 
+@mixin limited-full-width() {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
 // hack - improve scrolling performance on mobile android browsers and mobile safari
 @mixin backface-hack() {
 	backface-visibility: hidden;
 }
-
 @mixin flex() {
 	display: flex;
 }
-
 @mixin order($val) {
 	order: $val;
 }
-
 @mixin flex-grow($val) {
 	flex-grow: $val;
 }
-
 @mixin flex-column() {
 	flex-direction: column;
 }
-
+@mixin flex-row() {
+	flex-direction: row;
+}
 @mixin justify-content-center() {
 	justify-content: center;
 }
-
 @mixin space-between() {
 	justify-content: space-between;
 }
-
 @mixin justify-content-start() {
 	justify-content: flex-start;
 }
-
 @mixin justify-content-end() {
 	justify-content: flex-end;
 }
-
 @mixin align-items-center() {
 	align-items: center;
 }
-
 @mixin align-items-top() {
 	align-items: flex-start;
 }
-
 @mixin align-items-baseline() {
 	align-items: baseline;
 }
-
 @mixin align-items-bottom() {
 	align-items: flex-end;
 }
-
 @mixin flex-wrap() {
 	flex-wrap: wrap;
 }

@@ -1,46 +1,41 @@
 @mixin button() {
-  position: relative;
-  display: inline-block;;
-  min-width: 80px;
-  height: 36px;
-  line-height: 36px;
-  padding: 0 20px;
-  border-radius: 4px;
-  background-color: color2('medium-gray', 'medium');
-  text-align: center;
-  vertical-align: middle;
-  color: color2('gray', 'dark');
-  @include button-text();
-
-  will-change: background-color;
-  transition: background-color $animation-duration $swiftOut;
-  @include backface-hack();
-
-  &:hover {
-    cursor: pointer;
-    background-color: color('medium-gray');
-  }
-
-  &--primary {
-    background-color: color2('primary');
-    color: color2('primary', 'contrast');
-    line-height: 38px;
-
-    &:hover {
-      background-color: color2('primary', 'dark');
+    @include button-text();
+    max-width: 180px;
+    min-width: 130px;
+    height: 44px;
+    padding: 10px 22px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    text-align: left;
+    color: color('primary');
+    will-change: background-color;
+    
+    @include breakpoint(small) {
+        text-align: center;
     }
-  }
-
-  &--disabled,
-  &--disabled:hover {
-    cursor: not-allowed;
-    line-height: 38px;
-    background-color: color2('medium-gray', 'light');
-    color: color2('medium-gray');
-  }
-
-  .loader {
-    float: right;
-    margin-top: $gutter / 2;
-  }
+    &:hover {
+        cursor: pointer;
+    }
+    &--primary {
+        text-align: center;
+        background-color: color('primary');
+        color: color('text', 'highlight');
+    }
+    &--secondary {
+        text-align: center;
+        border: 2px solid color('primary');
+    }
+    &--disabled,
+    &:disabled {
+        text-align: center;
+        background-color: color('primary', 'disabled');
+        color: color('text', 'highlight');
+        
+        @include breakpoint(small) {
+            background-color: transparent;
+            color: color('text', 'disabled');
+        }
+    }
 }

@@ -1,93 +1,49 @@
 // Color Pallette
 $palette: (
   'primary': (
-    'primary': #00adef,// Uniplaces_Blue
-    'dark': #003b52,// Prussian_blue
-    'medium': #0076a3,// Allports
-    'light': #C8F0FF,// Tropical_Blue
-    'contrast': #fff,// Contrast_White
-    'hover': #17BFFF,// Pacific_Blue
-    'active': #0091C8
+    'primary': #148aff,
+    'light': #3b9eff,
+    'translucent': rgba(157, 206, 255, 0.25),
+    'divider': #9dceff
+  ),
+  'buttons': (
+    'primary': #fff,
+    'hover': #ecf5ff
   ),
   'text': (
-    'primary': rgba(0,0,0,0.87),
-    'secondary': rgba(0,0,0,0.54),
-    'disabled': rgba(0,0,0,0.38),
-    'dialog': #4e4e4e
+    'primary': #575757,
+    'subheading': #434343,
+    'title': #303030,
+    'subtitle': #888,
+    'body': #575757,
+    'highlight': #fff,
+    'input': #888,
+    'modal': #6b6b6b
   ),
-  'error': (
-    'primary': #ff7473,// Burnt_Sienna
-    'light': #ffd5d5,// Cosmos
-    'contrast': #1d2022// Shark
+  'borders': (
+    'primary': #e0e0e0,
+    'light': #f0f0f0,
+    'gallery-item': #bcbcbc
   ),
-  'success': (
-    'primary': #7fcf98,// The_York
-    'light': #c1e7cd,// Fringy_Flower
-    'contrast': #1d2022// Shark
+  'background': (
+    'primary': #fff,
+    'secondary': rgba(250, 250, 250, 0.55),
+    'light': #f0f0f0,
+    'modal': #fafafa,
+    'gallery-item': #f0f0f0,
+    'translucent': rgba(0,0,0,0.35)
   ),
-  'warning': (
-    'primary': #ffc952,// Golden_Tainoi
-    'light': #ffe8b4,// Peach
-    'contrast': #1d2022// Shark
-  ),
-  "neutral": (
-    'primary': #2F96B8,// Boston_Blue
-    'light': #dcf0f6// Link_Water
-  ),
-  'gray': (
-    'primary': #4e4e4e,
-    'dark': #1d2022,// Shark
-    'input': #535d61,// Rolling_Stone
-    'disabled': #8c999d,// Regent_Gray
-    'disabled_light': #ccd2d4,// Iron_1
-    'border': #ccd2d4,// Iron_1
-    'disabled_input': #f6f7f8,
-    'light': #fafafa
-  ),
-  'secondary': (
-    'one': #ffc952,// Golden_Tainoi
-    'two': #fa7c71,// Salmon
-    'three': #918fef// Portage
-  ),
-);
-
-$palette2: (
-  'primary': (
-    'primary': #00adef, // Uniplaces_Blue,
-    'medium': #009fdb, // Pacific_Blue
-    'dark': #0076a3, // Allports
-    'contrast': #fff
-  ),
-  'secondary': (
-    'primary': #66d5ff, // Malibu
-    'medium': #c8f0ff, // Onahau
-    'light': #dbf5ff // Pattens_Blue
-  ),
-  'gray': (
-    'primary': #1d2022, // Shark
-    'dark': #434343, // Tundora
-    'medium': #616161, // Dove_Gray
-    'light': #888888, // _Gray
-  ),
-  'medium-gray': (
-    'primary': #cccccc, // Silver
-    'medium': #e0e0e0, // ALto
-    'light': #eaeaea, // Gallery
-  ),
-  'light-gray': (
-    'primary': #f6f6f6, // Wildsand
-    'medium': #fafafa, // Alabaster
-    'light': #ffffff // _White
+  'input': (
+    'primary': #3b9eff,
+    'disabled': #888,
+    'border': #e0e0e0,
+    'focus': #ecf5ff,
+    'mobile-border': #d6d6d6
   ),
   'feedback': (
-    'primary': #2f96b8, // Boston_Blue
-    'light': #dceef5, // Link_Blue
-    'success': #7fcf98, // De_York
-    'light-success': #c1e7cd, // Fringy_Flower
-    'warning': #ffc952, // Golden_Tainoi
-    'light-warning': #ffe8b4, // Peach
-    'error': #ef5b5b, // Burst_Sienna
-    'light-error': #ffd5d5 // Cosmos
+    'success': #3ad778,
+    'error': #ff3a2d,
+    'info': #148aff
   )
 );
 
@@ -104,23 +60,3 @@ $primary-color-key: 'primary' !default;
 
   @return $color;
 }
-
-@function color2($name: 'primary', $variant: $primary-color-key) {
-  $color: null;
-  // Get the color spectrum
-  $color-spectrum: map-get($palette2, $name);
-  // Get the color variant
-  @if $color-spectrum {
-    $color: map-get($color-spectrum, $variant);
-  }
-
-  @return $color;
-}
-
-// UniQ
-$main-background-color: color('gray', 'light');
-
-$label-text-color: color('gray', 'input');
-$input-border-color: #e0e0e0;//color('gray', 'border'); - to be fixed
-$input-border-color-hover: color('primary', 'light');
-$button-hover-background-color: color('primary', 'light');

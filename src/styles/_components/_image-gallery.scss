@@ -1,0 +1,171 @@
+@mixin image-gallery() {
+    @include limited-full-width();
+    width: 100%;
+    
+    @include breakpoint(small) {
+        padding: 0 14px;
+    }
+    &__title {
+        @include title();
+        margin-bottom: 16px;
+    }
+    &__wrapper {
+        @include flex();
+        @include flex-wrap();
+        @include flex-column;
+        @include align-items-center();
+        @include justify-content-center();
+        height: 334px;
+        overflow: hidden;
+        overflow-y: scroll;
+        margin-bottom: 46px;
+        border: 2px dashed color('borders');
+        border-bottom: 2px solid color('borders');
+        text-align: center;
+        
+        @include breakpoint(small) {
+            height: auto;
+            min-height: 195px;
+            overflow: auto;
+        }
+        &__button {
+            @include button();
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 20px;
+        }
+        &__message {
+            width: 100%;
+            font-size: em(20px);
+        }
+        &__image {
+            width: calc(25% - 20px);
+            height: 160px;
+            margin: 20px 10px 0px 10px;
+            border-bottom: 2px solid color('borders');
+            border-radius: 2px;
+        }
+        &__item,
+        &__add-more {
+            position: relative;
+            width: calc(25% - 20px);
+            min-height: 160px;
+            margin: 10px;
+            overflow: hidden;
+            
+            &:hover {
+                cursor: pointer;
+            }
+            @include breakpoint(small) {
+                width: calc(100% - 20px);
+            }
+        }
+        &__item {
+            border-radius: 2px;
+            &__image {
+                position: relative;
+                height: 160px;
+                margin-bottom: 14px;
+                background-position: center middle;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+            }
+            &__caption {
+                font-size: em(20px);
+                color: color('text', 'primary');
+                text-align: left;
+            }
+            &__remove,
+            &__select,
+            &__main {
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 35px;
+                height: 35px;
+                top: 15px;
+                right: 15px;
+                border-radius: 5px;
+                background-color: color('background', 'secondary');
+                z-index: 2;
+            }
+            &__select,
+            &__main {
+                width: 27px;
+                height: 27px;
+                right: auto;
+                left: 15px;
+                border: 1px solid color('borders', 'gallery-item');
+                border-radius: 50%;
+                background-color: transparent;               
+                font-size: em(18px);
+                color: color('text', 'highlight');
+
+                &--selected {
+                    background-color: color('feedback', 'success');
+                    border: none;
+                }
+            }
+            &__main {
+                width: auto;
+                height: 34px;
+                line-height: 34px;
+                left: 0;
+                padding: 0px 10px 0px 34px;;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                background-color: rgba(87, 87, 87, 0.49);
+                border: none;
+                
+                &--selected {
+                    background-color: color('feedback', 'info');
+                }
+            }
+        }
+        &__add-more {
+            @include flex();
+            @include flex-wrap();
+            @include flex-column();
+            @include justify-content-center();
+            @include align-items-center();
+            border-radius: 6px;
+            border: 2px dashed color('borders', 'gallery-item');
+            background-color: color('background', 'gallery-item');
+            text-align: center;
+            color: color('text', 'subtitle');
+            
+            .plus {
+                @include heading();
+                display: block;
+                width: 100%;
+                margin-bottom: 8px;
+                color: color('text', 'subtitle');
+            }
+        }
+    }
+    &--has-images &__wrapper,
+    &--select-images &__wrapper {
+        @include flex-row();
+        @include align-items-top();
+        @include justify-content-start();
+        padding: 10px;
+        background-color: color('background', 'modal');
+    }
+    &--select-images &__wrapper {
+        &__item {
+            &__image:before {
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: color('background', 'translucent');
+            }
+        }
+    }
+}

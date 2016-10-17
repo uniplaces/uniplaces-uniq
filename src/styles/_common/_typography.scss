@@ -1,181 +1,42 @@
-@mixin display-4() {
-  font-size: 112px;
-  margin-bottom: $gutter;
-}
+$base-font-size: 18; // Default font-size
 
-@mixin display-3() {
-  font-size: 56px;
-  margin-bottom: $gutter;
-}
+@function em($pixels, $context: $base-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
 
-@mixin display-2() {
-  font-size: 45px;
-  margin-bottom: 48px;
+  @return $pixels / $context * 1em;
 }
-
-@mixin display-1() {
-  font-size: 34px;
-  margin-bottom: 40px;
+@mixin heading() {
+    font-size: em(34px);
+    color: color('text','title');
 }
-
-@mixin headline() {
-  font-size: 24px;
-  margin-bottom: 32px;
-}
-
-@mixin title() {
-  font-size: 20px;
-  margin-bottom: $gutter;
-}
-
 @mixin subheading() {
-  font-size: 15px;
-
-  @include breakpoint(medium) {
-    font-size: 15px;
-  }
+    font-size: em(21px);
+    color: color('text','subheading');
 }
-
-@mixin body-2() {
-  font-size: 13px;
-
-  @include breakpoint(medium) {
-    font-size: 14px;
-  }
+@mixin title() {
+    font-size: em(24px);
+    color: color('text','title');
 }
-
-@mixin body-1() {
-  font-size: 13px;
-  line-height: 22px;
-
-  @include breakpoint(medium) {
-    font-size: 14px;
-  }
+@mixin subtitle() {
+    font-size: em(20px);
+    line-height: 22px;
+    color: color('text','subtitle');
 }
-
-@mixin caption() {
-  font-size: 12px;
+@mixin body() {
+    font-size: em(18px);
+    line-height: 21px; 
+    color: color('text','body');
 }
-
 @mixin button-text() {
-  font-size: 15px;
+    font-size: em(20px);
+    text-align: center;
 }
-
-@mixin link() {
-  font-size: 14px;
-  color: color('primary');
-  text-decoration: none;
-  will-change: color;
-  transition: color $animation-duration $cubic-bezier;
-
-  @include backface-hack();
-
-  &:hover {
-    text-decoration: underline;
-  }
-  &:active {
-    color: color2('primary', 'dark');
+@mixin anchor() {
+    color: color('primary');
     text-decoration: none;
-  }
-
-  &.inline {
-    color: color2('gray', 'medium');
-
-    &:hover {
-      text-decoration: underline;;
-    }
-    &:active {
-      text-decoration: none;
-    }
-  }
-}
-
-@mixin light() {
-  font-weight: 100;
-}
-
-@mixin normal() {
-  font-weight: 300;
-}
-
-@mixin medium() {
-  font-weight: 500;
-}
-
-@mixin bold() {
-  font-weight: 700;
-}
-
-// Typography Basics
-@mixin main-heading() {
-  font-size: 28px;
-  line-height: 31px;
-  font-weight: 500;
-
-  &--spaced {
-    margin-top: 44px;
-    margin-bottom: 36px;
-  }
-}
-
-@mixin subpage-title() {
-  font-size: 26px;
-  line-height: 29px;
-  font-weight: 500px;
-
-  &--spaced {
-    margin-top: 48px;
-    margin-bottom: 40px;
-  }
-
-  &--alt {
-    margin-bottom: 0 !important;
-  }
-}
-
-@mixin subsection-title() {
-  font-size: 20px;
-  font-weight: 500;
-
-  &--spaced {
-    margin-top: 56px;
-    margin-bottom: 16px;
-  }
-
-  &--alt {
-    margin-bottom: 0 !important;
-  }
-}
-
-@mixin section-heading() {
-  font-size: 20px;
-  line-height: 23px;
-  font-weight: 500;
-}
-
-@mixin strong() {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-@mixin body-content() {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-@mixin meta-content() {
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 500;
-}
-
-@mixin form-label() {
-  font-size: 16px;
-
-  &--spaced {
-    margin-top: 16px;
-    margin-bottom: 14px;
-  }
 }
