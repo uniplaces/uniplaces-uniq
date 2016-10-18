@@ -12,6 +12,7 @@
     &--overhangs {
         box-shadow: 0 -2px 5px 0 rgba(210, 210, 210, 0.3);
     }
+    
     &__wrapper {
         @include flex();
         @include space-between();
@@ -19,6 +20,7 @@
         @include limited-full-width();
         height: 100%;
     }
+
     @include breakpoint(small) {
         height: 58px;
         padding: 0;

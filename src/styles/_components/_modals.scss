@@ -40,10 +40,12 @@
             height: 160px;
             margin: 24px auto;
         }
+
         &__title {
             @include subheading();
             margin-bottom: 8px;
         }
+        
         &__message {
             @include subtitle();
             color: color('text', 'modal');

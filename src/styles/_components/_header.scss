@@ -17,6 +17,7 @@ $header-height: 60px;
         @include breakpoint(small) {
             padding: 14px;
         }
+
         &__logo {
             width: 140px;
             height: 33px;
@@ -24,6 +25,7 @@ $header-height: 60px;
             background-repeat: no-repeat;
             background-size: contain;
         }
+
         &__breadcrumb {
             margin-right: auto;
             margin-left: 80px;
@@ -31,27 +33,34 @@ $header-height: 60px;
             @include breakpoint(small) {
                 display: none;
             }
+
             &__step,
             &__description {
                 display: inline-table;
                 font-size: em(17px);
             }
+
             &__step {
                 font-weight: bold;
             }
         }
+
         &__mobile-buttons {
             display: none;
+
             svg {
                 fill: color('primary');
             }
+
             @include breakpoint(small) {
                 display: block;
             }
         }
+
         &__mobile-buttons--active + &__buttons {
             @include flex();
         }
+
         &__buttons {
             @include flex();
             @include align-items-center();
@@ -69,6 +78,7 @@ $header-height: 60px;
                 left: 0;
                 background-color: color('background');
             }
+
             &__button {
                 @include button();
                 position: relative;
@@ -87,12 +97,15 @@ $header-height: 60px;
         }
     }
 }
+
 @mixin dropdown() {
     position: relative;
     height: 100%;
+
     @include breakpoint(small) {
         width: 100%;
     }
+
     &__wrapper {
         position: absolute;
         display: none;
@@ -102,6 +115,7 @@ $header-height: 60px;
         z-index: 3;
         box-shadow: 0 1px 2px 0 rgba(176, 176, 176, 0.21);
         border: 1px solid color('borders');
+
         @include breakpoint(small) {
             display: block;
             width: 100%;
@@ -113,6 +127,7 @@ $header-height: 60px;
             overflow-y: scroll;
         }
     }
+
     &,
     &-button {
         position: relative;
@@ -121,12 +136,15 @@ $header-height: 60px;
         text-transform: uppercase;
         color: color('text', 'title');
     }
+
     &-button {
         padding-right: 40px;
+
         @include breakpoint(small) {
             width: 100%;
             border: 1px solid color('borders');
         }
+
         &:before,
         &:after {
             content: "";
@@ -137,47 +155,58 @@ $header-height: 60px;
             top: 50%;
             background-color: color('text', 'title');
         }
+
         &:before {
             right: 29px;
             transform: rotate(45deg);
         }
+
         &:after {
             right: 24px;
             transform: rotate(-45deg);
         }
+
         &--active {
             background-color: color('background', 'modal');
             border: 1px solid color('borders');
+
             &:before {
                 transform: rotate(-45deg);
             }
+
             &:after {
                 transform: rotate(45deg);
             }
         }
+
         @include breakpoint(small) {
             background-color: transparent;
+
             &:before,
             &:after {
                 display: none;
             }
         }
     }
+
     &__item {
         height: 55px;
         padding: 20px;
         font-size: em(15px);
         text-align: left;
         background-color: color('background', 'modal');
+
         &:hover {
             cursor: pointer;
             background-color: color('input', 'border');
         }
+
         @include breakpoint(small) {
             background-color: color('background');
             padding-left: 45px;
         }
     }
+    
     &-button--active + &__wrapper {
         display: block;
     }

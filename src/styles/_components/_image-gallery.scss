@@ -5,10 +5,12 @@
     @include breakpoint(small) {
         padding: 0 14px;
     }
+
     &__title {
         @include title();
         margin-bottom: 16px;
     }
+
     &__wrapper {
         @include flex();
         @include flex-wrap();
@@ -28,16 +30,19 @@
             min-height: 195px;
             overflow: auto;
         }
+
         &__button {
             @include button();
             margin-right: auto;
             margin-left: auto;
             margin-bottom: 20px;
         }
+
         &__message {
             width: 100%;
             font-size: em(20px);
         }
+
         &__image {
             width: calc(25% - 20px);
             height: 160px;
@@ -45,6 +50,7 @@
             border-bottom: 2px solid color('borders');
             border-radius: 2px;
         }
+
         &__item,
         &__add-more {
             position: relative;
@@ -56,12 +62,15 @@
             &:hover {
                 cursor: pointer;
             }
+
             @include breakpoint(small) {
                 width: calc(100% - 20px);
             }
         }
+
         &__item {
             border-radius: 2px;
+
             &__image {
                 position: relative;
                 height: 160px;
@@ -71,11 +80,13 @@
                 background-size: cover;
                 z-index: 1;
             }
+
             &__caption {
                 font-size: em(20px);
                 color: color('text', 'primary');
                 text-align: left;
             }
+
             &__remove,
             &__select,
             &__main {
@@ -90,6 +101,7 @@
                 background-color: color('background', 'secondary');
                 z-index: 2;
             }
+
             &__select,
             &__main {
                 width: 27px;
@@ -107,6 +119,7 @@
                     border: none;
                 }
             }
+
             &__main {
                 width: auto;
                 height: 34px;
@@ -125,6 +138,7 @@
                 }
             }
         }
+
         &__add-more {
             @include flex();
             @include flex-wrap();
@@ -146,6 +160,7 @@
             }
         }
     }
+
     &--has-images &__wrapper,
     &--select-images &__wrapper {
         @include flex-row();
@@ -154,6 +169,7 @@
         padding: 10px;
         background-color: color('background', 'modal');
     }
+    
     &--select-images &__wrapper {
         &__item {
             &__image:before {

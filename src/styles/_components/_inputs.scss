@@ -32,6 +32,7 @@ $checkbox-size: 24px;
         }
     }
 }
+
 @mixin input() {
     height: $input-height;
     border: 0;
@@ -44,10 +45,12 @@ $checkbox-size: 24px;
         border: 1px solid color('primary', 'light');
         outline: none;
     }
+
     &:error,
     &--error {
         border: 1px solid color('feedback', 'error');
     }
+
     &--range {
         position: relative;
         width: calc(100% - 134px);
@@ -56,11 +59,13 @@ $checkbox-size: 24px;
         border: 1px solid color('borders');
         border-right: 0;
     }
+
     &--transparent {
         background-color: transparent;
         border: 0;
     }
 }
+
 @mixin input-button(){
     @include flex();
     @include align-items-center();
@@ -75,6 +80,7 @@ $checkbox-size: 24px;
     &:first-of-type {
         border-right: 0;
     }
+
     &:last-of-type {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
@@ -83,13 +89,16 @@ $checkbox-size: 24px;
     svg {
         fill: color('primary');
     }
+
     &:hover {
         background-color: color('buttons', 'hover');
         cursor: pointer;
     }
+
     &:active {
         background-color: color('background', 'light');
     }
+
     &:disabled,
     &--disabled {
         svg {
@@ -97,6 +106,7 @@ $checkbox-size: 24px;
         }
     }
 }
+
 @mixin textarea() {
     @include input();
     max-width: 410px;
@@ -112,6 +122,7 @@ $checkbox-size: 24px;
         text-align: right;
     }
 }
+
 // BASIC CHECKBOX STYLES
 @mixin checkbox() {
     width: $checkbox-size;
@@ -124,6 +135,7 @@ $checkbox-size: 24px;
         display: none;
         fill: color('primary');
     }
+
     & + label {
         height: $checkbox-size;
         line-height: $checkbox-size;
@@ -131,6 +143,7 @@ $checkbox-size: 24px;
         color: color('text', 'body');
         will-change: color;
     }
+
     &:focus,
     &:checked,
     &--checked {
@@ -140,14 +153,17 @@ $checkbox-size: 24px;
         svg {
             display: block;
         }
+
         & + label {
             color: color('primary');
         }
+
         @include breakpoint(small) {
             background-color: color('background');
         }
     }
 }
+
 @mixin radio-button() {
     @include checkbox();
     position: relative;
@@ -166,6 +182,7 @@ $checkbox-size: 24px;
         border-radius: 50%;
     }
 }
+
 @mixin mobile-number() {
     @include flex();
     @include align-items-center();
@@ -187,6 +204,7 @@ $checkbox-size: 24px;
         &:hover {
             cursor: pointer;
         }
+
         &:before,
         &:after {
             content: "";
@@ -197,25 +215,31 @@ $checkbox-size: 24px;
             top: 50%;
             background-color: color('text', 'title');
         }
+
         &:before {
             right: 20px;
             transform: rotate(45deg);
         }
+
         &:after {
             right: 15px;
             transform: rotate(-45deg);
         }
+
         &--active {
             &:before {
                 transform: rotate(-45deg);
             }
+
             &:after {
                 transform: rotate(45deg);
             }
         }
+
         &--active &__dropdown {
             display: block;
         }
+
         img {
             display: inline-block;
             width: 20px;
@@ -224,6 +248,7 @@ $checkbox-size: 24px;
             border-radius: 2px;
             overflow: hidden;
         }
+
         &__dropdown {
             position: absolute;
             display: none;
@@ -245,12 +270,14 @@ $checkbox-size: 24px;
                     cursor: pointer;
                     background-color: color('input', 'border');
                 }
+
                 &:last-child {
                     margin-bottom: 0;
                 }
             }
         }
     }
+    
     input {
         @include input();
         width: calc(100% - 130px);

@@ -15,18 +15,22 @@
     @include breakpoint(small) {
         text-align: center;
     }
+
     &:hover {
         cursor: pointer;
     }
+
     &--primary {
         text-align: center;
         background-color: color('primary');
         color: color('text', 'highlight');
     }
+
     &--secondary {
         text-align: center;
         border: 2px solid color('primary');
     }
+    
     &--disabled,
     &:disabled {
         text-align: center;

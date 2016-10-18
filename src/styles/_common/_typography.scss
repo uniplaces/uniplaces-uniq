@@ -8,7 +8,7 @@ $base-font-size: 18; // Default font-size
     $context: $context * 1px;
   }
 
-  @return $pixels / $context * 1em;
+  @return $pixels / $context * 1rem;
 }
 @mixin heading() {
     font-size: em(34px);
