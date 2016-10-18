@@ -1,0 +1,196 @@
+@import "_main";
+
+html,
+body {
+    @include flex();
+    @include flex-wrap();
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    @include body();
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.header,
+.main,
+.footer {
+    &__wrapper {
+        @include flex();
+        @include space-between();
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    @include header();
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+.main {
+    display: table;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    z-index: 1;
+
+    &__wrapper {
+        padding-top: 46px;
+    }
+
+    &__content {
+        width: auto;
+
+        @include breakpoint(small) {
+            width: 100%;
+            padding: 0 14px;
+        }
+    }
+}
+
+.footer {
+    @include footer();
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    
+    @include breakpoint(small) {
+        border: 0;
+        
+        .button {
+            min-width: 50%;
+            height: 100%;
+            border-radius: 0;
+        }
+    }
+}
+
+.anchor {
+    @include anchor();
+}
+
+.button {
+    @include button();
+}
+
+.progress-bar {
+    @include progress-bar();
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    z-index: 3;
+}
+
+.info-box {
+    @include info-box();
+    width: 320px;
+}
+
+.title {
+    @include title();
+    margin-top: 46px;
+    margin-bottom: 20px;
+    
+    @include breakpoint(small) {
+        margin-top: 46px;
+    }
+}
+
+.input-container {
+    @include input-container();
+    margin-bottom: 24px;
+}
+
+.input {
+    @include input();
+    display: block;
+    float: left;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.input-button {
+    @include input-button();
+    display: inline-flex;
+    float: left;
+}
+
+.button--secondary {
+    margin-bottom: 46px;
+}
+
+.checkbox {
+    @include checkbox();
+}
+
+.radio-button {
+    @include radio-button();
+}
+
+.textarea {
+    @include textarea();
+    width: 100%;
+    
+    &-counter {
+        margin-bottom: 46px;
+    }
+}
+
+.modal {
+    @include modal();
+}
+
+.steps-wrapper {
+    @include flex();
+    @include flex-wrap();
+    @include space-between();
+    @include limited-full-width();
+    margin-bottom: 46px;
+    
+    &__title {
+        @include heading();
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    &__message {
+        width: 100%;
+        margin-bottom: 68px;
+        line-height: 19px;
+
+        p {
+            max-width: 490px;
+        }
+    }
+
+    &__title,
+    &__message {
+        @include breakpoint(small) {
+            padding: 0 14px;
+        }
+    }
+}
+
+.step-card {
+    @include step-card();
+}
+
+.image-gallery {
+    @include image-gallery();
+    margin-bottom: 46px;
+}
+
+.dropdown {
+    @include dropdown();
+}
+
+.mobile-number {
+    @include mobile-number();
+    margin-bottom: 64px;
+}
