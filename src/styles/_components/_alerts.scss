@@ -1,0 +1,31 @@
+@mixin alert() {
+    @include flex();
+    @include align-items-center();
+    padding: 15px 60px;
+    background-color: color('feedback', 'info');
+    will-change: background-color;
+    
+    &--success {
+        background-color: color('feedback', 'success');
+    }
+    &--warning {
+        background-color: color('feedback', 'warning');
+    }
+    
+    svg {
+        width: 25px;
+        height: 25px;
+        margin-right: 16px;
+        fill: color('feedback', 'text');
+    }
+    &__title {
+        font-size: em(17px);
+        font-weight: bold;
+        color: color('text', 'title');
+    }
+    &__content {
+        font-size: em(16px);
+        line-height: 18px;
+        color: color('feedback', 'text');
+    }
+}

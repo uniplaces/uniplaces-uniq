@@ -26,9 +26,9 @@
         width: 0px;
         height: 100%;
         border-radius: 2px;
-        background-color: color('primary', 'divider');
-        will-change: width;
+        background-color: color('primary');
         transition: width .3s ease-out;
         z-index: 2;
+        will-change: width;
     }
 }

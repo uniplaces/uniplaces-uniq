@@ -1,0 +1,7 @@
+cache/**
+node_modules/**
+bower_components/**
+.sass-cache/**
+connect.lock/**
+coverage/*/**
+libpeerconnection.log

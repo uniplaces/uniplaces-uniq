@@ -1,4 +1,4 @@
-$base-font-size: 18; // Default font-size
+$base-font-size: 16px; // Default font-size
 
 @function em($pixels, $context: $base-font-size) {
   @if (unitless($pixels)) {
@@ -11,32 +11,36 @@ $base-font-size: 18; // Default font-size
   @return $pixels / $context * 1rem;
 }
 @mixin heading() {
-    font-size: em(34px);
+    font-size: em(32px);
     color: color('text','title');
 }
 @mixin subheading() {
-    font-size: em(21px);
+    font-size: em(18px);
     color: color('text','subheading');
 }
 @mixin title() {
-    font-size: em(24px);
+    font-size: em(21px);
     color: color('text','title');
 }
 @mixin subtitle() {
-    font-size: em(20px);
+    font-size: em(18px);
     line-height: 22px;
     color: color('text','subtitle');
 }
 @mixin body() {
-    font-size: em(18px);
+    font-size: em(16px);
     line-height: 21px; 
     color: color('text','body');
 }
 @mixin button-text() {
-    font-size: em(20px);
+    font-size: em(18px);
     text-align: center;
 }
 @mixin anchor() {
     color: color('primary');
     text-decoration: none;
+    
+    &:hover {
+        cursor: pointer;
+    }
 }

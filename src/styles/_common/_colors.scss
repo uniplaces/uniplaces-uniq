@@ -1,7 +1,7 @@
 // Color Pallette
 $palette: (
   'primary': (
-    'primary': #148aff,
+    'primary': #00adef,
     'light': #3b9eff,
     'translucent': rgba(157, 206, 255, 0.25),
     'divider': #9dceff
@@ -21,7 +21,7 @@ $palette: (
     'modal': #6b6b6b
   ),
   'borders': (
-    'primary': #e0e0e0,
+    'primary': #d1d5da,
     'light': #f0f0f0,
     'gallery-item': #bcbcbc
   ),
@@ -31,19 +31,22 @@ $palette: (
     'light': #f0f0f0,
     'modal': #fafafa,
     'gallery-item': #f0f0f0,
-    'translucent': rgba(0,0,0,0.35)
+    'translucent': rgba(0,0,0,0.35),
+    'hover': #E6F8FD
   ),
   'input': (
     'primary': #3b9eff,
     'disabled': #888,
-    'border': #e0e0e0,
+    'border': #d1d5da,
     'focus': #ecf5ff,
     'mobile-border': #d6d6d6
   ),
   'feedback': (
-    'success': #3ad778,
+    'success': #9bdfb8,
+    'warning': #fff2b6,
     'error': #ff3a2d,
-    'info': #148aff
+    'info': #148aff,
+    'text': #224251
   )
 );
 

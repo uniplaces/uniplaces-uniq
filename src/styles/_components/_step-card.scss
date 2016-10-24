@@ -3,7 +3,7 @@
     @include flex-wrap();
     @include flex-column();
     @include justify-content-start();
-    width: calc(33.3333% - 15px);
+    width: calc(33.3333% - 14px);
     min-height: 210px;
     padding: 32px;
     margin-right: 20px;
@@ -22,7 +22,7 @@
     &__step {
         width: 100%;
         margin-bottom: 12px;
-        font-size: em(14px);
+        font-size: em(12px);
         color: color('text', 'subtitle');
         text-transform: uppercase;
     }
@@ -30,14 +30,14 @@
     &__title {
         width: 100%;
         margin-bottom: 6px;
-        font-size: em(25px);
+        font-size: em(22px);
         color: color('text', 'title');
     }
 
     &__hint {
         width: 100%;
         margin-bottom: 14px;
-        font-size: em(14px);
+        font-size: em(16px);
         color: color('text', 'subheading');
     }
 
@@ -48,7 +48,7 @@
         margin: 15px 0;
         
         &-label {
-            font-size: em(18px);
+            font-size: em(15px);
             color: color('text', 'body');
         }
     }
@@ -75,8 +75,13 @@
         border-top: 3px solid color('borders', 'light');
     }
 
+    &--passed &__title,
+    &--passed &__step {
+        opacity: .3;
+    }
+
     &--passed &__title {
-        font-size: em(19px);
+        font-size: em(17px);
         color: color('text', 'subtitle');
     }
 
