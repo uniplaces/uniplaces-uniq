@@ -111,11 +111,11 @@
                 border: 1px solid color('borders', 'gallery-item');
                 border-radius: 50%;
                 background-color: transparent;               
-                font-size: em(18px);
+                font-size: em(16px);
                 color: color('text', 'highlight');
 
                 &--selected {
-                    background-color: color('feedback', 'success');
+                    background-color: color('primary');
                     border: none;
                 }
             }

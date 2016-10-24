@@ -10,7 +10,7 @@ body {
     
     @include body();
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: $base-font-size;
 }
 .header,
 .main,
@@ -146,6 +146,11 @@ body {
     @include modal();
 }
 
+.alert {
+    @include alert();
+    margin-top: 16px;
+}
+
 .steps-wrapper {
     @include flex();
     @include flex-wrap();
@@ -162,10 +167,10 @@ body {
     &__message {
         width: 100%;
         margin-bottom: 68px;
-        line-height: 19px;
 
         p {
             max-width: 490px;
+            line-height: 21px;
         }
     }
 
@@ -193,4 +198,9 @@ body {
 .mobile-number {
     @include mobile-number();
     margin-bottom: 64px;
+}
+
+::selection {
+    background-color: color('primary');
+    color: color('text', 'highlight');
 }

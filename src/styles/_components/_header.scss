@@ -37,7 +37,7 @@ $header-height: 60px;
             &__step,
             &__description {
                 display: inline-table;
-                font-size: em(17px);
+                font-size: em(15px);
             }
 
             &__step {
@@ -83,7 +83,7 @@ $header-height: 60px;
                 @include button();
                 position: relative;
                 height: 100%;
-                font-size: em(16px);
+                font-size: em(14px);
                 text-transform: uppercase;
                 color: color('text', 'title');
 
@@ -132,9 +132,10 @@ $header-height: 60px;
     &-button {
         position: relative;
         height: 100%;
-        font-size: em(16px);
+        font-size: em(14px);
         text-transform: uppercase;
         color: color('text', 'title');
+        will-change: background-color;
     }
 
     &-button {
@@ -192,13 +193,13 @@ $header-height: 60px;
     &__item {
         height: 55px;
         padding: 20px;
-        font-size: em(15px);
+        font-size: em(13px);
         text-align: left;
         background-color: color('background', 'modal');
 
         &:hover {
             cursor: pointer;
-            background-color: color('input', 'border');
+            background-color: color('background', 'hover');
         }
 
         @include breakpoint(small) {

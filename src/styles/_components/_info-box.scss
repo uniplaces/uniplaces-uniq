@@ -21,9 +21,9 @@
     }
     
     &__title {
+        @include title();
         display: inline-block;
         margin: 0 0 15px 15px;
-        font-size: em(23px);
         color: color('text', 'body');
         vertical-align: middle;
     }

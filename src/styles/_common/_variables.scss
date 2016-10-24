@@ -21,8 +21,14 @@
 @mixin flex-column() {
 	flex-direction: column;
 }
+@mixin flex-column-reverse() {
+	flex-direction: column-reverse;
+}
 @mixin flex-row() {
 	flex-direction: row;
+}
+@mixin flex-row-reverse() {
+	flex-direction: row-reverse;
 }
 @mixin justify-content-center() {
 	justify-content: center;

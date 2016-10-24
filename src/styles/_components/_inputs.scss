@@ -10,6 +10,7 @@ $checkbox-size: 24px;
     border-radius: 4px;
     overflow: hidden;
     white-space: nowrap;
+    will-change: border;
 
     @include breakpoint(small) {
         width: 100%;
@@ -21,7 +22,7 @@ $checkbox-size: 24px;
     &--bordered {
         @include breakpoint(small) {
             padding: 20px;
-            border: 1px solid color('input', 'mobile-border');
+            border: 2px solid color('input', 'mobile-border');
             border-radius: 4px;
         }
     }
@@ -36,10 +37,12 @@ $checkbox-size: 24px;
 @mixin input() {
     height: $input-height;
     border: 0;
-    font-size: em(22px);
+    font-size: em(20px);
     color: color('text', 'input');
     margin-right: auto;
     padding: 0 14px;
+    will-change: border;
+    -webkit-appearance: none;
     
     &:focus {
         border: 1px solid color('primary', 'light');
@@ -48,7 +51,7 @@ $checkbox-size: 24px;
 
     &:error,
     &--error {
-        border: 1px solid color('feedback', 'error');
+        border: 2px solid color('feedback', 'error');
     }
 
     &--range {
@@ -56,13 +59,18 @@ $checkbox-size: 24px;
         width: calc(100% - 134px);
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        border: 1px solid color('borders');
+        border: 2px solid color('borders');
         border-right: 0;
+        -webkit-appearance: none;
     }
 
     &--transparent {
         background-color: transparent;
         border: 0;
+    }
+    
+    &--bordered {
+        border: 2px solid color('input', 'border');
     }
 }
 
@@ -72,10 +80,12 @@ $checkbox-size: 24px;
     @include justify-content-center();
     width: 67px;
     height: $input-height;
-    border: 1px solid color('borders');
+    border: 2px solid color('borders');
+    border-left: 1px solid color('borders');
     font-size: em(24px);
     font-weight: bold;
     color: color('primary');
+    will-change: background-color;
     
     &:first-of-type {
         border-right: 0;
@@ -114,7 +124,7 @@ $checkbox-size: 24px;
     padding: 12px;
     border: 1px solid color('input', 'border');
     border-radius: 4px;
-    font-size: em(20px);
+    font-size: em(18px);
     
     & + &-counter {
         @include body();
@@ -130,6 +140,7 @@ $checkbox-size: 24px;
     border: 1px solid color('input', 'border');
     margin-right: 20px;
     border-radius: 4px;
+    will-change: background-color;
     
     svg {
         display: none;
@@ -139,7 +150,7 @@ $checkbox-size: 24px;
     & + label {
         height: $checkbox-size;
         line-height: $checkbox-size;
-        font-size: em(20px);
+        font-size: em(18px);
         color: color('text', 'body');
         will-change: color;
     }
@@ -147,11 +158,12 @@ $checkbox-size: 24px;
     &:focus,
     &:checked,
     &--checked {
-        border: 1px solid color('primary', 'light');
-        background-color: color('input', 'focus');
+        border: 1px solid color('primary');
+        background-color: color('primary');
         
         svg {
             display: block;
+            fill: color('background');
         }
 
         & + label {
@@ -165,21 +177,58 @@ $checkbox-size: 24px;
 }
 
 @mixin radio-button() {
-    @include checkbox();
-    position: relative;
-    border-radius: 50%;
-    
-    &:checked:after,
-    &--checked:after {
-        content: " ";
-        position: absolute;
-        display: block;
-        width: #{$checkbox-size - 8px};
-        height: #{$checkbox-size - 8px};
-        top: 3px;
-        left: 3px;
-        background-color: color('primary');
-        border-radius: 50%;
+    @include flex();
+    @include flex-wrap();
+    @include align-items-center();
+
+    input[type="radio"] {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    label {
+        position: relative;
+        padding-left: #{$checkbox-size + 20px};
+        height: $checkbox-size;
+        line-height: $checkbox-size;
+        font-size: em(18px);
+        color: color('text', 'body');
+        will-change: color;
+
+        &:before,
+        &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+        }
+        &:before {
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border: 2px solid color('input', 'border');
+            will-change: border;
+        }
+        &:after {
+            width: 16px;
+            height: 16px;
+            will-change: background-color;
+            top: 4px;
+            left: 4px;
+        }
+    }
+
+    input[type="radio"]:checked + label {
+        color: color('primary');
+        
+        &:before {
+            border: 2px solid color('primary');
+        }
+        &:after {
+            background-color: color('primary');
+        }
     }
 }
 
@@ -198,7 +247,7 @@ $checkbox-size: 24px;
         background-color: color('input', 'border');
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
-        font-size: em(20px);
+        font-size: em(18px);
         color: color('text', 'title');
 
         &:hover {
@@ -214,6 +263,7 @@ $checkbox-size: 24px;
             height: 1px;
             top: 50%;
             background-color: color('text', 'title');
+            will-change: transform;
         }
 
         &:before {
@@ -281,7 +331,7 @@ $checkbox-size: 24px;
     input {
         @include input();
         width: calc(100% - 130px);
-        border: 1px solid color('input', 'border');
+        border: 2px solid color('input', 'border');
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
