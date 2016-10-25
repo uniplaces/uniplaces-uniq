@@ -1,5 +1,4 @@
 // VARIABLES
-
 @mixin limited-full-width() {
 	width: 100%;
 	max-width: 1000px;
@@ -17,6 +16,9 @@
 }
 @mixin flex-grow($val) {
 	flex-grow: $val;
+}
+@mixin flex-basis($val) {
+	flex-basis: $val;
 }
 @mixin flex-column() {
 	flex-direction: column;
