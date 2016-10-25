@@ -41,6 +41,39 @@
   <div class="progress-bar">
     <div class="progress-bar__bar" style="width: 14%"></div>
   </div>
+    <div class="alert alert--success alert--fixed-top">
+      <div class="alert__wrapper">
+                <?xml version="1.0" encoding="utf-8"?>
+      <?xml version="1.0" encoding="utf-8"?>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+      <g>
+        <defs>
+          <rect id="SVGID_1_" width="36" height="36"/>
+        </defs>
+        <clipPath id="SVGID_2_">
+          <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+        </clipPath>
+      </g>
+      <g>
+        <defs>
+          <rect id="SVGID_3_" width="36" height="36"/>
+        </defs>
+        <clipPath id="SVGID_4_">
+          <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+        </clipPath>
+      </g>
+      <path class="st0" d="M17.5,0C7.8,0,0,7.8,0,17.5S7.8,35,17.5,35S35,27.2,35,17.5S27.4,0,17.5,0 M17.5,32.1
+        c-8.1,0-14.6-6.5-14.6-14.6S9.4,2.9,17.5,2.9s14.6,6.5,14.6,14.6S25.8,32.1,17.5,32.1"/>
+      <path class="st0" d="M24.4,11.4l-9.5,8.9l-2.5-2.5c-0.5-0.5-1.4-0.5-1.9,0c-0.5,0.5-0.5,1.4,0,1.9l3.5,3.5c0.3,0.3,0.6,0.5,1,0.5
+        s0.6-0.2,1-0.3l10.5-9.9c0.6-0.5,0.6-1.4,0-1.9C25.6,10.9,24.8,10.8,24.4,11.4"/>
+      </svg>
+      
+      <div class="alert__content">
+        Good morning! This is a generic alert message.
+      </div>
+      </div>
+  </div>
   
   <section id="main" class="main">
     <div class="main__wrapper">
@@ -88,7 +121,7 @@
         </div>
 
         <div class="title">Does the property have gas installation?</div>
-        <div class="input-container input-container--bordered input-container--focused">
+        <div class="input-container input-container--bordered">
           <div class="radio-button">
             <input type="radio" id="piped">
             <label for="piped">Yes, piped gas</label>
@@ -108,7 +141,7 @@
         </div>
 
         <div class="title">City</div>
-        <div class="input-container input-container--bordered input-container--focused">
+        <div class="input-container">
           <input type="text" class="input input--bordered">
         </div>
         <div class="alert alert--warning">
@@ -159,44 +192,54 @@
         <div class="textarea-counter">300 characters</div>
         
         <div class="title">Add mobile number</div>
-        <div class="mobile-number">
-          <div class="mobile-number__country-code">
-            <img src="images/flag.svg" alt=""> +351
+        <div class="input-container">
+          <div class="mobile-number">
+            <div class="mobile-number__country-code">
+              <img src="images/flag.svg" alt=""> +351
 
-            <div class="mobile-number__country-code__dropdown">
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt=""> +49
-              </div>
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt=""> +33
-              </div>
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt=""> +34
-              </div>
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt=""> +39
-              </div>
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg" alt=""> +32
-              </div>
-              <div class="mobile-number__country-code__dropdown__item">
-                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt=""> +44
+              <div class="mobile-number__country-code__dropdown">
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt=""> +49
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt=""> +33
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt=""> +34
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt=""> +39
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg" alt=""> +32
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt=""> +44
+                </div>
               </div>
             </div>
+            <input type="text" placeholder="Mobile number">
           </div>
-          <input type="text" placeholder="Mobile number">
         </div>
       </div>
 
       <aside>
         <section class="info-box">
-          <div class="info-box__icon">i</div>
-          <div class="info-box__title">Number of rooms</div>
-          <div class="info-box__hr"></div>
-          <div class="info-box__content">
-            The amenities you have are very important to the students and it adds value to your property. <br><br>If you provide additional services like cleaning, make sure you include it on your amenities.
+          <div class="info-box__wrapper">
+            <div class="info-box__close-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.9 17.7"><path class="st0" d="M17.9 16.1l-7.5-7.3 7.4-7.4L16.4 0 8.9 7.4 1.4.1 0 1.6l7.5 7.3-7.4 7.4 1.4 1.4L9 10.2l7.5 7.4z"></path></svg>
+            </div>
+            <div class="info-box__icon">i</div>
+            <div class="info-box__title">Number of rooms</div>
+            <div class="info-box__hr"></div>
+            <div class="info-box__content">
+              The amenities you have are very important to the students and it adds value to your property. <br><br>If you provide additional services like cleaning, make sure you include it on your amenities.
+            </div>
           </div>
         </section>
+        <div class="info-box-mobile-button">
+          <div class="info-box__icon">i</div>
+        </div>
       </aside>
     </div>
     <div class="steps-wrapper">
@@ -296,9 +339,10 @@
   </footer>
   
   <div class="modal">
-    <div class="modal__close-button"></div>
-    
     <div class="modal__wrapper">
+      <div class="modal__close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.9 17.7"><path class="st0" d="M17.9 16.1l-7.5-7.3 7.4-7.4L16.4 0 8.9 7.4 1.4.1 0 1.6l7.5 7.3-7.4 7.4 1.4 1.4L9 10.2l7.5 7.4z"></path></svg>
+      </div>
       <div class="modal__wrapper__image"></div>
       <div class="modal__wrapper__title">Let’s create your first offer page</div>
       <div class="modal__wrapper__message">This is your first offer page to get you started.

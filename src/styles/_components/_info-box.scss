@@ -1,13 +1,75 @@
 @mixin info-box() {
+    position: relative;
     min-height: 310px;
     padding: 24px;
     border-radius: 6px;
     background-color: color('background', 'secondary');
     
-    @include breakpoint(small) {
+    &__close-button {
         display: none;
     }
+    
+    &-mobile-button {
+        display: none;
+        @include align-items-center();
+        @include justify-content-center();
+        position: fixed;
+        bottom: 88px;
+        right: 10px;
+        z-index: 4;
+        width: 50px;
+        height: 45px;
+        border-radius: 10px;
+        border: 1px solid color('borders');
+        background-color: color('background');
+        box-shadow: 0 2px 4px 0 rgba(152, 152, 152, 0.2);
+        
+        @include breakpoint(small) {
+            @include flex();
+        }
+    }
+    
+    @include breakpoint(small) {
+        display: none;
+        
+        &--active {
+            @include flex();
+            @include align-items-center();
+            @include justify-content-center();
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            background-color: color('background', 'translucent');
+            padding: 10px;
+        }
+        &--active &__wrapper {
+            height: 100%;
+            max-height: 350px;
+            padding: 65px 26px;
+            border-radius: 2px;
+            background-color: color('background', 'modal');
+        }
+        &__close-button {
+            position: absolute;
+            display: block;
+            width: 23px;
+            height: 23px;
+            top: 26px;
+            right: 26px;
 
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    
+    &__wrapper {
+        position: relative;
+    }
+    
     &__icon {
         display: inline-block;
         width: 20px;

@@ -12,7 +12,7 @@ $max-columns: 12;
     @include flex-row();
     @include flex-wrap();
     @include limited-full-width();
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     
     &--reverse {
         @include flex-row-reverse();
@@ -25,18 +25,20 @@ $max-columns: 12;
 
 @mixin col() {
     position: relative;
-    
-    @include breakpoint(small) {
-        width: 100%;
-        @include flex-grow(1);
-    }
+    @include flex-grow(0);
+    max-width: 100%;
 }
 
 @mixin column($count, $total-columns:$max-columns) {
     @include col();
-    //flex: 0 1 ($count * 100% / $total-columns);
-    //flex-basis: $count * 100% / $todal-columns;
-   width: $count * 100% / $total-columns;
+    @include flex-basis($count * 100% / $total-columns);
+    width: $count * 100% / $total-columns;
+
+    @include breakpoint(small) {
+        @include flex-grow(1);
+        @include flex-basis(100%);
+        width: 100%;
+    }
 }
 
 @mixin clearfix() {

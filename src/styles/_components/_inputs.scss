@@ -169,10 +169,6 @@ $checkbox-size: 24px;
         & + label {
             color: color('primary');
         }
-
-        @include breakpoint(small) {
-            background-color: color('background');
-        }
     }
 }
 

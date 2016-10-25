@@ -5,14 +5,14 @@
 }
 
 html, body, div, span,
-h1, h2, p,
+h1, h2, h3, h4, h5, h6, p,
 a,
 img,
 ul, li,
 article,
 header,
 menu, section,
-time, audio, video {
+time, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,8 +23,8 @@ time, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details,
-header, menu, section {
+div, article, aside,
+header, section {
     display: block;
 }
 
@@ -36,20 +36,12 @@ ul {
     list-style: none;
 }
 
-blockquote, q {
-    quotes: none;
-}
-
 .hidden,
 [hidden],
 [aria-hidden="true"] {
   display: none !important;
 }
 
-pre {
-  border: 1px solid #ccc !important;
-
-  p {
-    margin: 0 !important;
-  }
+::-webkit-scrollbar { 
+    display: none; 
 }

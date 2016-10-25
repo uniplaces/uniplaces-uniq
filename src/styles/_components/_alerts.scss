@@ -11,12 +11,27 @@
     &--warning {
         background-color: color('feedback', 'warning');
     }
+    &--fixed-top {
+        position: fixed;
+        width: 100%;
+        top: 65px;
+        left: 0;
+        z-index: 3;
+        margin-top: 0;
+        @include backface-hack();
+    }
     
     svg {
         width: 25px;
         height: 25px;
         margin-right: 16px;
         fill: color('feedback', 'text');
+    }
+    &__wrapper {
+        @include flex();
+        @include align-items-center();
+        @include column(12);
+        @include limited-full-width();
     }
     &__title {
         font-size: em(17px);
