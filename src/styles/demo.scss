@@ -46,7 +46,6 @@ body {
     }
 
     &__content {
-        width: auto;
         @include column(8);
 
         @include breakpoint(small) {
@@ -106,6 +105,12 @@ body {
     @include breakpoint(small) {
         margin-top: 46px;
     }
+}
+
+.subtitle {
+    @include subtitle();
+    margin-bottom: 24px;
+    margin-top: -16px;//never use negative margins this is just for demo
 }
 
 .input-container {
@@ -212,4 +217,23 @@ body {
 ::selection {
     background-color: color('text', 'highlight');
     color: color('primary');
+}
+
+.input-price {
+    @include input-price();
+    @include column(5);
+    margin-bottom: 64px;
+    margin-left: 0;
+    margin-right: auto;
+
+    @include breakpoint(small) {
+        margin-bottom: 64px;
+    }
+}
+
+.pill {
+    @include pill();
+    display: inline-block;
+    margin-right: 16px;
+    margin-bottom: 46px;
 }

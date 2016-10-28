@@ -71,15 +71,7 @@
     }
     
     &__icon {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-color: color('primary', 'light');
-        border-radius: 50%;
-        font-size: em(10px);
-        text-align: center;
-        color: color('text', 'highlight');
-        vertical-align: top;
+        @include info-icon();
     }
     
     &__title {
@@ -101,4 +93,16 @@
     &__content {
         @include body();
     }
+}
+
+@mixin info-icon() {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: color('primary', 'light');
+    border-radius: 50%;
+    font-size: em(10px);
+    text-align: center;
+    color: color('text', 'highlight');
+    vertical-align: top;
 }

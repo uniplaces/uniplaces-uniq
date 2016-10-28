@@ -44,3 +44,27 @@
         color: color('feedback', 'text');
     }
 }
+
+@mixin pill() {
+    height: 22px;
+    padding: 6px 16px 0 16px;
+    border-radius: 22px;
+    font-size: em(12px);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+    color: color('pill', 'text');
+
+    &--success {
+        background-color: color('pill', 'success');
+    }
+    &--warning {
+        background-color: color('pill', 'warning');
+    }
+    &--error {
+        background-color: color('pill', 'error');
+    }
+    &--info {
+        background-color: color('pill', 'info');
+    }
+}

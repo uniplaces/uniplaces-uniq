@@ -332,3 +332,55 @@ $checkbox-size: 24px;
         border-bottom-right-radius: 4px;
     }
 }
+
+@mixin input-price() {
+    @include row();
+    @include justify-content-center();
+    @include align-items-center();
+    border: 2px solid color('input', 'border');
+    border-radius: 4px;
+
+    input,
+    &__value {
+        @include input();
+        font-size: em(20px);
+        margin: 0;
+    }
+
+    input {
+        max-width: 30%;
+        padding-left: 0;
+        border: 0;
+        text-align: right;
+
+        &:focus {
+            border: 0;
+        }
+    }
+
+    &__value {
+        max-width: 70%;
+        padding: 0;
+        padding-right: 36px;
+        border-left: 0;
+        line-height: $input-height;
+    }
+
+    &__currency {
+        color: color('text');
+    }
+    
+    &__interval {
+        color: color('text', 'input');
+    }
+
+    @include breakpoint(small) {
+        margin: 0;
+        padding: 0;
+
+        input,
+        &__value {
+            width: 50%;
+        }
+    }
+}
