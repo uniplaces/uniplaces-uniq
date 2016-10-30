@@ -8,6 +8,7 @@
 </head>
 <body>
   <header id="header" class="header">
+    <!--
     <div class="header__wrapper">
       <div class="header__wrapper__logo"></div>
       <div class="header__wrapper__breadcrumb">
@@ -37,38 +38,22 @@
         </div>
       </div>
     </div>
+    -->
+    <div class="header__wrapper">
+      <div class="header__wrapper__logo"></div>
+      <div class="header__wrapper__breadcrumb">
+        <div class="header__wrapper__breadcrumb__step">First step:</div>
+        <div class="header__wrapper__breadcrumb__description">Describe your property</div>
+      </div>
+      <button class="button button--align-right">Exit</button>
+    </div>
   </header>
   <div class="progress-bar">
     <div class="progress-bar__bar" style="width: 14%"></div>
   </div>
     <div class="alert alert--success alert--fixed-top">
       <div class="alert__wrapper">
-                <?xml version="1.0" encoding="utf-8"?>
-      <?xml version="1.0" encoding="utf-8"?>
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
-      <g>
-        <defs>
-          <rect id="SVGID_1_" width="36" height="36"/>
-        </defs>
-        <clipPath id="SVGID_2_">
-          <use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-        </clipPath>
-      </g>
-      <g>
-        <defs>
-          <rect id="SVGID_3_" width="36" height="36"/>
-        </defs>
-        <clipPath id="SVGID_4_">
-          <use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-        </clipPath>
-      </g>
-      <path class="st0" d="M17.5,0C7.8,0,0,7.8,0,17.5S7.8,35,17.5,35S35,27.2,35,17.5S27.4,0,17.5,0 M17.5,32.1
-        c-8.1,0-14.6-6.5-14.6-14.6S9.4,2.9,17.5,2.9s14.6,6.5,14.6,14.6S25.8,32.1,17.5,32.1"/>
-      <path class="st0" d="M24.4,11.4l-9.5,8.9l-2.5-2.5c-0.5-0.5-1.4-0.5-1.9,0c-0.5,0.5-0.5,1.4,0,1.9l3.5,3.5c0.3,0.3,0.6,0.5,1,0.5
-        s0.6-0.2,1-0.3l10.5-9.9c0.6-0.5,0.6-1.4,0-1.9C25.6,10.9,24.8,10.8,24.4,11.4"/>
-      </svg>
-      
+        {{inline-svg}}
       <div class="alert__content">
         Good morning! This is a generic alert message.
       </div>
@@ -221,6 +206,20 @@
             <input type="text" placeholder="Mobile number">
           </div>
         </div>
+
+        <div class="title">What is the rent price?</div>
+        <div class="subtitle">This is the price for Single Bedroom.</div>
+        <div class="input-price">
+          <input type="text" maxlength="4" placeholder="00" value="">
+          <div class="input-price__value"><span class="input-price__currency">€</span> / <span class="input-price__interval">month</span></div>
+        </div>
+
+        <div class="title">Lorem ipsum dolor</div>
+        <div class="subtitle">Lorem ipsum dolor sit amet conseqteteur un gradiva.</div>
+        <div class="pill pill--success">success label</div>
+        <div class="pill pill--warning">warning label</div>
+        <div class="pill pill--error">error label</div>
+        <div class="pill pill--info">info label</div>
       </div>
 
       <aside>
@@ -333,11 +332,12 @@
   
   <footer id="footer" class="footer footer--overhangs">
     <div class="footer__wrapper">
-      <button class="button">Back</button>
+      <button class="button button--align-left">Back</button>
       <button class="button button--primary">Next</button>
     </div>
   </footer>
   
+  <!--
   <div class="modal">
     <div class="modal__wrapper">
       <div class="modal__close-button">
@@ -349,6 +349,7 @@
 You can always add more offers later</div>
     </div>
   </div>
+  -->
   
   <script src="http://zeptojs.com/zepto.min.js"></script>
   <script async>

@@ -10,7 +10,7 @@ $header-height: 60px;
     &__wrapper {
         @include flex();
         @include align-items-center();
-        @include space-between();
+        @include justify-content-end();
         position: relative;
         height: $header-height;
         
@@ -21,7 +21,7 @@ $header-height: 60px;
         &__logo {
             width: 140px;
             height: 33px;
-            background-image: url("https://d1mivx2mj8sr2d.cloudfront.net/dist/54bc2e9e2ddefe611a1496fbf0cf339ed95f5934/img/uniplaces_logo.svg");
+            background-image: url("https://d1mivx2mj8sr2d.cloudfront.net/dist/a980e83624c9ce877f2aaa984082e43d79883fc9/img/uniplaces_logo.svg");
             background-repeat: no-repeat;
             background-size: contain;
         }
