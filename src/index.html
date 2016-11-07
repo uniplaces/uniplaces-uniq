@@ -77,7 +77,7 @@
         </div>
         
         <div class="title">Do you have a living room?</div>
-        <div class="button button--alternative button--cool">Add living room</div>
+        <div class="button button--alternative button--disabled button--cool">Add living room</div>
         
         <div class="title">Which amenities does your property have?</div>
         <div class="input-container input-container--bordered input-container--focused">
@@ -123,6 +123,27 @@
             <input type="radio" id="electric">
             <label for="electric">No, it's all electric</label>
           </div>
+        </div>
+
+        <div class="title">Availability</div>
+        <div class="input-container">
+          <label>Wifi</label>
+          <div class="toggle">
+            <label for="availability"></label>
+            <input type="checkbox" id="availability">
+            <div class="toggle__icon"></div>
+          </div>
+        </div>
+
+        <div class="title">Do you have any questions?</div>      
+        <a class="anchor" href="#">Contact us</a>
+
+        <div class="title">Warning</div>
+        <div class="input-container">
+            <input type="text" placeholder="adssa" class="input input--error">
+            <div class="input-error">
+                The number doesn't seem right, please check.
+            </div>
         </div>
 
         <div class="title">City</div>
@@ -275,7 +296,7 @@
     <div class="image-gallery image--gallery-empty">
       <div class="image-gallery__title">Photos of the property</div>
       <div class="image-gallery__wrapper">
-        <div class="image-gallery__wrapper__button image-gallery__wrapper__button--primary">Upload Photos</div>
+        <div class="image-gallery__wrapper__button image-gallery__wrapper__button--primary image-gallery__wrapper__button--cool">Upload Photos</div>
         <div class="image-gallery__wrapper__message">You can also drag and drop them</div>
       </div>
     </div>
@@ -333,7 +354,7 @@
   <footer id="footer" class="footer footer--overhangs">
     <div class="footer__wrapper">
       <button class="button button--align-left">Back</button>
-      <button class="button button--primary">Next</button>
+      <button class="button button--primary button--cool">Next</button>
     </div>
   </footer>
   

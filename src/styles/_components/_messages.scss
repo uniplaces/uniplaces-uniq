@@ -1,0 +1,19 @@
+@mixin message {
+    @include alert();
+    padding: 15px 0;
+    background: transparent;
+    word-wrap: break-word;
+    white-space: normal;
+    
+    &__content {
+        &--success {
+            color: color('feedback', 'success');
+        }
+        &--warning {
+            color: color('feedback', 'warning');
+        }
+        &--error {
+            color: color('feedback', 'error');
+        }
+    }    
+}
