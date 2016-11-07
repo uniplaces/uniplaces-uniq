@@ -49,7 +49,6 @@ $checkbox-size: 24px;
         outline: none;
     }
 
-    &:error,
     &--error {
         border: 2px solid color('feedback', 'error');
     }
