@@ -55,7 +55,11 @@ $checkbox-size: 24px;
     }
 
     &--error {
-        border: 2px solid color('feedback', 'error');
+        border: 2px solid color('feedback', 'error') !important;
+    }
+
+    &--test {
+        border: 2px solid color('feedback', 'error') !important;
     }
 
     &--range {
@@ -391,5 +395,78 @@ $checkbox-size: 24px;
         &__value {
             width: 50%;
         }
+    }
+}
+
+@mixin toggle() {
+    width: 60px;
+    height: 32px;
+    background: color('input', 'disabled');
+    position: relative;
+    cursor: pointer;
+    border-radius: 6px;
+
+    &__icon {
+        padding: 5px;
+        height: 100%;
+        color: color('buttons', 'primary');
+
+        &:before {
+            pointer-events: none;
+            height: 22px;
+            width: 22px;
+            content: " ";
+            position: absolute;
+            background-image: url('../../images/success-icon.svg');
+            right: 7px;
+        }
+
+        &:after {
+            pointer-events: none;
+            content: " ";
+            background: color('buttons', 'primary');
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            position: absolute;
+            color: color('background', 'primary');
+            left: 5px;
+            transform: translate3d(0, 0, 0);
+        }    
+    }
+
+
+    input:checked + 
+    &__icon {
+        display: block;
+        border-radius: 6px;
+        background: color('primary');
+
+        &:after {
+            content: " ";
+            transform: translate3d(27px, 0, 0);
+        }    
+
+        &:before {
+            pointer-events: none;
+            height: 22px;
+            width: 22px;
+            background-image: url('../../images/success-icon.svg');
+            content: " ";
+            position: absolute;
+            left: 7px;
+            right: initial;
+        }
+    }
+
+    input {
+        opacity: 0;
+        position: absolute;
+    }
+    
+    label {
+        position: absolute;
+        height: 100%;
+        width: 100%;
     }
 }

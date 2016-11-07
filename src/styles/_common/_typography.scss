@@ -42,9 +42,22 @@ $base-font-size: 16px; // Default font-size
 }
 @mixin anchor() {
     color: color('primary');
-    text-decoration: none;
     
     &:hover {
         cursor: pointer;
+        text-decoration: none;
+    }
+
+    &--active {
+        color: color('primary', 'light');
+        text-decoration: underline;
+    }
+
+    &--negative {
+        color: color('background', 'primary')
+    }
+
+    &--grey {
+        color: color('text', 'dark-grey');
     }
 }
