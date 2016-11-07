@@ -1,6 +1,8 @@
 @mixin button() {
     @include button-text();
-    max-width: 180px;
+    @include height-modifiers();
+    width: 100%;
+    display: table;
     min-width: 130px;
     height: 44px;
     padding: 10px 22px;
@@ -54,5 +56,22 @@
 
     &--uppercase {
         text-transform: uppercase;
+    }
+
+    &--cool {
+        width: auto;
+    }
+
+    &--l {
+        padding: 15px 22px;
+    }
+
+    &--m {
+        padding: 11px 22px;
+    }
+
+    &--s {
+        font-size: em(16px);
+        padding: 9px 22px;
     }
 }

@@ -121,6 +121,7 @@ body {
 
 .input {
     @include input();
+    @include height-modifiers();
     display: block;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;

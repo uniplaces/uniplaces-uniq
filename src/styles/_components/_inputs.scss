@@ -5,7 +5,7 @@ $checkbox-size: 24px;
     @include flex();
     @include flex-wrap();
     @include align-items-center();
-    max-width: 290px;
+    @include height-modifiers();
     margin-bottom: 20px;
     border-radius: 4px;
     overflow: hidden;
@@ -32,9 +32,14 @@ $checkbox-size: 24px;
             background-color: color('input', 'focus');
         }
     }
+
+    &--full-width {
+        width: 100%;
+    }
 }
 
 @mixin input() {
+    @include height-modifiers();
     height: $input-height;
     border: 0;
     font-size: em(20px);
@@ -71,12 +76,17 @@ $checkbox-size: 24px;
     &--bordered {
         border: 2px solid color('input', 'border');
     }
+
+    &--full-width {
+        width: 100%;
+    }
 }
 
 @mixin input-button(){
     @include flex();
     @include align-items-center();
     @include justify-content-center();
+    @include height-modifiers();
     width: 67px;
     height: $input-height;
     border: 2px solid color('borders');
