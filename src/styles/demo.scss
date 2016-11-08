@@ -243,3 +243,7 @@ body {
     @include toggle();
     margin-left: 16px;
 }
+
+.information {
+    @include alert();
+}

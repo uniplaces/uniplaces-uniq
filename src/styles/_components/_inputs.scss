@@ -43,7 +43,6 @@ $checkbox-size: 24px;
     height: $input-height;
     border: 0;
     font-size: em(20px);
-    width: 100%;
     color: color('text', 'input');
     margin-right: auto;
     padding: 0 14px;
@@ -409,22 +408,11 @@ $checkbox-size: 24px;
     border-radius: 6px;
 
     &__icon {
+        pointer-events: none;
+        position: relative;
+        overflow: hidden;
         padding: 5px;
         height: 100%;
-        color: color('buttons', 'primary');
-
-        &:before {
-            pointer-events: none;
-            height: 11px;
-            width: 11px;
-            content: " ";
-            position: absolute;
-            background-image: url('../../images/toggle-off-icon.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            right: 9px;
-            top: 10px;
-        }
 
         &:after {
             pointer-events: none;
@@ -434,10 +422,26 @@ $checkbox-size: 24px;
             height: 22px;
             border-radius: 4px;
             position: absolute;
-            color: color('background', 'primary');
             left: 5px;
             transform: translate3d(0, 0, 0);
         }    
+        svg {
+            position: absolute;
+
+            &:first-child {
+                left: 10px;
+                top: 11px;
+                width: 15px;
+                height: 11px;
+                transform: translate3d(-30px, 0, 0);
+            }
+            &:last-child {
+                width: 11px;
+                height: 11px;
+                right: 10px;
+                top: 11px;
+            }
+        }
     }
 
 
@@ -446,25 +450,19 @@ $checkbox-size: 24px;
         display: block;
         border-radius: 6px;
         background: color('primary');
+        svg {
+            &:first-child {
+                transform: translate3d(0, 0, 0);
+            }
 
+            &:last-child {
+                transform: translate3d(30px, 0, 0);
+            }
+        }
         &:after {
             content: " ";
             transform: translate3d(27px, 0, 0);
         }    
-
-        &:before {
-            pointer-events: none;
-            height: 12px;
-            width: 16px;
-            background-image: url('../../images/toggle-on-icon.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            content: " ";
-            position: absolute;
-            top: 10px;
-            left: 8px;
-            right: initial;
-        }
     }
 
     input {

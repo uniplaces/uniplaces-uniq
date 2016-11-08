@@ -128,10 +128,19 @@
         <div class="title">Availability</div>
         <div class="input-container">
           <label>Wifi</label>
-          <div class="toggle">
+          <div class="toggle" aria-role="button">
             <label for="availability"></label>
             <input type="checkbox" id="availability">
-            <div class="toggle__icon"></div>
+            <div class="toggle__icon">
+             <?xml version="1.0" encoding="utf-8"?>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="11.2px" height="9.2px" viewBox="0 0 11.2 9.2" style="enable-background:new 0 0 11.2 9.2;" xml:space="preserve" fill="#FFFFFF">
+              <g><path class="st0" d="M3.5,8.7C3.2,8.7,3,8.6,2.8,8.4L0.7,6.3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4l5.6-5.2c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L4.2,8.4C3.9,8.6,3.7,8.7,3.5,8.7z"/></g>
+              </svg>
+              <?xml version="1.0" encoding="utf-8"?>
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="9.4px" height="9.6px" viewBox="0 0 9.4 9.6" style="enable-background:new 0 0 9.4 9.6;" xml:space="preserve" fill="#FFFFFF">
+              <path class="st0" d="M6.2,4.8l2.5-2.4c0.4-0.4,0.4-1,0-1.4c-0.4-0.4-1-0.4-1.4,0L4.8,3.3L2.4,0.8C2,0.4,1.4,0.4,1,0.8c-0.4,0.4-0.4,1,0,1.4l2.4,2.5L0.9,7.2c-0.4,0.4-0.4,1,0,1.4C1,8.8,1.3,8.9,1.6,8.9c0.3,0,0.5-0.1,0.7-0.3l2.5-2.4l2.4,2.5C7.4,8.9,7.7,9,8,9c0.3,0,0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L6.2,4.8z"/>
+              </svg>
+            </div>
           </div>
         </div>
 
@@ -140,9 +149,9 @@
 
         <div class="title">Warning</div>
         <div class="input-container">
-          <input type="text" placeholder="adssa" class="input input--bordered input--success">
-          <div class="information-message information-message--warning">
-            <div class="information-message__content">
+          <input type="text" placeholder="adssa" class="input input--bordered input--error">
+          <div class="information information--message">
+            <div class="information__content information__content--error">
               Unfortunately our service doesn’t currently support Braga.
             </div>
           </div>

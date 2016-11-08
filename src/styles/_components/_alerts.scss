@@ -20,6 +20,13 @@
         margin-top: 0;
         @include backface-hack();
     }
+
+    &--message {
+        padding: 15px 0;
+        background: transparent;
+        word-wrap: break-word;
+        white-space: normal;
+    }
     
     svg {
         width: 25px;
@@ -42,6 +49,16 @@
         font-size: em(16px);
         line-height: 18px;
         color: color('feedback', 'text');
+
+        &--success {
+            color: color('feedback', 'success');
+        }
+        &--warning {
+            color: color('feedback', 'warning');
+        }
+        &--error {
+            color: color('feedback', 'error');
+        }
     }
 }
 
