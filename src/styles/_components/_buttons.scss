@@ -41,7 +41,6 @@
         padding-left: 0;
     }
     
-    &--disabled,
     &:disabled {
         text-align: center;
         background-color: color('primary', 'disabled');
