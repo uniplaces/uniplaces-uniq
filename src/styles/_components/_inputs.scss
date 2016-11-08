@@ -54,14 +54,6 @@ $checkbox-size: 24px;
         outline: none;
     }
 
-    &--error {
-        border: 2px solid color('feedback', 'error');
-    }
-
-    &--success {
-        border: 2px solid color('feedback', 'success');
-    }
-
     &--range {
         position: relative;
         width: calc(100% - 134px);
@@ -77,14 +69,22 @@ $checkbox-size: 24px;
         border: 0;
     }
     
+    &--full-width {
+        width: 100%;
+    }
+    
+    // modifiers that handle border OVERRIDE each other, the last is applied
     &--bordered {
         border: 2px solid color('input', 'border');
     }
 
-    &--full-width {
-        width: 100%;
+    &--error {
+        border: 2px solid color('feedback', 'error');
     }
 
+    &--success {
+        border: 2px solid color('feedback', 'success');
+    }
 }
 
 @mixin input-button(){
