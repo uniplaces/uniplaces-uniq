@@ -245,5 +245,5 @@ body {
 }
 
 .information {
-    @include alert();
+    @include message();
 }

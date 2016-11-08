@@ -55,11 +55,11 @@ $checkbox-size: 24px;
     }
 
     &--error {
-        border: 2px solid color('feedback', 'error') !important;
+        border: 2px solid color('feedback', 'error');
     }
 
     &--success {
-        border: 2px solid color('feedback', 'success') !important;
+        border: 2px solid color('feedback', 'success');
     }
 
     &--range {
