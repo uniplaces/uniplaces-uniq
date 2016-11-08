@@ -54,10 +54,10 @@ $base-font-size: 16px; // Default font-size
     }
 
     &--negative {
-        color: color('background', 'primary')
+        color: color('anchor', 'negative')
     }
 
-    &--grey {
-        color: color('text', 'dark-grey');
+    &--alternative {
+        color: color('anchor', 'alternative');
     }
 }
