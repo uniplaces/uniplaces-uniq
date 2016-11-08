@@ -149,12 +149,16 @@ $checkbox-size: 24px;
 
 // BASIC CHECKBOX STYLES
 @mixin checkbox() {
+    @include flex();
+    @include align-items-center();
+    @include justify-content-center();
     width: $checkbox-size;
     height: $checkbox-size;
     border: 1px solid color('input', 'border');
     margin-right: 20px;
     border-radius: 4px;
     will-change: background-color;
+    
     
     svg {
         display: none;
