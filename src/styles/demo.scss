@@ -240,15 +240,6 @@ body {
 }
 
 .toggle {
-    margin-left: 16px;
     @include toggle();
-}
-
-.input-error {
-    padding: 16px 0px;
-    width: 100%;
-    overflow: hidden;
-    word-wrap: break-word;
-    white-space: normal;
-    color: color('feedback', 'error');
+    margin-left: 16px;
 }

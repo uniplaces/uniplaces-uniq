@@ -43,6 +43,7 @@ $checkbox-size: 24px;
     height: $input-height;
     border: 0;
     font-size: em(20px);
+    width: 100%;
     color: color('text', 'input');
     margin-right: auto;
     padding: 0 14px;
@@ -58,8 +59,8 @@ $checkbox-size: 24px;
         border: 2px solid color('feedback', 'error') !important;
     }
 
-    &--test {
-        border: 2px solid color('feedback', 'error') !important;
+    &--success {
+        border: 2px solid color('feedback', 'success') !important;
     }
 
     &--range {
@@ -84,6 +85,7 @@ $checkbox-size: 24px;
     &--full-width {
         width: 100%;
     }
+
 }
 
 @mixin input-button(){
@@ -413,12 +415,15 @@ $checkbox-size: 24px;
 
         &:before {
             pointer-events: none;
-            height: 22px;
-            width: 22px;
+            height: 11px;
+            width: 11px;
             content: " ";
             position: absolute;
-            background-image: url('../../images/success-icon.svg');
-            right: 7px;
+            background-image: url('../../images/toggle-off-icon.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            right: 9px;
+            top: 10px;
         }
 
         &:after {
@@ -449,12 +454,15 @@ $checkbox-size: 24px;
 
         &:before {
             pointer-events: none;
-            height: 22px;
-            width: 22px;
-            background-image: url('../../images/success-icon.svg');
+            height: 12px;
+            width: 16px;
+            background-image: url('../../images/toggle-on-icon.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
             content: " ";
             position: absolute;
-            left: 7px;
+            top: 10px;
+            left: 8px;
             right: initial;
         }
     }
