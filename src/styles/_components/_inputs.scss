@@ -108,7 +108,6 @@ $checkbox-size: 24px;
         background-color: color('background', 'light');
     }
 
-    &:disabled,
     &--disabled {
         svg {
             fill: color('input', 'disabled');
