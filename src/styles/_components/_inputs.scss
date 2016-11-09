@@ -44,8 +44,11 @@ $checkbox-size: 24px;
     border: 0;
     font-size: em(20px);
     color: color('text', 'input');
-    margin-right: auto;
     padding: 0 14px;
+    
+    // padding-right to allow inputs to have a right icon (ex: validation icons)
+    padding-right: 44px;
+
     will-change: border;
     -webkit-appearance: none;
     
@@ -87,13 +90,48 @@ $checkbox-size: 24px;
     }
 }
 
+@mixin input-right-icon() {
+    padding: 0;
+    margin-right: 0;
+    transform: translate3d(-100%, 0, 0) translate3d(-14px, 0, 0);
+    border: 0;
+
+    svg {
+        fill: currentColor;
+        width: 17px; 
+        height: 13px;
+    }
+    
+    &--warning {
+        svg {
+            fill: color('feedback', 'warning');
+        }
+    }
+
+    &--error {
+        svg {
+            fill: color('feedback', 'error');
+        }
+    }
+
+    &--success {
+        svg {
+            fill: color('feedback', 'success');
+        }
+    }
+
+}
+
 @mixin input-button(){
     @include flex();
     @include align-items-center();
     @include justify-content-center();
-    @include height-modifiers();
-    width: 67px;
+
+    // height-modifiers must be above height so modifiers override the default height
     height: $input-height;
+    @include height-modifiers();
+
+    width: 67px;
     border: 2px solid color('borders');
     border-left: 1px solid color('borders');
     font-size: em(24px);
@@ -449,8 +487,7 @@ $checkbox-size: 24px;
     }
 
 
-    &__input:checked + 
-    &__icon {
+    &__input:checked + &__icon {
         background: color('primary');
         transform: translate3d(0, 0, 0);
     }

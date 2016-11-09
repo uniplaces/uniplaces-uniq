@@ -1,11 +1,13 @@
 @mixin button() {
     @include button-text();
     @include height-modifiers();
+    @include align-items-center();
+    @include justify-content-center();
+    @include flex();
     width: 100%;
-    display: table;
     min-width: 130px;
     height: 44px;
-    padding: 10px 22px;
+    padding: 0 22px;
     background-color: transparent;
     border-radius: 2px;
     border: none;
@@ -68,16 +70,7 @@
         width: auto;
     }
 
-    &--l {
-        padding: 15px 22px;
-    }
-
-    &--m {
-        padding: 11px 22px;
-    }
-
     &--s {
         font-size: em(16px);
-        padding: 9px 22px;
     }
 }
