@@ -39,8 +39,10 @@ $checkbox-size: 24px;
 }
 
 @mixin input() {
-    @include height-modifiers();
+    // height-modifiers must be above height so modifiers override the default height
     height: $input-height;
+    @include height-modifiers();
+
     border: 0;
     font-size: em(20px);
     color: color('text', 'input');
@@ -53,7 +55,7 @@ $checkbox-size: 24px;
     -webkit-appearance: none;
     
     &:focus {
-        border: 1px solid color('primary', 'light');
+        border: 2px solid color('primary', 'light');
         outline: none;
     }
 
