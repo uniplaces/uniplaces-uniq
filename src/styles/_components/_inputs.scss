@@ -83,6 +83,10 @@ $checkbox-size: 24px;
         border: 2px solid color('input', 'border');
     }
 
+    &--warning {
+        border: 2px solid color('feedback', 'warning');
+    }
+
     &--error {
         border: 2px solid color('feedback', 'error');
     }
