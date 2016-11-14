@@ -20,7 +20,7 @@
         margin-top: 0;
         @include backface-hack();
     }
-    
+
     svg {
         width: 25px;
         height: 25px;
@@ -68,3 +68,4 @@
         background-color: color('pill', 'info');
     }
 }
+

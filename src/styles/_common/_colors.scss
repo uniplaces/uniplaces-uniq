@@ -4,11 +4,13 @@ $palette: (
     'primary': #00adef,
     'light': #3b9eff,
     'translucent': rgba(157, 206, 255, 0.25),
-    'divider': #9dceff
+    'divider': #9dceff,
+    'disabled': #888
   ),
   'buttons': (
     'primary': #fff,
-    'hover': #ecf5ff
+    'hover': #ecf5ff,
+    'alternative': #44c482
   ),
   'text': (
     'primary': #575757,
@@ -19,6 +21,10 @@ $palette: (
     'highlight': #fff,
     'input': #888,
     'modal': #6b6b6b
+  ),
+  'anchor' : (
+    'negative' : #fff,
+    'alternative' : #616161
   ),
   'borders': (
     'primary': #d1d5da,

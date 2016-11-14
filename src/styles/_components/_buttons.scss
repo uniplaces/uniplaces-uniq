@@ -1,9 +1,14 @@
 @mixin button() {
     @include button-text();
-    max-width: 180px;
+    @warn "TODO: Implement new heights and color schemes";
+    @include height-modifiers();
+    @include align-items-center();
+    @include justify-content-center();
+    @include flex();
     min-width: 130px;
     height: 44px;
-    padding: 10px 22px;
+    padding: 0 22px;
+    max-width: 180px;
     background-color: transparent;
     border-radius: 2px;
     border: none;
@@ -31,6 +36,12 @@
         border: 2px solid color('primary');
     }
 
+    &--alternative {
+        text-align: center;
+        background-color: color('buttons', 'alternative');
+        color: color('text', 'highlight');
+    }
+
     &--align-right {
         text-align: right;
         padding-right: 0;
@@ -54,5 +65,13 @@
 
     &--uppercase {
         text-transform: uppercase;
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    &--small {
+        font-size: em(16px);
     }
 }

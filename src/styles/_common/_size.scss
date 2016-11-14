@@ -1,0 +1,15 @@
+// Defines input and button heights 
+$height-by-size: (
+  "small" : 44px,
+  "medium" : 48px,
+  "large" : 56px,
+);
+
+@mixin height-modifiers() {
+  @each $size, $height in $height-by-size {
+    &--#{$size} {
+      height: $height;
+    }
+  }
+}
+

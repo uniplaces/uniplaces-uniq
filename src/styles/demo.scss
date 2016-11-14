@@ -77,12 +77,17 @@ body {
     }
 }
 
+.input-right-icon {
+    @include input-right-icon();
+}
+
 .anchor {
     @include anchor();
 }
 
 .button {
     @include button();
+    max-width: 200px;
 }
 
 .progress-bar {
@@ -121,6 +126,7 @@ body {
 
 .input {
     @include input();
+    @include height-modifiers();
     display: block;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
@@ -236,4 +242,13 @@ body {
     display: inline-block;
     margin-right: 16px;
     margin-bottom: 46px;
+}
+
+.toggle {
+    @include toggle();
+    margin-right: 16px;
+}
+
+.information {
+    @include message();
 }

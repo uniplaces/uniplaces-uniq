@@ -26,6 +26,10 @@ $base-font-size: 16px; // Default font-size
     font-size: em(18px);
     line-height: 22px;
     color: color('text','subtitle');
+
+    &--strong {
+        color: color('text','title');
+    }
 }
 @mixin body() {
     font-size: em(16px);
@@ -38,9 +42,22 @@ $base-font-size: 16px; // Default font-size
 }
 @mixin anchor() {
     color: color('primary');
-    text-decoration: none;
     
     &:hover {
         cursor: pointer;
+        text-decoration: none;
+    }
+
+    &--active {
+        color: color('primary', 'light');
+        text-decoration: underline;
+    }
+
+    &--negative {
+        color: color('anchor', 'negative')
+    }
+
+    &--alternative {
+        color: color('anchor', 'alternative');
     }
 }
