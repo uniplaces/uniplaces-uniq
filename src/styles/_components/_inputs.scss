@@ -190,6 +190,15 @@ $checkbox-size: 24px;
         max-width: 410px;
         text-align: right;
     }
+
+    &--naked {
+        max-width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        outline: none;
+        background-color: transparent;
+    }
 }
 
 // BASIC CHECKBOX STYLES
