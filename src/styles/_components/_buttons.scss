@@ -1,13 +1,14 @@
 @mixin button() {
     @include button-text();
+    @warn "TODO: Implement new heights and color schemes";
     @include height-modifiers();
     @include align-items-center();
     @include justify-content-center();
     @include flex();
-    width: 100%;
     min-width: 130px;
     height: 44px;
     padding: 0 22px;
+    max-width: 180px;
     background-color: transparent;
     border-radius: 2px;
     border: none;
@@ -66,11 +67,11 @@
         text-transform: uppercase;
     }
 
-    &--cool {
-        width: auto;
+    &--full-width {
+        width: 100%;
     }
 
-    &--s {
+    &--small {
         font-size: em(16px);
     }
 }

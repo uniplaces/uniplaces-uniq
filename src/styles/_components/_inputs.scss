@@ -39,6 +39,7 @@ $checkbox-size: 24px;
 }
 
 @mixin input() {
+    @warn "TODO: Implement new heights and color schemes";
     // height-modifiers must be above height so modifiers override the default height
     height: $input-height;
     @include height-modifiers();
