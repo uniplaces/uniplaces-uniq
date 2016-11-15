@@ -58,6 +58,7 @@ $base-font-size: 16px; // Default font-size
 
 $display-text: em(48px);
 $headline: em(32px);
+$header: em(24px);
 $subheader: em(20px);
 $body: em(16px);
 $caption: em(12px);
@@ -76,6 +77,10 @@ $small: em(9px);
     @include font("IntervalNextReg");
     font-size: em(18px);
     color: color('text','subheading');
+}
+@mixin header() {
+    @include font("IntervalNextReg");
+    font-size: em(24px);
 }
 @mixin title() {
     @include font("IntervalNextReg");
