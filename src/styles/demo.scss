@@ -6,10 +6,8 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    
     @include body();
-    font-family: 'Roboto', sans-serif;
-    font-size: $base-font-size;
+    font-size: 16px;
 }
 .header,
 .main,
@@ -110,6 +108,12 @@ body {
     @include breakpoint(small) {
         margin-top: 46px;
     }
+}
+
+.label-title {
+    @include label-title();
+    margin-bottom: 13px;
+    margin-top: 32px;
 }
 
 .subtitle {
@@ -217,7 +221,10 @@ body {
 
 .mobile-number {
     @include mobile-number();
-    margin-bottom: 64px;
+
+    &:last-child {
+        margin-bottom: 64px;
+    }
 }
 
 ::selection {

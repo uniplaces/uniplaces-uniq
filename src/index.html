@@ -51,6 +51,7 @@
   <div class="progress-bar">
     <div class="progress-bar__bar" style="width: 14%"></div>
   </div>
+  <!--
     <div class="alert alert--success alert--fixed-top">
       <div class="alert__wrapper">
         {{inline-svg}}
@@ -59,6 +60,7 @@
       </div>
       </div>
   </div>
+  -->
   
   <section id="main" class="main">
     <div class="main__wrapper">
@@ -75,16 +77,45 @@
           <div class="input-button input-button--disabled">-</div>
           <div class="input-button">+</div>
         </div>
+
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--large button--primary">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--medium button--primary">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--primary">Add living room</div>
+
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--large button--primary button--primary--disabled">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--medium button--primary button--primary--disabled">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--primary button--primary--disabled">Add living room</div>
+
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--large button--secondary button--secondary--disabled">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--medium button--secondary button--secondary--disabled">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--secondary button--secondary--disabled">Add living room</div>
         
         <div class="title">Do you have a living room?</div>
-        <div class="button button--alternative button--disabled">Add living room</div>
+        <div class="button button--large button--alternative">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--medium button--alternative">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--alternative">Add living room</div>
 
-        <div class="title">Do you have a kitchen?</div>
-        <div class="button button--alternative button--large">Add kitchen</div>
-        
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--full-width button--primary ">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--full-width button--secondary ">Add living room</div>
+        <div class="title">Do you have a living room?</div>
+        <div class="button button--small button--full-width button--alternative ">Add living room</div>
+
         <div class="title">Which amenities does your property have?</div>
         <div class="input-container input-container--bordered input-container--focused">
-          <div class="checkbox">
+          <div class="checkbox checkbox--checked">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                        width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
               <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
@@ -138,17 +169,11 @@
           <label for="">Elevator</label>
         </div>
 
-        <div class="title">Does the property have gas installation?</div>
+        <div class="label-title">Does the property have gas installation?</div>
         <div class="input-container input-container--bordered">
           <div class="radio-button">
             <input type="radio" id="piped">
-            <label for="piped">Yes, piped gas</label>
-          </div>
-        </div>
-        <div class="input-container input-container--bordered">
-          <div class="radio-button">
-            <input type="radio" id="bottled">
-            <label for="bottled">Yes, bottled gas</label>
+            <label for="piped">Yes</label>
           </div>
         </div>
         <div class="input-container input-container--bordered">
@@ -158,7 +183,7 @@
           </div>
         </div>
 
-        <div class="title">Who is this property for?</div>
+        <div class="label-title">Who is this property for?</div>
         <div class="input-container">
           <div class="toggle" aria-role="button">
             <label class="toggle__label" for="students"></label>
@@ -192,13 +217,13 @@
           <label>Full-time workers</label>
         </div>
 
-        <div class="title">Do you have any questions?</div>      
+        <div class="label-title">Do you have any questions?</div>      
         <a class="anchor" href="#">Contact us</a>
 
-        <div class="title">Do you have suggestions?</div>
+        <div class="label-title">Do you have suggestions?</div>
         <a class="anchor anchor--alternative" href="#">Email us</a>
 
-        <div class="title">Warning</div>
+        <div class="label-title">Warning</div>
         <div class="input-container">
           <input type="text" placeholder="Search for city" value="Braga" class="input input--bordered input--success">
           <div class="input-right-icon input-right-icon--success">
@@ -213,7 +238,7 @@
           </div>
         </div>
 
-        <div class="title">City</div>
+        <div class="label-title">City</div>
         <div class="input-container">
           <input type="text" value="Braga" class="input input--bordered">
         </div>
@@ -261,7 +286,7 @@
         <textarea name="" id="" rows="5" class="textarea" placeholder="I.E: Two bedroom apartment with a balcony and great view in trendy Bairro Alto."></textarea>
         <div class="textarea-counter">300 characters</div>
         
-        <div class="title">Add mobile number</div>
+        <div class="label-title">Add mobile number</div>
         <div class="input-container">
           <div class="mobile-number">
             <div class="mobile-number__country-code">
@@ -290,6 +315,40 @@
             </div>
             <input type="text" placeholder="Mobile number">
           </div>
+        </div>
+
+        <div class="label-title">Add mobile number</div>
+        <div class="input-container">
+          <div class="mobile-number mobile-number--error">
+            <div class="mobile-number__country-code">
+              <img src="images/flag.svg" alt=""> +351
+
+              <div class="mobile-number__country-code__dropdown">
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt=""> +49
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt=""> +33
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt=""> +34
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt=""> +39
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg" alt=""> +32
+                </div>
+                <div class="mobile-number__country-code__dropdown__item">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt=""> +44
+                </div>
+              </div>
+            </div>
+            <input type="text" placeholder="Mobile number" value="987654321">
+          </div>
+          <label class="information__content information__content--error">
+            The number doesn’t seem right. Please try again.
+          </label>
         </div>
 
         <div class="title">What is the rent price?</div>

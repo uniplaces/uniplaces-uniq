@@ -6,7 +6,7 @@
     will-change: background-color;
     
     &--success {
-        background-color: color('feedback', 'success');
+        background-color: color('feedback', 'success-light');
     }
     &--warning {
         background-color: color('feedback', 'warning');

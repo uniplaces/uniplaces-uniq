@@ -1,25 +1,35 @@
-@mixin button() {
-    @include button-text();
-    @warn "TODO: Implement new heights and color schemes";
+$button-large: em(20px);
+$button-medium: em(20px);
+$button-small: em(16px);
+
+$sizes: (
+  'small': 44px,
+  'medium': 48px,
+  'large': 56px,
+);
+
+@function size($name: 'small') {
+  @return map-get($sizes, $name);
+}
+
+@mixin button($size: 'small') {
     @include height-modifiers();
     @include align-items-center();
     @include justify-content-center();
     @include flex();
     min-width: 130px;
-    height: 44px;
+    height: size(#{$size});
     padding: 0 22px;
     max-width: 180px;
     background-color: transparent;
     border-radius: 2px;
     border: none;
     outline: none;
-    text-align: left;
-    color: color('primary');
     will-change: background-color;
     
-    @include breakpoint(small) {
-        text-align: center;
-    }
+    font-size: em(20px);
+    text-align: center;
+    color: color('primary');
 
     &:hover {
         cursor: pointer;
@@ -29,6 +39,15 @@
         text-align: center;
         background-color: color('primary');
         color: color('text', 'highlight');
+
+        &:active {
+            background-color: color('buttons', 'pressed');
+        }
+
+        &--disabled {
+            background-color: color('buttons', 'disabled');
+            color: color('buttons', 'disabled-text');
+        }
     }
 
     &--secondary {
@@ -42,36 +61,17 @@
         color: color('text', 'highlight');
     }
 
-    &--align-right {
-        text-align: right;
-        padding-right: 0;
-    }
-
-    &--align-left {
-        text-align: left;
-        padding-left: 0;
-    }
-    
-    &--disabled {
-        text-align: center;
-        background-color: color('primary', 'disabled');
-        color: color('text', 'highlight');
-        
-        @include breakpoint(small) {
-            background-color: transparent;
-            color: color('text', 'disabled');
-        }
-    }
-
-    &--uppercase {
-        text-transform: uppercase;
-    }
-
     &--full-width {
+        max-width: 100%;
         width: 100%;
     }
 
     &--small {
         font-size: em(16px);
     }
+}
+
+@mixin button-text() {
+    font-size: $button-large;
+    text-align: center;
 }

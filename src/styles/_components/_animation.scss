@@ -1,6 +1,7 @@
 $cubic-bezier: cubic-bezier(0,0,0.21,1);
 $swiftOut: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $animation-duration: .3s;
+$transition: $animation-duration $cubic-bezier;
 
 @keyframes fadeIn {
     0% {
@@ -48,14 +49,14 @@ $animation-duration: .3s;
 }
 
 @mixin fade-in($duration: $animation-duration, $bezier: $cubic-bezier) {
-@include backface-hack();
+    @include backface-hack();
     opacity: 0;
     will-change: opacity;
     animation: fadeIn $duration $bezier forwards;
 }
 
 @mixin fade-out($duration: $animation-duration, $bezier: $cubic-bezier) {
-@include backface-hack();
+    @include backface-hack();
     opacity: 1;
     will-change: opacity;
     animation: fadeOut $duration $bezier forwards;

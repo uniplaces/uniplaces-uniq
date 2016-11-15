@@ -10,20 +10,85 @@ $base-font-size: 16px; // Default font-size
 
   @return $pixels / $context * 1rem;
 }
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff eot ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@include font-face(IntervalNextBold, fonts/intervalnext-bold, null, null, woff2 woff eot);
+@include font-face(IntervalNextBook, fonts/intervalnext-book, null, null, woff2 woff eot);
+@include font-face(IntervalNextBookit, fonts/intervalnext-bookit, null, null, woff2 woff eot);
+@include font-face(IntervalNextMedium, fonts/intervalnext-medium, null, null, woff2 woff eot);
+@include font-face(IntervalNextMediumit, fonts/intervalnext-mediumit, null, null, woff2 woff eot);
+@include font-face(IntervalNextReg, fonts/intervalnext-regular, null, null, woff2 woff eot);
+@include font-face(IntervalNextRegularit, fonts/intervalnext-regularit, null, null, woff2 woff eot);
+
+$display-text: em(48px);
+$headline: em(32px);
+$subheader: em(20px);
+$body: em(16px);
+$caption: em(12px);
+$small: em(9px);
+
+@mixin font($name: "IntervalNextReg") {
+    font-family: $name, sans-serif;
+}
+
 @mixin heading() {
-    font-size: em(32px);
+    @include font("IntervalNextReg");
+    font-size: $headline;
     color: color('text','title');
 }
 @mixin subheading() {
+    @include font("IntervalNextReg");
     font-size: em(18px);
     color: color('text','subheading');
 }
 @mixin title() {
-    font-size: em(21px);
+    @include font("IntervalNextReg");
+    font-size: $subheader;
     color: color('text','title');
 }
-@mixin subtitle() {
+@mixin label-title() {
+    @include font("IntervalNextBook");
     font-size: em(18px);
+}
+@mixin subtitle() {
+    @include font("IntervalNextBook");
+    font-size: $body;
     line-height: 22px;
     color: color('text','subtitle');
 
@@ -32,15 +97,13 @@ $base-font-size: 16px; // Default font-size
     }
 }
 @mixin body() {
-    font-size: em(16px);
+    @include font("IntervalNextReg");
+    font-size: $body;
     line-height: 21px; 
     color: color('text','body');
 }
-@mixin button-text() {
-    font-size: em(18px);
-    text-align: center;
-}
 @mixin anchor() {
+    @include font("IntervalNextReg");
     color: color('primary');
     
     &:hover {
