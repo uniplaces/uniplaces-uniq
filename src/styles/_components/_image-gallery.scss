@@ -152,7 +152,7 @@
             color: color('text', 'subtitle');
             
             .plus {
-                @include heading();
+                //@include heading();
                 display: block;
                 width: 100%;
                 margin-bottom: 8px;

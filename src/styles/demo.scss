@@ -110,8 +110,18 @@ body {
     }
 }
 
+.subheader {
+    @include subheader();
+    margin-top: 46px;
+    margin-bottom: 20px;
+
+    @include breakpoint(small) {
+        margin-top: 46px;
+    }
+}
+
 .label-title {
-    @include label-title();
+    //@include label-title();
     margin-bottom: 13px;
     margin-top: 32px;
 }
@@ -183,7 +193,7 @@ body {
     margin-bottom: 46px;
     
     &__title {
-        @include heading();
+        @include headline();
         width: 100%;
         margin-bottom: 16px;
     }
@@ -193,6 +203,7 @@ body {
         margin-bottom: 68px;
 
         p {
+            @include subtitle();
             max-width: 490px;
             line-height: 21px;
         }

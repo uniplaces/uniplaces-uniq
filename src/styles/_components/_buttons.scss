@@ -2,6 +2,12 @@ $button-large: em(20px);
 $button-medium: em(20px);
 $button-small: em(16px);
 
+$button-text-sizes: (
+    'large': $button-large,
+    'medium': $button-medium,
+    'small': $button-small
+);
+
 $sizes: (
   'small': 44px,
   'medium': 48px,
@@ -27,7 +33,8 @@ $sizes: (
     outline: none;
     will-change: background-color;
     
-    font-size: em(20px);
+    font-size: map-get($button-text-sizes, $size);
+
     text-align: center;
     color: color('primary');
 
@@ -66,8 +73,14 @@ $sizes: (
         width: 100%;
     }
 
+    &--large {
+        font-size: map-get($button-text-sizes, 'large');
+    }
+    &--medium {
+        font-size: map-get($button-text-sizes, 'medium');
+    }
     &--small {
-        font-size: em(16px);
+        font-size: map-get($button-text-sizes, 'small');
     }
 }
 
