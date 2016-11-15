@@ -78,7 +78,7 @@ $small: em(9px);
     font-size: em(18px);
     color: color('text','subheading');
 }
-@mixin header() {
+@mixin header-label() {
     @include font("IntervalNextReg");
     font-size: em(24px);
 }
