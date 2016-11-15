@@ -4,13 +4,16 @@ $palette: (
     'primary': #00adef,
     'light': #3b9eff,
     'translucent': rgba(157, 206, 255, 0.25),
-    'divider': #9dceff,
+    'divider': #d1d5da,
     'disabled': #888
   ),
   'buttons': (
     'primary': #fff,
     'hover': #ecf5ff,
-    'alternative': #44c482
+    'pressed': #33bdf2,
+    'alternative': #44c482,
+    'disabled': #f0f1f3,
+    'disabled-text': #d1d5da
   ),
   'text': (
     'primary': #575757,
@@ -38,7 +41,8 @@ $palette: (
     'modal': #fafafa,
     'gallery-item': #f0f0f0,
     'translucent': rgba(0,0,0,0.35),
-    'hover': #E6F8FD
+    'hover': #E6F8FD,
+    'progress-bar': #f0f1f3
   ),
   'input': (
     'primary': #3b9eff,
@@ -48,10 +52,11 @@ $palette: (
     'mobile-border': #d6d6d6
   ),
   'feedback': (
-    'success': #9bdfb8,
+    'success': #44c482,
+    'success-light': #9bdfb8,
     'warning': #fff2b6,
-    'error': #ff3a2d,
-    'info': #148aff,
+    'error': #ff6b6b,
+    'info': #00adef,
     'text': #224251
   ),
   'pill': (

@@ -3,7 +3,7 @@
     min-height: 310px;
     padding: 24px;
     border-radius: 6px;
-    background-color: color('background', 'secondary');
+    background-color: color('background', 'modal');
     
     &__close-button {
         display: none;
@@ -92,6 +92,7 @@
     
     &__content {
         @include body();
+        font-family: "IntervalNextBook", sans-serif;
     }
 }
 
@@ -99,7 +100,7 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: color('primary', 'light');
+    background-color: color('primary');
     border-radius: 50%;
     font-size: em(10px);
     text-align: center;

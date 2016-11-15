@@ -1,9 +1,13 @@
 // Defines input and button heights 
 $height-by-size: (
-  "small" : 44px,
-  "medium" : 48px,
-  "large" : 56px,
+  'small' : 44px,
+  'medium' : 48px,
+  'large' : 56px,
 );
+
+@function height-size($name: 'small') {
+  @return map-get($height-by-size, $name);
+}
 
 @mixin height-modifiers() {
   @each $size, $height in $height-by-size {

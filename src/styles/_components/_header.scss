@@ -3,7 +3,6 @@ $header-height: 60px;
 @mixin header() {
     width: 100%;
     height: $header-height;
-    border-bottom: 1px solid color('borders');
     background-color: color('background');
     @include backface-hack();
     
@@ -21,7 +20,7 @@ $header-height: 60px;
         &__logo {
             width: 140px;
             height: 33px;
-            background-image: url("https://d1mivx2mj8sr2d.cloudfront.net/dist/a980e83624c9ce877f2aaa984082e43d79883fc9/img/uniplaces_logo.svg");
+            background-image: url("https://d2a8dzwjngigu.cloudfront.net/dist/8d5e3bc914e31e065b74c7d1e9b3651f1ab1a7fa/img/uniplaces_logo.svg");
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -29,6 +28,7 @@ $header-height: 60px;
         &__breadcrumb {
             margin-right: auto;
             margin-left: 80px;
+            opacity: 0.7;
             
             @include breakpoint(small) {
                 display: none;
