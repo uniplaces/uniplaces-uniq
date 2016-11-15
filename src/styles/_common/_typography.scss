@@ -58,7 +58,7 @@ $base-font-size: 16px; // Default font-size
 
 $display-text: em(48px);
 $headline: em(32px);
-$header: em(24px);
+$title: em(24px);
 $subheader: em(20px);
 $body: em(16px);
 $caption: em(12px);
@@ -68,44 +68,39 @@ $small: em(9px);
     font-family: $name, sans-serif;
 }
 
-@mixin heading() {
+@mixin display() {
+    @include font("IntervalNextReg");
+    font-size: $display-text;
+    color: color('text','title');
+}
+@mixin headline() {
     @include font("IntervalNextReg");
     font-size: $headline;
     color: color('text','title');
 }
-@mixin subheading() {
-    @include font("IntervalNextReg");
-    font-size: em(18px);
-    color: color('text','subheading');
-}
-@mixin header-label() {
-    @include font("IntervalNextReg");
-    font-size: em(24px);
-}
 @mixin title() {
     @include font("IntervalNextReg");
-    font-size: $subheader;
+    font-size: $title;
     color: color('text','title');
 }
-@mixin label-title() {
-    @include font("IntervalNextBook");
-    font-size: em(18px);
-}
-@mixin subtitle() {
-    @include font("IntervalNextBook");
-    font-size: $body;
-    line-height: 22px;
+@mixin subheader() {
+    @include font("IntervalNextReg");
+    font-size: $subheader;
     color: color('text','subtitle');
-
-    &--strong {
-        color: color('text','title');
-    }
 }
 @mixin body() {
     @include font("IntervalNextBook");
     font-size: $body;
-    line-height: 21px; 
-    color: color('text','body');
+    color: color('text', 'body');
+    line-height: 21px;
+}
+@mixin caption() {
+    @include font("IntervalNextBook");
+    font-size: $caption;
+}
+@mixin small() {
+    @include font("IntervalNextBook");
+    font-size: $small;
 }
 @mixin anchor() {
     @include font("IntervalNextReg");
