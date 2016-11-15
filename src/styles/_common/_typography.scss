@@ -97,7 +97,7 @@ $small: em(9px);
     }
 }
 @mixin body() {
-    @include font("IntervalNextReg");
+    @include font("IntervalNextBook");
     font-size: $body;
     line-height: 21px; 
     color: color('text','body');
