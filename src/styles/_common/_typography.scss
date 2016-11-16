@@ -11,6 +11,7 @@ $small: em(9px);
     font-size: $display-text;
     color: color('text','title');
 }
+
 @mixin headline() {
     @include font("IntervalNextReg");
     font-size: $headline;
@@ -20,36 +21,43 @@ $small: em(9px);
         @include font("IntervalNextLi");
     }
 }
+
 @mixin title() {
     @include font("IntervalNextReg");
     font-size: $title;
     color: color('text','title');
 }
+
 @mixin subheader() {
     @include font("IntervalNextReg");
     font-size: $subheader;
     color: color('text','subheader');
 }
+
 @mixin subtitle() {
     @include font("IntervalNextBook");
     font-size: $body;
     color: color('text', 'subheader');
-    opacity: .7;//jesus Xavier... really?
+    opacity: .7;
 }
+
 @mixin body() {
     @include font("IntervalNextBook");
     font-size: $body;
     color: color('text', 'body');
     line-height: 21px;
 }
+
 @mixin caption() {
     @include font("IntervalNextBook");
     font-size: $caption;
 }
+
 @mixin small() {
     @include font("IntervalNextBook");
     font-size: $small;
 }
+
 @mixin anchor() {
     @include font("IntervalNextReg");
     color: color('primary');
