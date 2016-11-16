@@ -92,6 +92,10 @@ $checkbox-size: 32px;
     &--success {
         border: 2px solid color('feedback', 'success');
     }
+
+    &--small {
+        font-size: em(16px);    
+    }
 }
 
 @mixin input-right-icon() {
