@@ -20,10 +20,12 @@ $palette: (
     'subheading': #434343,
     'title': #303030,
     'subtitle': #888,
+    'subheader': #224251,
     'body': #575757,
     'highlight': #fff,
     'input': #888,
-    'modal': #6b6b6b
+    'modal': #6b6b6b,
+    'header': #545d69
   ),
   'anchor' : (
     'negative' : #fff,
@@ -50,6 +52,10 @@ $palette: (
     'border': #d1d5da,
     'focus': #ecf5ff,
     'mobile-border': #d6d6d6
+  ),
+  dropdown: (
+    'primary': #f5f9fc,
+    'hover': #e6f0f7
   ),
   'feedback': (
     'success': #44c482,

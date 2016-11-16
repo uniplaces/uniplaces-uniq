@@ -75,9 +75,10 @@
     }
     
     &__title {
-        @include title();
         display: inline-block;
         margin: 0 0 15px 15px;
+        @include font("IntervalNextReg");
+        font-size: em(21px);
         color: color('text', 'body');
         vertical-align: middle;
     }

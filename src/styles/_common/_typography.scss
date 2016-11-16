@@ -1,61 +1,3 @@
-$base-font-size: 16px; // Default font-size
-
-@function em($pixels, $context: $base-font-size) {
-  @if (unitless($pixels)) {
-    $pixels: $pixels * 1px;
-  }
-  @if (unitless($context)) {
-    $context: $context * 1px;
-  }
-
-  @return $pixels / $context * 1rem;
-}
-
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
-}
-
-@mixin font-face($name, $path, $weight: null, $style: null, $exts: woff2 woff eot ttf svg) {
-	$src: null;
-
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
-
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
-
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
-
-	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
-		src: $src;
-	}
-}
-
-@include font-face(IntervalNextBold, fonts/intervalnext-bold, null, null, woff2 woff eot);
-@include font-face(IntervalNextBook, fonts/intervalnext-book, null, null, woff2 woff eot);
-@include font-face(IntervalNextBookit, fonts/intervalnext-bookit, null, null, woff2 woff eot);
-@include font-face(IntervalNextMedium, fonts/intervalnext-medium, null, null, woff2 woff eot);
-@include font-face(IntervalNextMediumit, fonts/intervalnext-mediumit, null, null, woff2 woff eot);
-@include font-face(IntervalNextReg, fonts/intervalnext-regular, null, null, woff2 woff eot);
-@include font-face(IntervalNextRegularit, fonts/intervalnext-regularit, null, null, woff2 woff eot);
-
 $display-text: em(48px);
 $headline: em(32px);
 $title: em(24px);
@@ -63,10 +5,6 @@ $subheader: em(20px);
 $body: em(16px);
 $caption: em(12px);
 $small: em(9px);
-
-@mixin font($name: "IntervalNextReg") {
-    font-family: $name, sans-serif;
-}
 
 @mixin display() {
     @include font("IntervalNextReg");
@@ -77,6 +15,10 @@ $small: em(9px);
     @include font("IntervalNextReg");
     font-size: $headline;
     color: color('text','title');
+
+    &--light {
+        @include font("IntervalNextLi");
+    }
 }
 @mixin title() {
     @include font("IntervalNextReg");
@@ -86,7 +28,13 @@ $small: em(9px);
 @mixin subheader() {
     @include font("IntervalNextReg");
     font-size: $subheader;
-    color: color('text','subtitle');
+    color: color('text','subheader');
+}
+@mixin subtitle() {
+    @include font("IntervalNextBook");
+    font-size: $body;
+    color: color('text', 'subheader');
+    opacity: .7;//jesus Xavier... really?
 }
 @mixin body() {
     @include font("IntervalNextBook");
@@ -105,21 +53,17 @@ $small: em(9px);
 @mixin anchor() {
     @include font("IntervalNextReg");
     color: color('primary');
+    text-decoration: underline;
     
     &:hover {
         cursor: pointer;
-        text-decoration: none;
     }
-
     &--active {
         color: color('primary', 'light');
-        text-decoration: underline;
     }
-
     &--negative {
         color: color('anchor', 'negative')
     }
-
     &--alternative {
         color: color('anchor', 'alternative');
     }

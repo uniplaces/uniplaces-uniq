@@ -7,8 +7,7 @@
   <link rel="stylesheet" href="styles/demo.css" />
 </head>
 <body>
-  <header id="header" class="header">
-    <!--
+  <header id="header" class="header header--with-nav">
     <div class="header__wrapper">
       <div class="header__wrapper__logo"></div>
       <div class="header__wrapper__breadcrumb">
@@ -38,7 +37,8 @@
         </div>
       </div>
     </div>
-    -->
+  </header>
+    <!--
     <div class="header__wrapper">
       <div class="header__wrapper__logo"></div>
       <div class="header__wrapper__breadcrumb">
@@ -48,6 +48,7 @@
       <button class="button button--align-right">Exit</button>
     </div>
   </header>
+    -->
   <div class="progress-bar">
     <div class="progress-bar__bar" style="width: 14%"></div>
   </div>
@@ -65,55 +66,55 @@
   <section id="main" class="main">
     <div class="main__wrapper">
       <div class="main__content">
-        <div class="title">How many bedrooms in the property?</div>
+        <div class="subheader">How many bedrooms in the property?</div>
         <div class="input-container">
           <input type="text" class="input input--range" placeholder="2 bedrooms">
           <div class="input-button input-button--disabled">-</div>
           <div class="input-button">+</div>
         </div>
-        <div class="title">How many bathrooms in the property?</div>
+        <div class="subheader">How many bathrooms in the property?</div>
         <div class="input-container">
           <input type="text" class="input input--range" placeholder="1 bedroom">
           <div class="input-button input-button--disabled">-</div>
           <div class="input-button">+</div>
         </div>
 
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--large button--primary">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--medium button--primary">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--primary">Add living room</div>
 
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--large button--primary button--primary--disabled">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--medium button--primary button--primary--disabled">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--primary button--primary--disabled">Add living room</div>
 
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--large button--secondary button--secondary--disabled">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--medium button--secondary button--secondary--disabled">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--secondary button--secondary--disabled">Add living room</div>
         
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--large button--alternative">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--medium button--alternative">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--alternative">Add living room</div>
 
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--full-width button--primary ">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--full-width button--secondary ">Add living room</div>
-        <div class="title">Do you have a living room?</div>
+        <div class="subheader">Do you have a living room?</div>
         <div class="button button--small button--full-width button--alternative ">Add living room</div>
 
-        <div class="title">Which amenities does your property have?</div>
+        <div class="subheader">Which amenities does your property have?</div>
         <div class="input-container input-container--bordered input-container--focused">
           <div class="checkbox checkbox--checked">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -169,7 +170,7 @@
           <label for="">Elevator</label>
         </div>
 
-        <div class="label-title">Does the property have gas installation?</div>
+        <div class="subheader">Does the property have gas installation?</div>
         <div class="input-container input-container--bordered">
           <div class="radio-button">
             <input type="radio" id="piped">
@@ -183,7 +184,7 @@
           </div>
         </div>
 
-        <div class="label-title">Who is this property for?</div>
+        <div class="subheader">Who is this property for?</div>
         <div class="input-container">
           <div class="toggle" aria-role="button">
             <label class="toggle__label" for="students"></label>
@@ -217,13 +218,13 @@
           <label>Full-time workers</label>
         </div>
 
-        <div class="label-title">Do you have any questions?</div>      
+        <div class="subheader">Do you have any questions?</div>      
         <a class="anchor" href="#">Contact us</a>
 
-        <div class="label-title">Do you have suggestions?</div>
+        <div class="subheader">Do you have suggestions?</div>
         <a class="anchor anchor--alternative" href="#">Email us</a>
 
-        <div class="label-title">Warning</div>
+        <div class="subheader">Warning</div>
         <div class="input-container">
           <input type="text" placeholder="Search for city" value="Braga" class="input input--bordered input--success">
           <div class="input-right-icon input-right-icon--success">
@@ -238,7 +239,7 @@
           </div>
         </div>
 
-        <div class="label-title">City</div>
+        <div class="subheader">City</div>
         <div class="input-container">
           <input type="text" value="Braga" class="input input--bordered">
         </div>
@@ -282,11 +283,11 @@
             </div>
         </div>
         
-        <div class="title">Describe your property</div>
+        <div class="subheader">Describe your property</div>
         <textarea name="" id="" rows="5" class="textarea" placeholder="I.E: Two bedroom apartment with a balcony and great view in trendy Bairro Alto."></textarea>
         <div class="textarea-counter">300 characters</div>
         
-        <div class="label-title">Add mobile number</div>
+        <div class="subheader">Add mobile number</div>
         <div class="input-container">
           <div class="mobile-number">
             <div class="mobile-number__country-code">
@@ -317,7 +318,7 @@
           </div>
         </div>
 
-        <div class="label-title">Add mobile number</div>
+        <div class="subheader">Add mobile number</div>
         <div class="input-container">
           <div class="mobile-number mobile-number--error">
             <div class="mobile-number__country-code">
@@ -351,14 +352,14 @@
           </label>
         </div>
 
-        <div class="title">What is the rent price?</div>
+        <div class="subheader">What is the rent price?</div>
         <div class="subtitle">This is the price for Single Bedroom.</div>
         <div class="input-price">
           <input type="text" maxlength="4" placeholder="00" value="">
           <div class="input-price__value"><span class="input-price__currency">€</span> / <span class="input-price__interval">month</span></div>
         </div>
 
-        <div class="title">Lorem ipsum dolor</div>
+        <div class="subheader">Lorem ipsum dolor</div>
         <div class="subtitle">Lorem ipsum dolor sit amet conseqteteur un gradiva.</div>
         <div class="pill pill--success">success label</div>
         <div class="pill pill--warning">warning label</div>
@@ -396,7 +397,7 @@
           <div class="step-card__step">First Step</div>
           <div class="step-card__title">Describe your property</div>
           <div class="step-card__hint">Location, rooms and general features</div>
-          <div class="button button--primary">Continue</div>
+          <div class="button button--primary button--small">Continue</div>
           <div class="step-card__anchor">Change</div>
         </div>
         <div class="step-card">
@@ -476,7 +477,7 @@
   
   <footer id="footer" class="footer footer--overhangs">
     <div class="footer__wrapper">
-      <button class="button button--align-left">Back</button>
+      <button class="button button--link">Back</button>
       <button class="button button--primary">Next</button>
     </div>
   </footer>

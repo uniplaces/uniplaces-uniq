@@ -44,7 +44,8 @@ $checkbox-size: 32px;
     @include height-modifiers();
 
     border: 0;
-    font-size: em(20px);
+    @include font("IntervalNextBook");
+    font-size: em(18px);
     color: color('text', 'input');
     padding: 0 14px;
     
@@ -209,7 +210,6 @@ $checkbox-size: 32px;
     border-radius: 4px;
     will-change: background-color;
     
-    
     svg {
         display: none;
         fill: color('primary');
@@ -218,6 +218,7 @@ $checkbox-size: 32px;
     & + label {
         height: $checkbox-size;
         line-height: $checkbox-size;
+        @include font("IntervalNextReg");
         font-size: em(18px);
         color: color('text', 'body');
         will-change: color;
@@ -256,6 +257,7 @@ $checkbox-size: 32px;
         padding-left: #{$checkbox-size + 20px};
         height: $checkbox-size;
         line-height: $checkbox-size;
+        @include font("IntervalNextReg");
         font-size: em(18px);
         color: color('text', 'body');
         will-change: color;
