@@ -5,6 +5,10 @@ $header-height: 60px;
     height: $header-height;
     background-color: color('background');
     @include backface-hack();
+
+    &--with-nav {
+        border-bottom: 2px solid color('borders');
+    }
     
     &__wrapper {
         @include flex();
@@ -27,7 +31,7 @@ $header-height: 60px;
 
         &__breadcrumb {
             margin-right: auto;
-            margin-left: 80px;
+            margin-left: 40px;
             opacity: 0.7;
             
             @include breakpoint(small) {
@@ -41,7 +45,7 @@ $header-height: 60px;
             }
 
             &__step {
-                font-weight: bold;
+                @include font("IntervalNextMed");
             }
         }
 
@@ -85,7 +89,7 @@ $header-height: 60px;
                 height: 100%;
                 font-size: em(14px);
                 text-transform: uppercase;
-                color: color('text', 'title');
+                color: color('text', 'header');
 
                 @include breakpoint(small) {
                     width: 100%;
@@ -101,6 +105,11 @@ $header-height: 60px;
 @mixin dropdown() {
     position: relative;
     height: 100%;
+
+    &:last-child &-button {
+        border-right: 2px solid color('borders');
+        border-left: 2px solid color('borders');
+    }
 
     @include breakpoint(small) {
         width: 100%;
@@ -132,7 +141,7 @@ $header-height: 60px;
     &-button {
         position: relative;
         height: 100%;
-        font-size: em(14px);
+        font-size: em(12px);
         text-transform: uppercase;
         color: color('text', 'title');
         will-change: background-color;
@@ -169,7 +178,6 @@ $header-height: 60px;
 
         &--active {
             background-color: color('background', 'modal');
-            border: 1px solid color('borders');
 
             &:before {
                 transform: rotate(-45deg);
@@ -195,11 +203,11 @@ $header-height: 60px;
         padding: 20px;
         font-size: em(13px);
         text-align: left;
-        background-color: color('background', 'modal');
+        background-color: color('dropdown');
 
         &:hover {
             cursor: pointer;
-            background-color: color('background', 'hover');
+            background-color: color('dropdown', 'hover');
         }
 
         @include breakpoint(small) {

@@ -1,4 +1,5 @@
 @mixin step-card() {
+    @include backface-hack();
     @include flex();
     @include flex-wrap();
     @include flex-column();
@@ -22,6 +23,7 @@
     &__step {
         width: 100%;
         margin-bottom: 12px;
+        @include font("IntervalNextReg");
         font-size: em(12px);
         color: color('text', 'subtitle');
         text-transform: uppercase;
@@ -30,6 +32,7 @@
     &__title {
         width: 100%;
         margin-bottom: 6px;
+        @include font("IntervalNextReg");
         font-size: em(22px);
         color: color('text', 'title');
     }
@@ -37,6 +40,7 @@
     &__hint {
         width: 100%;
         margin-bottom: 14px;
+        @include font("IntervalNextBook");
         font-size: em(16px);
         color: color('text', 'subheading');
     }
@@ -55,7 +59,7 @@
 
     &__anchor {
         @include anchor();
-        font-size: em(20px);
+        font-size: em(16px);
     }
 
     &--disabled {
@@ -70,6 +74,10 @@
         }
     }
 
+    &--disabled &__hint {
+        @include font("IntervalNextLi");
+    }
+
     &--passed {
         background-color: color('background');
         border-top: 3px solid color('borders', 'light');
@@ -81,6 +89,7 @@
     }
 
     &--passed &__title {
+        @include font("IntervalNextBook");
         font-size: em(17px);
         color: color('text', 'subtitle');
     }

@@ -18,8 +18,8 @@
         position: absolute;
         width: 23px;
         height: 23px;
-        top: 26px;
-        right: 26px;
+        top: 20px;
+        right: 20px;
         
         svg {
             width: 23px;
@@ -48,12 +48,15 @@
         }
 
         &__title {
-            @include subheading();
-            margin-bottom: 8px;
+            max-width: 355px;
+            margin: 0 auto 10px auto;
+            @include subheader();
         }
         
         &__message {
-            @include subtitle();
+            max-width: 355px;
+            margin: 0 auto;
+            @include body();
             color: color('text', 'modal');
         }
     }
