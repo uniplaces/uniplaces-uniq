@@ -7,48 +7,46 @@
   <link rel="stylesheet" href="styles/demo.css" />
 </head>
 <body>
-  <header id="header" class="header header--with-nav">
+  <header id="header" class="header">
     <div class="header__wrapper">
-      <div class="header__wrapper__logo"></div>
-      <div class="header__wrapper__breadcrumb">
-        <div class="header__wrapper__breadcrumb__step">First step:</div>
-        <div class="header__wrapper__breadcrumb__description">Describe your property</div>
+      <div class="header__logo"></div>
+
+      <div class="header__breadcrumb">
+        <div class="header__breadcrumb__step">First step:</div>
+        <div class="header__breadcrumb__description">Describe your property</div>
       </div>
-      <div id="toggle-menu" class="header__wrapper__mobile-buttons">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-      </div>
-      <div class="header__wrapper__buttons">
-        <div class="dropdown">
-          <button class="header__wrapper__buttons__button dropdown-button">English</button>
-          <ul class="dropdown__wrapper">
-            <li class="dropdown__item">English</li>
-            <li class="dropdown__item">Español</li>
-            <li class="dropdown__item">Deutsch</li>
-            <li class="dropdown__item">Italiano</li>
-            <li class="dropdown__item">Português</li>
+
+      <nav class="header__nav">
+        <button class="header__nav__button">Help</button>
+        <button class="header__nav__button">Login</button>
+        <button class="header__nav__button header__nav__button--bordered">Sign up</button>
+        <div id="userDropdown" class="header__nav__dropdown">
+          <button id="userToggleDropdown" class="header__nav__button header__nav__button--dropdown">Filipe</button>
+          <ul class="header__nav__dropdown__list">
+            <li class="header__nav__dropdown__list__item">Account</li>
+            <li class="header__nav__dropdown__list__item">Billing</li>
+            <li class="header__nav__dropdown__list__item">Logout</li>
           </ul>
         </div>
-        <button class="header__wrapper__buttons__button">Help</button>
-        <div class="dropdown">
-          <button class="header__wrapper__buttons__button dropdown-button dropdown-button--active">Filipe</button>
-          <ul class="dropdown__wrapper">
-            <li class="dropdown__item">Logout</li>
+        <div id="dropdown" class="header__nav__dropdown">
+          <button id="toggleDropdown" class="header__nav__button header__nav__button--dropdown">EN</button>
+          <ul class="header__nav__dropdown__list">
+            <li class="header__nav__dropdown__list__item">Deutsch</li>
+            <li class="header__nav__dropdown__list__item">English</li>
+            <li class="header__nav__dropdown__list__item">Español</li>
+            <li class="header__nav__dropdown__list__item">Français</li>
+            <li class="header__nav__dropdown__list__item">Italiano</li>
+            <li class="header__nav__dropdown__list__item">Nederlands</li>
+            <li class="header__nav__dropdown__list__item">Polski</li>
+            <li class="header__nav__dropdown__list__item">Português</li>
+            <li class="header__nav__dropdown__list__item">中文</li>
           </ul>
         </div>
-      </div>
+        <button class="header__nav__button">Exit</button>
+      </nav>
     </div>
   </header>
-    <!--
-    <div class="header__wrapper">
-      <div class="header__wrapper__logo"></div>
-      <div class="header__wrapper__breadcrumb">
-        <div class="header__wrapper__breadcrumb__step">First step:</div>
-        <div class="header__wrapper__breadcrumb__description">Describe your property</div>
-      </div>
-      <button class="button button--align-right">Exit</button>
-    </div>
-  </header>
-    -->
+
   <div class="progress-bar">
     <div class="progress-bar__bar" style="width: 14%"></div>
   </div>
@@ -497,7 +495,7 @@ You can always add more offers later</div>
   -->
   
   <script src="http://zeptojs.com/zepto.min.js"></script>
-  <script async>
+  <script>
     (function () {
       $('#toggle-menu').on('click', function () {
         $(this).toggleClass('header__wrapper__mobile-buttons--active');
@@ -505,8 +503,11 @@ You can always add more offers later</div>
       $('.checkbox').on('click', function () {
         $(this).toggleClass('checkbox--checked');
       });
-      $('.dropdown-button').on('click', function (ev) {
-       $(ev.currentTarget).toggleClass('dropdown-button--active'); 
+      $('#userToggleDropdown').on('click', function () {
+       $('#userDropdown').toggleClass('header__nav__dropdown--active'); 
+      });
+      $('#toggleDropdown').on('click', function () {
+       $('#dropdown').toggleClass('header__nav__dropdown--active'); 
       });
       $('.mobile-number__country-code').on('click', function () {
         $(this).toggleClass('mobile-number__country-code--active');

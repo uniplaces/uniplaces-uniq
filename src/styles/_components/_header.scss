@@ -4,100 +4,242 @@ $header-height: 60px;
     width: 100%;
     height: $header-height;
     background-color: color('background');
+    padding: 10px 0;
     @include backface-hack();
-
-    &--with-nav {
-        border-bottom: 2px solid color('borders');
-    }
     
     &__wrapper {
         @include flex();
         @include align-items-center();
         @include justify-content-end();
         position: relative;
-        height: $header-height;
+        height: calc($header-height - 20px);
         
         @include breakpoint(small) {
-            padding: 14px;
+            padding: 0 14px;
         }
+    }
 
-        &__logo {
-            width: 140px;
-            height: 33px;
-            background-image: url("https://d2a8dzwjngigu.cloudfront.net/dist/8d5e3bc914e31e065b74c7d1e9b3651f1ab1a7fa/img/uniplaces_logo.svg");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
+    &__logo,
+    &__breadcrumb,
+    &__nav {
+        @include inline-flex();
+    }
 
-        &__breadcrumb {
+    &__logo {
+        width: 140px;
+        height: 33px;
+        background-image: url("../images/uniplaces_logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @include breakpoint(small) {
             margin-right: auto;
-            margin-left: 40px;
-            opacity: 0.7;
-            
-            @include breakpoint(small) {
-                display: none;
+        }
+    }
+
+    &__breadcrumb {
+        margin-left: 40px;
+        opacity: 0.7;
+        
+        @include breakpoint(small) {
+            display: none;
+        }
+
+        &__step,
+        &__description {
+            display: inline-table;
+            font-size: em(15px);
+        }
+
+        &__step {
+            @include font("IntervalNextMed");
+        }
+    }
+
+    &__nav {
+        margin-left: auto;
+
+        @include breakpoint(small) {
+            display: none;
+        }
+
+        &__button {
+            @include button();
+            min-width: auto;
+            height: 38px;
+            @include font("InvervalNextReg");
+            font-size: em(15px);
+            color: color('text', 'header');
+
+            &--bordered {
+                border: 1px solid color('text', 'header');
+
+                &:hover,
+                &:active,
+                &--active {
+                    border: 1px solid color('primary');
+                }
             }
 
-            &__step,
-            &__description {
-                display: inline-table;
-                font-size: em(15px);
-            }
-
-            &__step {
-                @include font("IntervalNextMed");
+            &:hover,
+            &:active {
+                color: color('primary');
             }
         }
 
-        &__mobile-buttons {
-            display: none;
+        &__dropdown &__button {
+            position: relative;
+            color: color('header', 'text');
 
-            svg {
-                fill: color('primary');
+            &:before,
+            &:after {
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 6px;
+                height: 2px;
+                top: calc(50% + 1px);
+                right: 8px;
+                background-color: color('text', 'header');
+                transform: rotate(-45deg);
+                will-change: transform;
             }
 
-            @include breakpoint(small) {
+            &:after {
+                right: 11px;
+                transform: rotate(45deg);
+            }
+
+            &:hover,
+            &:active {
+                &:before,
+                &:after {
+                    background-color: color('primary');
+                }
+            }
+        }
+
+        &__dropdown {
+            position: relative;
+
+            &__list {
+                position: absolute;
+                display: none;
+                width: 248px;
+                padding: 16px 0;
+                top: calc(100% + 11px);
+                right: 8px;
+                will-change: display;
+                @include backface-hack();
+
+                background-color: #fff;
+                box-shadow: 0 16px 18px 0 rgba(31, 36, 50, 0.32);
+                border: solid 1px #ccd2d4;
+                border-radius: 2px;
+
+                &:before,
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    top: -7px;
+                    right: 16px;
+                    z-index: 2;
+                    border-bottom: 8px solid #fff;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                }
+
+                &:after {
+                    top: -8px;
+                    z-index: 1;
+                    border-bottom: 8px solid #ccd2d4;
+                }
+
+                &__item {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 32px;
+                    line-height: 32px;
+                    padding: 0 27px;
+                    
+                    @include font("InvervalNextReg");
+                    font-size: em(16px);
+                    color: #545d69;
+
+                    &:hover,
+                    &--active {
+                        cursor: pointer;
+                        color: #00222f;
+
+                        &:before {
+                            content: " ";
+                            position: absolute;
+                            display: block;
+                            left: 0;
+                            top: 0;
+                            width: 3px;
+                            height: 100%;
+                            background-color: color('primary');
+                        }
+                    }
+                }
+            }
+
+            &--active &__list {
                 display: block;
             }
         }
 
-        &__mobile-buttons--active + &__buttons {
-            @include flex();
+        &__dropdown--active &__button {
+            color: color('primary');
+
+            &:before,
+            &:after {
+                background-color: color('primary');
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--transparent &__logo {
+        background-image: url("../images/uniplaces_logo_white.svg");
+    }
+
+    &--transparent &__nav__button {
+        border-color: #fff;
+        color: #fff;
+
+        &:before,
+        &:after {
+            background-color: #fff;
         }
 
-        &__buttons {
-            @include flex();
-            @include align-items-center();
-            position: relative;
-            height: 100%;
-            
-            @include breakpoint(small) {
-                display: none;
-                @include flex-column();
-                @include align-items-top();
-                @include justify-content-start();
-                position: fixed;
-                width: 100%;
-                top: $header-height;
-                left: 0;
-                background-color: color('background');
-            }
+        &:hover {
+            color: color('primary');
+            border-color: color('primary');
+        }
+    }
 
-            &__button {
-                @include button();
-                position: relative;
-                height: 100%;
-                font-size: em(14px);
-                text-transform: uppercase;
-                color: color('text', 'header');
-
-                @include breakpoint(small) {
-                    width: 100%;
-                    max-width: 100%;
-                    height: 55px !important;
-                    text-align: left;
-                }
-            }
+    &--transparent &__nav__dropdown--active &__nav__button {
+        color: color('primary');
+        &:before,
+        &:after {
+            background-color: color('primary');
         }
     }
 }
