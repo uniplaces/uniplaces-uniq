@@ -11,6 +11,9 @@
 @mixin flex() {
 	display: flex;
 }
+@mixin inline-flex() {
+	display: inline-flex;
+}
 @mixin order($val) {
 	order: $val;
 }
