@@ -32,7 +32,7 @@ $header-height: 60px;
         background-repeat: no-repeat;
         background-size: contain;
 
-        @include breakpoint(small){
+        @include breakpoint(small) {
             margin-right: auto;
         }
     }
