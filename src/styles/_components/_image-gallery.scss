@@ -76,7 +76,7 @@
                 position: relative;
                 height: 160px;
                 margin-bottom: 14px;
-                background-position: center middle;
+                background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 z-index: 1;
@@ -163,6 +163,26 @@
                 margin-bottom: 15px;
                 color: color('text', 'subtitle');
             }
+        }
+    }
+    &__remove {
+        @include flex();
+        @include align-items-center();
+        @include justify-content-center();
+        color: color('feedback', 'text');
+        background-color: color('dropdown');
+        padding: 0 10px;
+        width: auto;
+
+        svg {
+          width: 18px;
+          fill: color('feedback', 'text');
+        }
+
+        &--alert {
+          background-color: color('pill', 'error');
+          color: color('text', 'highlight');
+          opacity: 0.9;
         }
     }
 
