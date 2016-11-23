@@ -36,9 +36,8 @@ $small: em(9px);
 
 @mixin subtitle() {
     @include font("IntervalNextBook");
-    font-size: $body;
+    font-size: em(18px);
     color: color('text', 'subheader');
-    opacity: .7;
 }
 
 @mixin body() {
