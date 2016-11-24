@@ -440,7 +440,9 @@ $checkbox-size: 32px;
         padding-right: 10px;
 
         &:focus {
-            border: 0;
+            border: inherit;
+            border-right: 0;
+            border-left: 0;
         }
     }
 
