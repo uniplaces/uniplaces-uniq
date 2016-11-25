@@ -18,7 +18,7 @@ $checkbox-size: 32px;
         padding: 0;
         margin-bottom: 5px;
     }
-    
+
     &--bordered {
         @include breakpoint(small) {
             padding: 20px;
@@ -26,7 +26,7 @@ $checkbox-size: 32px;
             border-radius: 4px;
         }
     }
-    
+
     &--focused {
         @include breakpoint(small) {
             background-color: color('input', 'focus');
@@ -48,13 +48,13 @@ $checkbox-size: 32px;
     font-size: em(18px);
     color: color('text', 'input');
     padding: 0 14px;
-    
+
     // padding-right to allow inputs to have a right icon (ex: validation icons)
     padding-right: 44px;
 
     will-change: border;
     -webkit-appearance: none;
-    
+
     &:focus {
         border: 2px solid color('primary', 'light');
         outline: none;
@@ -74,12 +74,11 @@ $checkbox-size: 32px;
         background-color: transparent;
         border: 0;
     }
-    
+
     &--full-width {
         width: 100%;
     }
-    
-    // modifiers that handle border OVERRIDE each other, the last is applied
+
     &--bordered {
         border: 2px solid color('input', 'border');
     }
@@ -102,10 +101,10 @@ $checkbox-size: 32px;
 
     svg {
         fill: currentColor;
-        width: 17px; 
+        width: 17px;
         height: 13px;
     }
-    
+
     &--warning {
         svg {
             fill: color('feedback', 'warning');
@@ -142,7 +141,7 @@ $checkbox-size: 32px;
     font-weight: bold;
     color: color('primary');
     will-change: background-color;
-    
+
     &:first-of-type {
         border-right: 0;
     }
@@ -151,7 +150,7 @@ $checkbox-size: 32px;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
-    
+
     svg {
         fill: color('primary');
     }
@@ -181,7 +180,7 @@ $checkbox-size: 32px;
     border: 1px solid color('input', 'border');
     border-radius: 4px;
     font-size: em(18px);
-    
+
     & + &-counter {
         @include body();
         max-width: 410px;
@@ -209,7 +208,7 @@ $checkbox-size: 32px;
     margin-right: 20px;
     border-radius: 4px;
     will-change: background-color;
-    
+
     svg {
         display: none;
         fill: color('primary');
@@ -229,7 +228,7 @@ $checkbox-size: 32px;
     &--checked {
         border: 1px solid color('primary');
         background-color: color('primary');
-        
+
         svg {
             display: block;
             fill: color('background');
@@ -288,7 +287,7 @@ $checkbox-size: 32px;
 
     input[type="radio"]:checked + label {
         color: color('primary');
-        
+
         &:before {
             border: 2px solid color('primary');
         }
@@ -377,14 +376,14 @@ $checkbox-size: 32px;
             background-color: color('background', 'light');
             border-bottom-right-radius: 4px;
             border-bottom-left-radius: 4px;
-            
+
             &__item {
                 @include flex();
                 @include align-items-center();
                 height: 46px;
                 line-height: 46px;
                 padding: 20px;
-                
+
                 &:hover {
                     cursor: pointer;
                     background-color: color('input', 'border');
@@ -396,7 +395,7 @@ $checkbox-size: 32px;
             }
         }
     }
-    
+
     input {
         @include input();
         width: calc(100% - 130px);
@@ -457,7 +456,7 @@ $checkbox-size: 32px;
     &__currency {
         color: color('text');
     }
-    
+
     &__interval {
         color: color('text', 'input');
     }
@@ -490,7 +489,7 @@ $checkbox-size: 32px;
 
         border-radius: 4px;
         background: color('buttons', 'primary');
-    }    
+    }
 
     &__icon {
         @include flex();
@@ -529,11 +528,52 @@ $checkbox-size: 32px;
         position: absolute;
         left: -99999px;
     }
-    
+
     &__label {
         position: absolute;
         width: 100%;
         height: 100%;
         z-index: 2;
+    }
+}
+
+@mixin select() {
+    height: $input-height;
+    @include height-modifiers();
+    border: 0;
+    font-size: em(18px);
+    color: color('text', 'input');
+    padding: 0 14px;
+    padding-right: 46px;
+    will-change: border;
+    -webkit-appearance: none;
+    border: 2px solid color('borders');
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    &-wrapper {
+        display: inline-block;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 8px;
+            height: 2px;
+            top: 50%;
+            background-color:  color('text', 'input');
+        }
+
+        &:before {
+            right: 20px;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            right: 15px;
+            transform: rotate(-45deg);
+        }
     }
 }
