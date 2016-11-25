@@ -48,6 +48,8 @@ $base-font-size: 16px; // Default font-size
 	}
 }
 
+@include font-face(IntervalNextLi, "fonts/intervalnextcond-light", 100, null, woff2 woff eot);
+@include font-face(IntervalNextLi, "fonts/intervalnextcond-light", 100, null, woff2 woff eot);
 @include font-face(IntervalNextBold, "fonts/intervalnext-bold", bold, null, woff2 woff eot);
 @include font-face(IntervalNextBook, "fonts/intervalnext-book", 100, null, woff2 woff eot);
 @include font-face(IntervalNextBookit, "fonts/intervalnext-bookit", null, null, woff2 woff eot);
