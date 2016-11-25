@@ -539,6 +539,7 @@ $checkbox-size: 32px;
 
 @mixin select() {
     height: $input-height;
+    @include height-modifiers();
     border: 0;
     font-size: em(18px);
     color: color('text', 'input');
@@ -563,7 +564,6 @@ $checkbox-size: 32px;
             height: 2px;
             top: 50%;
             background-color:  color('text', 'input');
-            will-change: transform;
         }
 
         &:before {
