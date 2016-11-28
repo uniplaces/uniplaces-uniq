@@ -576,4 +576,12 @@ $checkbox-size: 32px;
             transform: rotate(-45deg);
         }
     }
+
+    will-change: border;
+    -webkit-appearance: none;
+
+    &:focus {
+        border: 2px solid color('primary', 'light');
+        outline: none;
+    }
 }
