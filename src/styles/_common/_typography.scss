@@ -60,10 +60,11 @@ $small: em(9px);
 @mixin anchor() {
     @include font("IntervalNextReg");
     color: color('primary');
-    text-decoration: underline;
+    text-decoration: none;
     
     &:hover {
         cursor: pointer;
+        text-decoration: underline;
     }
     &--active {
         color: color('primary', 'light');

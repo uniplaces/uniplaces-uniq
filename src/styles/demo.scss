@@ -8,6 +8,7 @@ body {
     height: 100%;
     @include body();
     font-size: 16px;
+    -webkit-font-smoothing: antialiased;
 }
 .header,
 .main,
@@ -171,6 +172,10 @@ body {
 
     &__wrapper {
         @include column(6);
+
+        &--signup {
+            @include column(4);
+        }
     }
 }
 
@@ -263,4 +268,8 @@ body {
 
 .information {
     @include message();
+}
+
+.signup {
+    @include signup();
 }

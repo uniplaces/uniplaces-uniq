@@ -5,7 +5,8 @@ $palette: (
     'light': #3b9eff,
     'translucent': rgba(157, 206, 255, 0.25),
     'divider': #d1d5da,
-    'disabled': #888
+    'disabled': #888,
+    'highlight': #fff
   ),
   'buttons': (
     'primary': #fff,
@@ -13,7 +14,9 @@ $palette: (
     'pressed': #33bdf2,
     'alternative': #44c482,
     'disabled': #f0f1f3,
-    'disabled-text': #d1d5da
+    'disabled-text': #d1d5da,
+    'facebook': #3b5998,
+    'light': rgba(34, 66, 81, .4)
   ),
   'text': (
     'primary': #575757,
@@ -25,7 +28,8 @@ $palette: (
     'highlight': #fff,
     'input': #888,
     'modal': #6b6b6b,
-    'header': #545d69
+    'header': #545d69,
+    'close': #b2b9c2
   ),
   'anchor' : (
     'negative' : #fff,
