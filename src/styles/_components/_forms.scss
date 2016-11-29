@@ -1,0 +1,158 @@
+@mixin signup {
+    &__title {
+        margin-bottom: 56px;
+        @include font("IntervalNextBook");
+        font-size: em(32px);
+        text-align: left;
+        color: color('feedback', 'text');
+    }
+
+    &__step1,
+    &__step2 {
+        position: relative;
+        width: 100%;
+    }
+
+    &__step1 {
+        display: block;
+    }
+    &__step2 {
+        display: none;
+    }
+
+    &__button {
+        position: relative;
+        width: 100%;
+        height: 48px;
+        margin-bottom: 16px;
+        padding: 0 60px;
+        border-radius: 2px;
+        background-color: color('primary', 'highlight');
+        @include font("IntervalNextReg");
+        font-size: em(20px);
+        text-align: center;
+
+        svg {
+            position: absolute;
+            display: block;
+            height: 20px;
+            top: 14px;
+            left: 18px;
+        }
+
+        &--facebook {
+            border: 0;
+            background-color: color('buttons', 'facebook');
+            color: color('primary', 'highlight');
+            line-height: 15px;
+
+            &__small {
+                @include font("IntervalNextBook");
+                font-size: em(11px);
+            }
+
+            svg {
+                fill: color('primary', 'highlight');
+            }
+        }
+
+        &--google {
+            color: color('buttons', 'light');
+            border: 2px solid color('buttons', 'light');
+        }
+
+        &--email {
+            margin-bottom: 116px;
+            color: color('primary');
+            border: 2px solid color('primary');
+
+            svg {
+                width: 23px;
+                height: auto;
+                top: 16px;
+                fill: color('primary');
+            }
+        }
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 264px;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        font-size: em(14px);
+        color: color('feedback', 'text');
+        text-align: left;
+
+        border-bottom: 1px solid color('background', 'progress-bar');
+
+        a {
+            @include anchor();
+        }
+    }
+
+    &__aux {
+        width: 100%;
+        @include font("IntervalNextBook");
+        font-size: em(16px);
+        text-align: left;
+        color: color('buttons', 'light');
+
+        a {
+            margin-left: 8px;
+            @include anchor();
+            @include font("IntervalNextReg");
+        }
+    }
+
+    &--with-email &__title {
+        position: relative;
+        padding-left: 28px;
+
+        &:before,
+        &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 2px;
+            height: 14px;
+            left: 0;
+            background-color: color('text', 'close');
+        }
+        &:before {
+            top: 0px;
+            transform: rotate(45deg);
+        }
+        &:after {
+            bottom: -3px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &--with-email &__step1 {
+        display: none;
+    }
+    &--with-email &__step2 {
+        display: block;
+    }
+
+    &--with-email {
+        max-height: 535px;
+
+        input {
+            @include input();
+            width: 100%;
+            height: 48px;
+            margin-bottom: 8px;
+            border: 2px solid color('borders');
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 8px;
+            margin-bottom: 36px;
+        }
+    }
+}

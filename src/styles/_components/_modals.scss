@@ -31,8 +31,20 @@
             cursor: pointer;
         }
     }
+
+    &__close-button--light {
+        top: 24px;
+        right: 24px;
+    }
+
+    &__close-button--light svg {
+        width: 20px;
+        height: 20px;
+        fill: color('text', 'close');
+    }
     
     &__wrapper {
+        display: table;
         height: 100%;
         max-height: 350px;
         padding: 36px;
@@ -40,6 +52,13 @@
         background-color: color('background', 'modal');
         box-shadow: 0 2px 7px 0 rgba(53, 53, 53, 0.5);
         text-align: center;
+
+        &--signup {
+            @include column(4);
+            max-height: 524px;
+            padding: 24px;
+            background-color: color('primary', 'highlight');
+        }
                
         &__image {
             width: 170px;
