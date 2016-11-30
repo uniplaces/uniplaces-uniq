@@ -173,7 +173,8 @@ body {
     &__wrapper {
         @include column(6);
 
-        &--signup {
+        &--signup,
+        &--login {
             @include column(4);
         }
     }
@@ -272,4 +273,8 @@ body {
 
 .signup {
     @include signup();
+}
+
+.login {
+    @include login();
 }
