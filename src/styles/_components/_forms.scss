@@ -16,8 +16,28 @@
     &__step1 {
         display: block;
     }
+
     &__step2 {
         display: none;
+    }
+
+    button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    input {
+        @include input();
+        width: 100%;
+        max-width: 100%;
+        height: 48px;
+        margin-bottom: 8px;
+        border: 2px solid color('borders');
+        border-radius: 4px;
+    }
+
+    a {
+        @include anchor();
     }
 
     &__button {
@@ -85,10 +105,6 @@
         text-align: left;
 
         border-bottom: 1px solid color('background', 'progress-bar');
-
-        a {
-            @include anchor();
-        }
     }
 
     &__aux {
@@ -100,9 +116,49 @@
 
         a {
             margin-left: 8px;
-            @include anchor();
             @include font("IntervalNextReg");
         }
+    }
+
+    &__divider {
+        position: relative;
+        width: 100%;
+        height: 16px;
+        margin: 0 0 15px 0;
+
+        &:before {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 1px;
+            top: 9px;
+            left: 0;
+            z-index: 1;
+            background-color: color('background', 'progress-bar');
+        }
+
+        &__content {
+            position: relative;
+            display: table;
+            margin: 0 auto;
+            padding: 0 24px;
+            opacity: .7;
+            z-index: 2;
+            background-color: color('primary', 'highlight');
+            @include font("IntervalNextReg");
+            font-size: em(16px);
+            line-height: 1em;
+        }
+    }
+
+    &__alt-text {
+        width: 100%;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        padding-bottom: 44px;
+        text-align: center;
+        border-bottom: 1px solid color('background', 'progress-bar');
     }
 
     &--with-email &__title {
@@ -132,6 +188,7 @@
     &--with-email &__step1 {
         display: none;
     }
+
     &--with-email &__step2 {
         display: block;
     }
@@ -139,20 +196,17 @@
     &--with-email {
         max-height: 535px;
 
-        input {
-            @include input();
-            width: 100%;
-            height: 48px;
-            margin-bottom: 8px;
-            border: 2px solid color('borders');
-            border-radius: 4px;
-        }
-
         button {
-            width: 100%;
-            max-width: 100%;
             margin-top: 8px;
             margin-bottom: 36px;
         }
+    }
+}
+
+@mixin login() {
+    @include signup();
+
+    [class*="--primary"] {
+        margin-top: 8px;
     }
 }

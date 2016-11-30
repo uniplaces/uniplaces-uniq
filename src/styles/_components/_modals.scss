@@ -37,7 +37,8 @@
         right: 24px;
     }
 
-    &__close-button--light svg {
+    &__close-button--light svg,
+    &__close-button--light .st0 {
         width: 20px;
         height: 20px;
         fill: color('text', 'close');
@@ -53,7 +54,8 @@
         box-shadow: 0 2px 7px 0 rgba(53, 53, 53, 0.5);
         text-align: center;
 
-        &--signup {
+        &--signup,
+        &--login {
             @include column(4);
             max-height: 524px;
             padding: 24px;
