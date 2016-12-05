@@ -19,7 +19,7 @@ body {
         @include space-between();
         position: relative;
         width: 100%;
-        max-width: 1000px;
+        padding: 0 32px;
         margin: 0 auto;
     }
 }
@@ -277,4 +277,11 @@ body {
 
 .login {
     @include login();
+}
+
+.tabs {
+    @include tabs();
+    position: fixed;
+    top: 65px;
+    left: 0;
 }

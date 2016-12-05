@@ -1,0 +1,33 @@
+$tabs-height: 36px;
+
+@mixin tabs() {
+    width: 100%;
+    height: $tabs-height;
+
+    &__wrapper {
+        @include flex();
+        @include align-items-center();
+        position: relative;
+        width: 100%;
+        height: $tabs-height;
+        background-color: color('buttons', 'disabled');
+        border-top: 1px solid color('buttons', 'disabled-text');
+        border-bottom: 1px solid color('buttons', 'disabled-text');
+
+        &__item {
+            width: 100%;
+            min-width: 150px;
+            height: $tabs-height;
+            line-height: $tabs-height;
+            padding: 0 8px;
+            text-align: center;
+            @include font("IntervalNextReg");
+            font-size: em(14px);
+            border-right: 1px solid color('buttons', 'disabled-text'); 
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+}
