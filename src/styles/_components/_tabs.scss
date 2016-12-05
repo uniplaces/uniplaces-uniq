@@ -10,9 +10,9 @@ $tabs-height: 36px;
         position: relative;
         width: 100%;
         height: $tabs-height;
-        background-color: color('buttons', 'disabled');
-        border-top: 1px solid color('buttons', 'disabled-text');
-        border-bottom: 1px solid color('buttons', 'disabled-text');
+        background-color: color('tabs', 'background');
+        border-top: 1px solid color('tabs', 'border');
+        border-bottom: 1px solid color('tabs', 'border');
 
         &__item {
             width: 100%;
@@ -23,7 +23,7 @@ $tabs-height: 36px;
             text-align: center;
             @include font("IntervalNextReg");
             font-size: em(14px);
-            border-right: 1px solid color('buttons', 'disabled-text'); 
+            border-right: 1px solid color('tabs', 'border');
 
             &:last-child {
                 border-right: 0;
