@@ -39,7 +39,7 @@
     &__row {
         @include column(12);
         @include flex();
-        align-items: flex-start;
+        @include align-items-top();
         padding-bottom: 32px;
 
         &:not(:first-child) {
