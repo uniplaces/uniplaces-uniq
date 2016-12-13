@@ -25,3 +25,80 @@
         padding: 0;
     }
 }
+
+@mixin footer-website {
+    width: 100%;
+    background-color: color('footer', 'background');
+    padding: 48px 0;
+
+    &__wrapper {
+        @include flex();
+        @include row();
+    }
+
+    &__row {
+        @include column(12);
+        @include flex();
+        @include align-items-top();
+        padding-bottom: 32px;
+
+        &:not(:first-child) {
+            border-top: 1px solid color('footer', 'divider');
+            padding-top: 32px;
+        }
+
+        &__cell {
+            @include column(3);
+
+            &--half-line{
+                @include column(6);
+            }
+
+            &__header {
+                @include subheader();
+                @include font("IntervalNext");
+                font-weight: 600;
+                padding-bottom: 18px;
+            }
+
+            &__anchor {
+                @include anchor();
+                display: block;
+                color: color('text', 'subheader');
+                opacity: 0.3;
+                padding: 6px 0px;
+                text-decoration: none;
+
+                &--inline {
+                    display: inline;
+                }
+            }
+
+            &__social-link {
+                @include flex();
+                @include align-items-center();
+                @include justify-content-center();
+                text-decoration: none;
+                width: 40px;
+                height: 40px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    fill: color('text', 'subheader');
+                    opacity: 0.3;
+                }
+            }
+
+            &--align-right {
+                @include flex();
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid color('footer', 'divider');
+        padding-top: 32px;
+    }
+}

@@ -62,7 +62,7 @@ $palette: (
     'focus': #ecf5ff,
     'mobile-border': #d6d6d6
   ),
-  dropdown: (
+  'dropdown': (
     'primary': #f5f9fc,
     'hover': #e6f0f7
   ),
@@ -85,6 +85,12 @@ $palette: (
     'separator': #d8d8d8,
     'thumbnail': #667485,
     'backdrop': rgba(0,0,0,0.5)
+   ),
+  'footer': (
+    'background': #fafafa,
+    'background-dark': #224251,
+    'divider': #f0f1f3,
+    'cell-header': #224251
   ),
   'step-card': (
     'first-bar': #26c6da,
