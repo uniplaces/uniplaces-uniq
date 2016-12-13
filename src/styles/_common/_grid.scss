@@ -41,7 +41,7 @@ $max-columns: 12;
     }
 }
 
-@mixin clearfix() {
+@mixin uni-clearfix() {
     &,
     &:before,
     &:after {
