@@ -83,13 +83,22 @@ $palette: (
   ),
   'modal': (
     'separator': #d8d8d8,
-    'thumbnail': #667485
+    'thumbnail': #667485,
+    'backdrop': rgba(0,0,0,0.5)
    ),
   'footer': (
     'background': #fafafa,
     'background-dark': #224251,
     'divider': #f0f1f3,
     'cell-header': #224251
+  ),
+  'step-card': (
+    'first-bar': #26c6da,
+    'first-gutter': rgba(38, 198, 218, 0.3),
+    'second-bar': #fabc63,
+    'second-gutter': rgba(249, 188, 99, 0.3),
+    'third-bar': #9575cd,
+    'third-gutter': rgba(148, 117, 205, 0.3)
   )
 );
 
