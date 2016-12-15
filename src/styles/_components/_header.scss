@@ -242,6 +242,168 @@ $header-height: 60px;
             background-color: color('primary');
         }
     }
+
+    &__mobile-button {
+        position: relative;
+        display: none;
+        padding-right: 20px;
+        @include font("IntervalNextReg");
+        font-size: em(15px);
+        text-transform: uppercase;
+
+        &:before,
+        &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            top: 11px;
+            right: 0;
+
+            width: 8px;
+            height: 1px;
+
+            background-color: color('feedback', 'text');
+        }
+
+        &:before {
+            transform: rotate(-45deg);
+        }
+
+        &:after {
+            right: 5px;
+            transform: rotate(45deg);
+        }
+
+        &--active {
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        @include breakpoint(small) {
+            display: block;
+        }
+    }
+
+    &__mobile-nav {
+        display: none;
+        @include align-items-center();
+        @include justify-content-center();
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        width: 100%;
+        height: calc(100% - #{$header-height});
+        padding: 30px 20px 20px;
+        will-change: transform, opacity;
+        transform: translate3d(0, -110%, 0);
+        transition: transform $animation-duration $cubic-bezier, opacity $animation-duration $cubic-bezier .3s;
+        opacity: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        background-color: color('background');
+
+        @include breakpoint(small) {
+            display: block;
+        }
+
+        &--active {
+            opacity: 1;
+            transform: translate3d(0, 0%, 0);
+        }
+
+        &__button,
+        &__separator {
+            width: 100%;
+        }
+
+        &__button {
+            display: table;
+            padding: 24px 0;
+            @include font("IntervalNextBook");
+            font-size: em(24px);
+            color: color('text', 'feedback');
+        }
+
+        &__separator {
+            height: 1px;
+            margin: 6px 0;
+            background-color: color('primary', 'divider');
+        }
+
+        &__button--dropdown {
+            position: relative;
+            margin-bottom: 0;
+            padding-bottom: 16px;
+            border-bottom: 1px solid color('primary', 'divider');
+
+            &:before,
+            &:after {
+                content: " ";
+                position: absolute;
+                display: block;
+                top: 36px;
+                right: 0;
+
+                width: 8px;
+                height: 1px;
+
+                background-color: color('feedback', 'text');
+            }
+
+            &:before {
+                transform: rotate(-45deg);
+            }
+
+            &:after {
+                right: 5px;
+                transform: rotate(45deg);
+            }
+
+            &--active {
+                &:before {
+                    transform: rotate(45deg);
+                }
+
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &__dropdown {
+            width: 100%;
+            height: 0%;
+            padding-top: 16px;
+            overflow: hidden;
+            will-change: height;
+            transition: height $animation-duration $cubic-bezier;
+
+            &--active {
+                height: 100%;
+                max-height: 300px;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 7px 0;
+                font-size: em(20px);
+                text-align: left;
+                text-decoration: none;
+                color: inherit;
+
+                &:active {
+                    color: color('primary');
+                }
+            }
+        }
+    }
 }
 
 @mixin dropdown() {
