@@ -407,6 +407,10 @@ $checkbox-size: 32px;
     &--error {
         input {
             border: 2px solid color('feedback', 'error');
+
+            &:focus {
+                border: 2px solid color('feedback', 'error');
+            }
         }
         & + label {
             margin-top: 16px;
