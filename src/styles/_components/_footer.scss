@@ -101,4 +101,19 @@
         border-top: 1px solid color('footer', 'divider');
         padding-top: 32px;
     }
+
+    &--dark {
+        background: color('footer', 'background-dark');
+        opacity: 1;
+
+        .footer__row__cell__header,
+        .footer__row__cell__anchor,
+        .footer__row__cell--social a:not([class*="--icon"]),
+        a,
+        svg g {
+            color: white;
+            fill: white;
+            opacity: 1;
+        }
+    }
 }
