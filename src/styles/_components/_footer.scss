@@ -111,8 +111,9 @@
         .footer__row__cell--social a:not([class*="--icon"]),
         a,
         svg g {
-            color: white;
-            fill: white;
+            color: color('footer', 'text-light');
+            fill: color('footer', 'text-light');
+            fill-opacity: 1;
             opacity: 1;
         }
     }
