@@ -57,6 +57,7 @@ $base-font-size: 16px; // Default font-size
 @include font-face(IntervalNextMediumit, "fonts/intervalnext-mediumit", null, null, woff2 woff eot);
 @include font-face(IntervalNextReg, "fonts/intervalnext-regular", null, null, woff2 woff eot);
 @include font-face(IntervalNextRegularit, "fonts/intervalnext-regularit", null, null, woff2 woff eot);
+@include font-face(IntervalNextSemiBold, "fonts/intervalnext-semibold", null, null, woff2 woff eot);
 
 @mixin font($name: "IntervalNextBook") {
     font-family: $name, sans-serif;
