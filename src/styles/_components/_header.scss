@@ -67,7 +67,7 @@ $header-height: 60px;
             @include button();
             min-width: auto;
             height: 38px;
-            @include font("InvervalNextReg");
+            @include font("IntervalNextReg");
             font-size: em(15px);
             color: color('text', 'header');
 
@@ -166,7 +166,7 @@ $header-height: 60px;
                     line-height: 32px;
                     padding: 0 27px;
                     
-                    @include font("InvervalNextReg");
+                    @include font("IntervalNextReg");
                     font-size: em(16px);
                     color: #545d69;
 
