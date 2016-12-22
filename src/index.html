@@ -9,6 +9,37 @@
 <body>
   <header id="header" class="header">
     <div class="header__wrapper">
+
+      <div class="header__mobile-cover"></div>
+
+      <ul class="header__mobile-nav">
+        <li class="header__mobile-nav__button">Home</li>
+
+        <li class="header__mobile-nav__separator"></li>
+
+        <li class="header__mobile-nav__button">Sign up</li>
+        <li class="header__mobile-nav__button">Log in</li>
+        <li class="header__mobile-nav__button">Become a landlord</li>
+
+        <li class="header__mobile-nav__separator"></li>
+
+        <li class="header__mobile-nav__button">Help</li>
+
+        <li class="header__mobile-nav__button header__mobile-nav__button--dropdown">En</li>
+
+        <li class="header__mobile-nav__dropdown">
+          <a href="">Deutsch</a>
+          <a href="">English</a>
+          <a href="">Español</a>
+          <a href="">Français</a>
+          <a href="">Italiano</a>
+          <a href="">Nederlands</a>
+          <a href="">Polski</a>
+          <a href="">Português</a>
+          <a href="">Mandarin</a>
+        </li>
+      </ul>
+
       <div class="header__logo"></div>
 
       <div class="header__breadcrumb">
@@ -46,34 +77,6 @@
       </nav>
 
       <div class="header__mobile-button">Menu</div>
-
-      <ul class="header__mobile-nav header__mobile-nav--active">
-        <li class="header__mobile-nav__button">Home</li>
-
-        <li class="header__mobile-nav__separator"></li>
-
-        <li class="header__mobile-nav__button">Sign up</li>
-        <li class="header__mobile-nav__button">Log in</li>
-        <li class="header__mobile-nav__button">Become a landlord</li>
-
-        <li class="header__mobile-nav__separator"></li>
-
-        <li class="header__mobile-nav__button">Help</li>
-
-        <li class="header__mobile-nav__button header__mobile-nav__button--dropdown">En</li>
-
-        <li class="header__mobile-nav__dropdown">
-          <a href="">Deutsch</a>
-          <a href="">English</a>
-          <a href="">Español</a>
-          <a href="">Français</a>
-          <a href="">Italiano</a>
-          <a href="">Nederlands</a>
-          <a href="">Polski</a>
-          <a href="">Português</a>
-          <a href="">Mandarin</a>
-        </li>
-      </ul>
     </div>
   </header>
 
@@ -697,6 +700,12 @@ You can always add more offers later</div>
       });
       $('.mobile-number__country-code').on('click', function () {
         $(this).toggleClass('mobile-number__country-code--active');
+      });
+
+      $('.header__mobile-button').on('click', function () {
+        $(this).toggleClass('header__mobile-button--active');
+        $('.header__mobile-nav').toggleClass('header__mobile-nav--active');
+        $('.header').toggleClass('header--active');
       });
     })();
   </script>

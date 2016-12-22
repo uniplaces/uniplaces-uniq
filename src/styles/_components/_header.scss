@@ -31,6 +31,10 @@ $header-height: 60px;
         background-image: url("../images/uniplaces_logo.svg");
         background-repeat: no-repeat;
         background-size: contain;
+        z-index: 3;
+        //transition: background-image #{$animation-duration/2} linear;
+        transition-duration: $animation-duration;
+        transition-delay: #{$animation-duration + .3s};
 
         @include breakpoint(small) {
             margin-right: auto;
@@ -220,6 +224,10 @@ $header-height: 60px;
         background-image: url("../images/uniplaces_logo_white.svg");
     }
 
+    &--transparent &__logo {
+        background-image: url("../images/uniplaces_logo_white.svg");
+    }
+
     &--transparent &__nav__button {
         border-color: #fff;
         color: #fff;
@@ -246,6 +254,7 @@ $header-height: 60px;
     &__mobile-button {
         position: relative;
         display: none;
+        z-index: 3;
         padding-right: 20px;
         @include font("IntervalNextReg");
         font-size: em(15px);
@@ -289,20 +298,45 @@ $header-height: 60px;
         }
     }
 
+    &__mobile-cover {
+        content: " ";
+        position: fixed;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: $header-height;
+        background-color: color('background');
+        transform: translate3d(0, -100%, 0);
+        transition: transform $transition;
+        transition-delay: #{$animation-duration*2};
+    }
+
+    &--active {
+        position: fixed;
+    }
+
+    &--active &__mobile-cover {
+        transform: translate3d(0, 0%, 0);
+        transition-delay: 0s;
+    }
+
     &__mobile-nav {
-        display: none;
+        @include flex();
         @include align-items-center();
         @include justify-content-center();
         position: fixed;
         top: $header-height;
         left: 0;
+        z-index: 1;
         width: 100%;
         height: calc(100% - #{$header-height});
-        padding: 30px 20px 20px;
-        will-change: transform, opacity;
+        padding: 30px 20px 20px 20px;
+        will-change: transform;
         transform: translate3d(0, -110%, 0);
-        transition: transform $animation-duration $cubic-bezier, opacity $animation-duration $cubic-bezier .3s;
-        opacity: 0;
+        transition: transform $animation-duration linear;
+        transition-delay: #{$animation-duration};
         overflow: hidden;
         overflow-y: scroll;
 
@@ -313,13 +347,20 @@ $header-height: 60px;
         }
 
         &--active {
-            opacity: 1;
             transform: translate3d(0, 0%, 0);
+            transition-delay: 0s;
+
+            &:before {
+                transform: translate3d(0, 0px, 0);
+            }
         }
 
         &__button,
         &__separator {
             width: 100%;
+            z-index: 1;
+            opacity: 0;
+            transition-delay: 0s;
         }
 
         &__button {
@@ -349,10 +390,8 @@ $header-height: 60px;
                 display: block;
                 top: 36px;
                 right: 0;
-
                 width: 8px;
                 height: 1px;
-
                 background-color: color('feedback', 'text');
             }
 
@@ -378,7 +417,7 @@ $header-height: 60px;
 
         &__dropdown {
             width: 100%;
-            height: 0%;
+            height: 0px;
             padding-top: 16px;
             overflow: hidden;
             will-change: height;
@@ -402,6 +441,24 @@ $header-height: 60px;
                     color: color('primary');
                 }
             }
+        }
+    }
+
+    &--active {
+        background-color: color('background');
+    }
+
+    &--active &__logo {
+        background-image: url("../images/uniplaces_logo.svg");
+        transition-delay: 0s;
+    }
+
+    &--active &__mobile-nav {
+        transition-delay: 0s;
+
+        &__button,
+        &__separator {
+            opacity: 1;
         }
     }
 }
