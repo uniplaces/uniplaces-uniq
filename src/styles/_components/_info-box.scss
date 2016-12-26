@@ -29,6 +29,7 @@
             background-color: color('background', 'translucent');
             padding: 10px;
         }
+
         &--active &__wrapper {
             height: 100%;
             max-height: 350px;
@@ -36,6 +37,7 @@
             border-radius: 2px;
             background-color: color('background', 'modal');
         }
+
         &__close-button {
             position: absolute;
             display: block;
