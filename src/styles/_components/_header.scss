@@ -6,14 +6,14 @@ $header-height: 60px;
     background-color: color('background');
     padding: 10px 0;
     @include backface-hack();
-    
+
     &__wrapper {
         @include flex();
         @include align-items-center();
         @include justify-content-end();
         position: relative;
         height: calc($header-height - 20px);
-        
+
         @include breakpoint(small) {
             padding: 0 14px;
         }
@@ -43,7 +43,7 @@ $header-height: 60px;
     &__breadcrumb {
         margin-left: 40px;
         opacity: 0.7;
-        
+
         @include breakpoint(small) {
             display: none;
         }
@@ -68,7 +68,7 @@ $header-height: 60px;
 
         &__button {
             @include button();
-            min-width: auto;
+            min-width: initial;
             height: 38px;
             @include font("IntervalNextReg");
             font-size: em(15px);
@@ -168,7 +168,7 @@ $header-height: 60px;
                     height: 32px;
                     line-height: 32px;
                     padding: 0 27px;
-                    
+
                     @include font("IntervalNextReg");
                     font-size: em(16px);
                     color: #545d69;
@@ -571,7 +571,7 @@ $header-height: 60px;
             padding-left: 45px;
         }
     }
-    
+
     &-button--active + &__wrapper {
         display: block;
     }
