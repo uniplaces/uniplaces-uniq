@@ -545,16 +545,20 @@ $checkbox-size: 32px;
 @mixin select() {
     height: $input-height;
     @include height-modifiers();
-    border: 0;
     font-size: em(18px);
     color: color('text', 'input');
-    padding: 0 14px;
-    padding-right: 46px;
+    padding: 0 46px 0 14px;
+    border: 2px solid color('borders');
+    border-radius: 4px;
+
     will-change: border;
     -webkit-appearance: none;
-    border: 2px solid color('borders');
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    appearance: none;
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 color('text', 'input');
+    }
 
     &-wrapper {
         display: inline-block;
@@ -581,9 +585,6 @@ $checkbox-size: 32px;
             transform: rotate(-45deg);
         }
     }
-
-    will-change: border;
-    -webkit-appearance: none;
 
     &:focus {
         border: 2px solid color('primary', 'light');
