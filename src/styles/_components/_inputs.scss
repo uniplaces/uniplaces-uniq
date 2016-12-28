@@ -552,7 +552,7 @@ $checkbox-size: 32px;
 
     will-change: border;
     -webkit-appearance: none;
-    -moz-appearance: none;
+    appearance: none;
 
     &:-moz-focusring {
         color: transparent;
