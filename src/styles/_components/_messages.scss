@@ -4,7 +4,7 @@
     background: transparent;
     word-wrap: break-word;
     white-space: normal;
-    
+
     &__content {
         &--success {
             color: color('feedback', 'success');
@@ -17,5 +17,5 @@
         &--error {
             color: color('feedback', 'error');
         }
-    }    
+    }
 }

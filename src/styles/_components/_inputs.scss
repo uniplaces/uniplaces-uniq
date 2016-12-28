@@ -425,6 +425,7 @@ $checkbox-size: 32px;
     @include align-items-center();
     border: 2px solid color('input', 'border');
     border-radius: 4px;
+    flex-wrap: nowrap;
 
     input,
     &__value {

@@ -9,24 +9,24 @@
     z-index: 10;
     top: 0;
     left: 0;
-    
+
     @include breakpoint(small) {
         padding: 8px;
     }
-    
+
     &__close-button {
         position: absolute;
         width: 23px;
         height: 23px;
         top: 20px;
         right: 20px;
-        
+
         svg {
             width: 23px;
             height: 23px;
             fill: color('primary');
         }
-        
+
         &:hover {
             cursor: pointer;
         }
@@ -43,7 +43,7 @@
         height: 20px;
         fill: color('text', 'close');
     }
-    
+
     &__wrapper {
         display: table;
         height: 100%;
@@ -61,7 +61,7 @@
             padding: 24px;
             background-color: color('primary', 'highlight');
         }
-               
+
         &__image {
             width: 170px;
             height: 160px;
@@ -73,7 +73,7 @@
             margin: 0 auto 10px auto;
             @include subheader();
         }
-        
+
         &__message {
             max-width: 355px;
             margin: 0 auto;
