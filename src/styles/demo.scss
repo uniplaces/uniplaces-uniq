@@ -35,7 +35,7 @@ body {
 .main {
     display: table;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 136px;
     padding-bottom: 90px;
     z-index: 1;
 
@@ -99,6 +99,7 @@ body {
 
 .info-box {
     @include info-box();
+
 }
 
 .title {
@@ -284,4 +285,8 @@ body {
     position: fixed;
     top: 65px;
     left: 0;
+}
+
+.nav-tabs {
+    @include nav-tabs();
 }
