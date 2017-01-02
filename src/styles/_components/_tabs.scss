@@ -51,7 +51,7 @@ $tabs-height: 36px;
             @include align-items-center();
             @include justify-content-center();
             @include font("IntervalNextReg");
-            font-size: 14px;
+            font-size: em(14px);
             text-transform: uppercase;
             border-bottom: 3px solid transparent;
 
@@ -60,6 +60,7 @@ $tabs-height: 36px;
             }
 
             a {
+                display: block;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
