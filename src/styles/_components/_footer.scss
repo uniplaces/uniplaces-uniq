@@ -50,6 +50,19 @@
         &__cell {
             @include column(3);
 
+            &:nth-child(2) {
+                @include breakpoint(medium) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+
+            &--cities {
+                @include breakpoint(medium) {
+                    @include justify-content-end();
+                }
+            }
+
             &--half-line{
                 @include column(6);
             }
@@ -71,6 +84,12 @@
 
                 &--inline {
                     display: inline;
+                }
+
+                &--spaced {
+                    @include breakpoint(medium) {
+                        margin-right: auto;
+                    }
                 }
             }
 
@@ -115,6 +134,12 @@
             fill: color('footer', 'text-light');
             fill-opacity: 1;
             opacity: 1;
+        }
+    }
+
+    @include breakpoint(medium) {
+        a:last-of-type {
+            margin-right: 0;
         }
     }
 }
