@@ -114,10 +114,10 @@ $primary-color-key: 'primary' !default;
     $color: map-get($color-spectrum, $variant);
 
     @if not($color) {
-      @error "Color `#{$variant}` does not exist in spectrum `#{$name}`";
+      @color "Color `#{$variant}` does not exist in spectrum `#{$name}`";
     }
   } @else {
-    @error "Spectrum `#{$name}` does not exist";
+    @warn "Spectrum `#{$name}` does not exist";
   }
 
   @return $color;
