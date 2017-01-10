@@ -23,6 +23,7 @@ $sizes: (
     @include align-items-center();
     @include justify-content-center();
     @include flex();
+    @include font("IntervalNextReg");
     min-width: 130px;
     height: size(#{$size});
     padding: 0 22px;

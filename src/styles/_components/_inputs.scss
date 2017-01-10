@@ -22,7 +22,7 @@ $checkbox-size: 32px;
     &--bordered {
         @include breakpoint(small) {
             padding: 20px;
-            border: 2px solid color('input', 'mobile-border');
+            border: 2px solid color('borders');
             border-radius: 4px;
         }
     }
