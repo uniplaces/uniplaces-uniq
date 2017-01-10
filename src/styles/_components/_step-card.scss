@@ -22,7 +22,7 @@
 
     &__step {
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
         @include font("IntervalNextReg");
         font-size: em(12px);
         color: color('text', 'subtitle');
