@@ -475,6 +475,11 @@ $checkbox-size: 32px;
             width: 50%;
         }
     }
+    
+    &--focused {
+        border: 2px solid color('primary');
+        outline: none;
+    }
 }
 
 @mixin toggle() {
