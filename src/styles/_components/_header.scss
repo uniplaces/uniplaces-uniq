@@ -92,7 +92,7 @@ $header-height: 60px;
 
         &__dropdown &__button {
             position: relative;
-            color: color('header', 'text');
+            color: color('text', 'header');
 
             &:before,
             &:after {
