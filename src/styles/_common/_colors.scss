@@ -112,6 +112,12 @@ $primary-color-key: 'primary' !default;
   // Get the color variant
   @if $color-spectrum {
     $color: map-get($color-spectrum, $variant);
+
+    @if not($color) {
+      @error "Color `#{$variant}` does not exist in spectrum `#{$name}`";
+    }
+  } @else {
+    @error "Spectrum `#{$name}` does not exist";
   }
 
   @return $color;
