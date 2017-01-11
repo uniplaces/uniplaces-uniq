@@ -4,12 +4,15 @@
     padding: 15px 60px;
     background-color: color('feedback', 'info');
     will-change: background-color;
-    
+
     &--success {
         background-color: color('feedback', 'success-light');
     }
     &--warning {
         background-color: color('feedback', 'warning');
+    }
+    &--error {
+        background-color: color('feedback', 'error');
     }
     &--fixed-top {
         position: fixed;
