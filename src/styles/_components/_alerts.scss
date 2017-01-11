@@ -69,3 +69,37 @@
     }
 }
 
+@mixin banner() {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 15px 20px;
+    background-color: color('cookieAlert', 'background');
+    font-size: em(15px);
+    color: color('text', 'subheading');
+
+    &__wrapper {
+        @include limited-full-width();
+
+        a {
+            position: relative;
+            display: block;
+            color: color('text', 'subheading');
+            text-decoration: none;
+            border-bottom: 1px solid color('text', 'subheading');
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: inline-block;
+        padding: 8px;
+        margin-left: 20px;
+        font-size: em(13px);
+        background-color: color('text', 'subheading');
+        color: color('primary', 'highlight');
+    }
+}
