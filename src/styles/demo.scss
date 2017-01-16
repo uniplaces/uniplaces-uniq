@@ -290,3 +290,7 @@ body {
 .nav-tabs {
     @include nav-tabs();
 }
+
+.banner {
+    @include banner();
+}
