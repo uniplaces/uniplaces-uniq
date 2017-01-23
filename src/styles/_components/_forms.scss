@@ -66,6 +66,10 @@
             color: color('primary', 'highlight');
             line-height: 15px;
 
+            &:active {
+                background-color: color('buttons', 'facebook-active');
+            }
+
             &__small {
                 @include font("IntervalNextBook");
                 font-size: em(11px);
@@ -77,8 +81,13 @@
         }
 
         &--google {
-            color: color('buttons', 'light');
-            border: 2px solid color('buttons', 'light');
+            color: color('google', 'text');
+            border: 2px solid color('google', 'border');
+
+            &:active {
+                color: color('google', 'text-active');
+                border: 2px solid color('google', 'border-active');
+            }
         }
 
         &--email {
@@ -97,12 +106,11 @@
 
     &__text {
         width: 100%;
-        max-width: 264px;
         padding-bottom: 24px;
         margin-top: 18px;
         margin-bottom: 18px;
         font-size: em(14px);
-        color: color('feedback', 'text');
+        color: color('text', 'secondary');
         text-align: left;
 
         border-bottom: 1px solid color('background', 'progress-bar');
@@ -113,7 +121,7 @@
         @include font("IntervalNextBook");
         font-size: em(16px);
         text-align: left;
-        color: color('buttons', 'light');
+        color: color('text', 'secondary');
 
         a {
             margin-left: 8px;
@@ -160,6 +168,10 @@
         padding-bottom: 44px;
         text-align: center;
         border-bottom: 1px solid color('background', 'progress-bar');
+
+        @include breakpoint(small) {
+            padding-bottom: 24px;
+        }
     }
 
     &--with-email &__step1 {

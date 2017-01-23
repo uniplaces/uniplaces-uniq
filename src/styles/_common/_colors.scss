@@ -16,6 +16,7 @@ $palette: (
     'disabled': #f0f1f3,
     'disabled-text': #d1d5da,
     'facebook': #3b5998,
+    'facebook-active': #507cc0,
     'light': rgba(34, 66, 81, .4)
   ),
   'tabs': (
@@ -100,6 +101,12 @@ $palette: (
     'second-gutter': rgba(249, 188, 99, 0.3),
     'third-bar': #9575cd,
     'third-gutter': rgba(148, 117, 205, 0.3)
+  ),
+  'google': (
+    'text': rgba(0, 60, 88, 0.7),
+    'text-active': rgba(0, 60, 88, 0.8),
+    'border': rgba(0, 60, 88, 0.3),
+    'border-active': rgba(0, 60, 88, 0.7),
   ),
   cookieAlert: (
     'background': #e1e4e6
