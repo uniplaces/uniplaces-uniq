@@ -51,11 +51,6 @@ $sizes: (
         &:active {
             background-color: color('buttons', 'pressed');
         }
-
-        &--disabled {
-            background-color: color('buttons', 'disabled');
-            color: color('buttons', 'disabled-text');
-        }
     }
 
     &--secondary {
@@ -87,11 +82,20 @@ $sizes: (
     &--large {
         font-size: map-get($button-text-sizes, 'large');
     }
+
     &--medium {
         font-size: map-get($button-text-sizes, 'medium');
     }
+
     &--small {
         font-size: map-get($button-text-sizes, 'small');
+    }
+
+    &--disabled {
+        background-color: color('buttons', 'disabled');
+        color: color('buttons', 'disabled-text');
+        cursor: initial;
+        pointer-events: none;
     }
 }
 
