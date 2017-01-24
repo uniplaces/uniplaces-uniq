@@ -363,7 +363,7 @@ $header-height: 60px;
             padding: 24px 0;
             @include font("IntervalNextBook");
             font-size: em(24px);
-            color: color('text', 'feedback');
+            color: color('feedback', 'text');
         }
 
         &__separator {
