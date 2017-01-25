@@ -56,7 +56,7 @@ $checkbox-size: 32px;
     -webkit-appearance: none;
 
     &:focus {
-        border: 2px solid color('primary', 'light');
+        border: 2px solid color('input', 'border-focus');
         outline: none;
     }
 
@@ -258,7 +258,7 @@ $checkbox-size: 32px;
         line-height: $checkbox-size;
         @include font("IntervalNextReg");
         font-size: em(18px);
-        color: color('text', 'body');
+        color: color('input', 'label');
         will-change: color;
 
         &:before,
@@ -289,6 +289,7 @@ $checkbox-size: 32px;
         color: color('primary');
 
         &:before {
+            background-color: color('buttons');
             border: 2px solid color('primary');
         }
         &:after {
@@ -435,6 +436,7 @@ $checkbox-size: 32px;
 
     input {
         @include input();
+        color: color('input', 'label');
         max-width: 30%;
         padding-left: 0;
         border: inherit;
@@ -475,7 +477,7 @@ $checkbox-size: 32px;
             width: 50%;
         }
     }
-    
+
     &--focused {
         border: 2px solid color('primary');
         outline: none;
