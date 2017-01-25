@@ -479,7 +479,7 @@ $checkbox-size: 32px;
     }
 
     &--focused {
-        border: 2px solid color('primary');
+        border: 2px solid color('input', 'border-focus');
         outline: none;
     }
 }
