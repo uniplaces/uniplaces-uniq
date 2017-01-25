@@ -1,0 +1,23 @@
+/*
+   status-tag
+    - example: https://projects.invisionapp.com/d/main/default/#/console/10009152/215179492/preview : expired and pending status
+    - the new colors should be added to the uniq colors
+*/
+.status-tag {
+  @include font("IntervalNextMed");
+  border-radius: 2px;
+  font-size: em(14px);
+  color: #12c6dc;
+  padding: 2px 9px 4px 9px;
+  display: inline-block;
+
+  &--critical {
+    color: #12c6dc;
+    background-color: #def6f9;
+  }
+
+  &--pending {
+    color: color('feedback', 'error');
+    background-color: #ffe1e1;
+  }
+}
