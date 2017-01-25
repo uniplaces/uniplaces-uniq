@@ -24,7 +24,7 @@
         svg {
             width: 23px;
             height: 23px;
-            fill: color('primary');
+            fill: color('text', 'close');
         }
 
         &:hover {
@@ -35,13 +35,12 @@
     &__close-button--light {
         top: 24px;
         right: 24px;
-    }
 
-    &__close-button--light svg,
-    &__close-button--light .st0 {
-        width: 20px;
-        height: 20px;
-        fill: color('text', 'close');
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: color('text', 'close');
+        }
     }
 
     &__wrapper {
