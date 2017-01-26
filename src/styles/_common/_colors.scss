@@ -111,8 +111,14 @@ $palette: (
     'border': rgba(0, 60, 88, 0.3),
     'border-active': rgba(0, 60, 88, 0.7),
   ),
-  cookieAlert: (
+  'cookieAlert': (
     'background': #e1e4e6
+  ),
+  'statusTag': (
+    'critical-text': '#12c6dc',
+    'critical-background': '#def6f9',
+    'pending-text': '#ff6b6b',
+    'pending-background': '#ffe1e1'
   )
 );
 

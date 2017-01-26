@@ -7,17 +7,16 @@
   @include font("IntervalNextMed");
   border-radius: 2px;
   font-size: em(14px);
-  color: #12c6dc;
   padding: 2px 9px 4px 9px;
   display: inline-block;
 
   &--critical {
-    color: #12c6dc;
-    background-color: #def6f9;
+    color: color('statusTag', 'critical-text');
+    background-color: color('statusTag', 'critical-background');
   }
 
   &--pending {
-    color: color('feedback', 'error');
-    background-color: #ffe1e1;
+    color: color('statusTag', 'pending-text');
+    background-color: color('statusTag', 'pending-background');
   }
 }
