@@ -1,16 +1,16 @@
-.status-tag {
-  @include font("IntervalNextMed");
-  border-radius: 2px;
-  font-size: em(14px);
-  padding: 2px 9px 4px 9px;
+@mixin status-tag {
+    @include font("IntervalNextMed");
+    border-radius: 2px;
+    font-size: em(14px);
+    padding: 2px 9px 4px 9px;
 
-  &--critical {
-    color: color('status-tag', 'critical-text');
-    background-color: color('status-tag', 'critical-background');
-  }
+    &--critical {
+        color: color('status-tag', 'critical-text');
+        background-color: color('status-tag', 'critical-background');
+    }
 
-  &--pending {
-    color: color('statusTag', 'pending-text');
-    background-color: color('status-tag', 'pending-background');
-  }
+    &--pending {
+        color: color('status-tag', 'pending-text');
+        background-color: color('status-tag', 'pending-background');
+    }
 }
