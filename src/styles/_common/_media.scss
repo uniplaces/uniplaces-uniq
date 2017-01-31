@@ -26,25 +26,31 @@ $current-breakpoint: $default-breakpoint;
 // Not meant to be manually edited
 $placeholders: ();
 
-// The usual breakpoint mixin
+// The usual breakpoint mixin available for desktop-first (default) and mobile-first
 // Except it updates the $current-breakpoint variable
-// 1. If breakpoint name exists in map
+// 1. If breakpoint name exists in map and 'max' approach string is passed
 // 2. Update $current-breakpoint
 // 3. Open a media query
 // 4. Let the user dump content
 // 5. Then reset $current-breakpoint
-// 6. If breakpoint name doesn't exist in map, warn the user
-@mixin breakpoint($breakpoint) {
+// 6. If breakpoint name exists in map and 'min' approach string is passed
+// 7. If breakpoint name doesn't exist in map, or the approach string is invalid warn the user
+@mixin breakpoint($breakpoint, $approach:'max') {
   $value: map-get($breakpoints, $breakpoint);
 
-  @if $value != null {                                    // 1
-    $current-breakpoint: $breakpoint         !global;     // 2
-    @media (max-width: $value) { @content; }              // 3
-    $current-breakpoint: $default-breakpoint !global;     // 5
+  @if ($value != null) and ($approach == 'max') {        //1
+    $current-breakpoint: $breakpoint         !global;    //2
+    @media (max-width: $value) { @content; }             //3
+    $current-breakpoint: $default-breakpoint !global;    //5
+
+  }@else if ($value != null) and ($approach == 'min') {  //6
+    $current-breakpoint: $breakpoint         !global;
+    @media (min-width: $value) { @content; }
+    $current-breakpoint: $default-breakpoint !global;
   }
 
   @else {
-    @warn "Invalid breakpoint `#{$breakpoint}`.";         // 6
+    @warn "Invalid breakpoint `#{$breakpoint}` or invalid approach `#{$approach}`.";  //7
   }
 }
 
