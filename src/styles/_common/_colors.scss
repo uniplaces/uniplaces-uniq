@@ -66,9 +66,8 @@ $palette: (
     'mobile-border': #d6d6d6,
     'label': #224251
   ),
-  'dropdown': (
-    'primary': #f5f9fc,
-    'hover': #e6f0f7
+  'image-gallery': (
+    'remove': #f5f9fc
   ),
   'feedback': (
     'success': #44c482,
@@ -120,13 +119,13 @@ $palette: (
     'pending-text': #ff6b6b,
     'pending-background': #ffe1e1
   ),
-  'dropdown': {
+  'dropdown': (
     'primary': #224251,
     'background': #ffffff,
     'border': #d1d5da,
     'active': #66d5ff,
     'item-hover': #dbf5ff
-  }
+  )
 );
 
 $primary-color-key: 'primary' !default;
