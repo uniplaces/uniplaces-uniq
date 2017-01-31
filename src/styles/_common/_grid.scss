@@ -13,11 +13,11 @@ $max-columns: 12;
     @include flex-wrap();
     @include limited-full-width();
     flex: 0 0 auto;
-    
+
     &--reverse {
         @include flex-row-reverse();
     }
-    
+
     &--column-reverse {
         @include flex-column-reverse();
     }
@@ -38,17 +38,5 @@ $max-columns: 12;
         @include flex-grow(1);
         @include flex-basis(100%);
         width: 100%;
-    }
-}
-
-@mixin uni-clearfix() {
-    &,
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-        clear: both;
-        overflow: auto;
-        float: none;
     }
 }

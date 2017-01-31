@@ -1,0 +1,11 @@
+@mixin uni-clearfix() {
+    &,
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+        overflow: auto;
+        float: none;
+    }
+}
