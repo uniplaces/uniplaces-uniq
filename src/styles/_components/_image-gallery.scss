@@ -1,7 +1,7 @@
 @mixin image-gallery() {
     @include limited-full-width();
     width: 100%;
-    
+
     @include breakpoint(small) {
         padding: 0 14px;
     }
@@ -24,7 +24,7 @@
         border: 2px dashed color('borders');
         border-bottom: 2px solid color('borders');
         text-align: center;
-        
+
         @include breakpoint(small) {
             height: auto;
             min-height: 195px;
@@ -59,7 +59,7 @@
             min-height: 160px;
             margin: 10px;
             overflow: hidden;
-            
+
             &:hover {
                 cursor: pointer;
             }
@@ -112,7 +112,7 @@
                 left: 15px;
                 border: 1px solid color('borders', 'gallery-item');
                 border-radius: 50%;
-                background-color: transparent;               
+                background-color: transparent;
                 @include font("IntervalNextReg");
                 font-size: em(16px);
                 color: color('text', 'highlight');
@@ -135,7 +135,7 @@
                 border-bottom-left-radius: 0px;
                 background-color: rgba(87, 87, 87, 0.49);
                 border: none;
-                
+
                 &--selected {
                     background-color: color('feedback', 'info');
                 }
@@ -155,7 +155,7 @@
             @include font("IntervalNextReg");
             font-size: em(20px);
             color: color('text', 'subtitle');
-            
+
             .plus {
                 @include headline();
                 display: block;
@@ -165,12 +165,13 @@
             }
         }
     }
+    
     &__remove {
         @include flex();
         @include align-items-center();
         @include justify-content-center();
         color: color('feedback', 'text');
-        background-color: color('dropdown');
+        background-color: color('image-gallery', 'remove');
         padding: 0 10px;
         width: auto;
 
@@ -194,7 +195,7 @@
         padding: 10px;
         background-color: color('background', 'modal');
     }
-    
+
     &--select-images &__wrapper {
         &__item {
             &__image:before {

@@ -157,7 +157,7 @@
             background-color: color('primary', 'highlight');
             @include font("IntervalNextReg");
             font-size: em(16px);
-            line-height: 1em;
+            line-height: em(16px);
         }
     }
 
