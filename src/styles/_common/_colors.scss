@@ -119,7 +119,14 @@ $palette: (
     'critical-background': #def6f9,
     'pending-text': #ff6b6b,
     'pending-background': #ffe1e1
-  )
+  ),
+  'dropdown': {
+    'primary': #224251,
+    'background': #ffffff,
+    'border': #d1d5da,
+    'active': #66d5ff,
+    'item-hover': #dbf5ff
+  }
 );
 
 $primary-color-key: 'primary' !default;
