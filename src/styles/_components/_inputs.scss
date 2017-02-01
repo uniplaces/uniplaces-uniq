@@ -594,7 +594,7 @@ $checkbox-size: 32px;
     }
 
     &:focus {
-        border: 2px solid color('primary', 'light');
+        border: 2px solid color('input', 'border-focus');
         outline: none;
     }
 }
