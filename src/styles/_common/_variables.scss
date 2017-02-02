@@ -41,6 +41,9 @@
 @mixin align-items-center() {
 	align-items: center;
 }
+@mixin align-content-center() {
+	align-content: center;
+}
 @mixin align-items-top() {
 	align-items: flex-start;
 }
