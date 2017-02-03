@@ -31,6 +31,17 @@ Documentation is available in our  [wiki](https://github.com/uniplaces/uniplaces
 
 *Bear in mind that this framework/toolkit provides both a set of mixins as well as default global styles.*
 
+## Versioning
+
+Although this is not really the norm, our versioning system is as follows:
+
+```shell
+X.Y.Z
+X - major refactors
+Y - new elements / breaking changes
+Z - bug fixes / small changes
+```
+
 ## Feedback
 
 Please file issues and pull requests against that repo. Only pull-requests that follow our styling guide will be accepted.
