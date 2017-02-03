@@ -294,3 +294,16 @@ body {
 .banner {
     @include banner();
 }
+
+.tooltip {
+    @include tooltip();
+    position: relative;
+
+    &__content {
+        width: 200px;
+    }
+}
+
+.tooltip-container {
+    height: 200px;
+}
