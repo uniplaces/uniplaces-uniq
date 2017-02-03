@@ -1,0 +1,31 @@
+@mixin tooltip() {
+    width: 20px;
+
+    &__icon {
+        @include info-icon();
+        @include font("IntervalNextReg");
+        background: color('background', 'negative');
+    }
+
+    &__content {
+        position: relative;
+        left: 28px;
+        top: -21px;
+        display: none;
+        padding: 20px;
+        background: color('background', 'negative');
+        color: color('text', 'highlight');
+        box-shadow: 0 8px 10px 0 rgba(31, 36, 50, 0.45);
+    }
+
+    &--active &__content, 
+    &:hover &__content {
+        display: block;
+    }
+
+    &--negative &__content {
+        background: color('background');
+        color: color('text');
+        border: 2px solid color('borders');
+    }
+}

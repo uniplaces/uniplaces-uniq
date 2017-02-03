@@ -541,6 +541,16 @@
         </div>
       </div>
     </div>
+
+    <div class="subheader">Tooltips</div>
+    <div class="tooltip-container">
+      <div class="tooltip tooltip--active">
+        <div class="tooltip__icon">i</div>
+        <div class="tooltip__content">
+          Tooltip text goes here! Like this, all pretty and stuff. 
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer id="footer" class="footer footer--overhangs">
@@ -722,11 +732,13 @@ You can always add more offers later</div>
       $('.mobile-number__country-code').on('click', function () {
         $(this).toggleClass('mobile-number__country-code--active');
       });
-
       $('.header__mobile-button').on('click', function () {
         $(this).toggleClass('header__mobile-button--active');
         $('.header__mobile-nav').toggleClass('header__mobile-nav--active');
         $('.header').toggleClass('header--active');
+      });
+      $('.tooltip').on('click', function() {
+        $(this).toggleClass('tooltip--active');  
       });
     })();
   </script>
