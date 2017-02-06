@@ -1,11 +1,14 @@
 @mixin tooltip() {
     position: relative;
-    width: 20px;
+    width: auto;
+    height: auto;
 
     &__icon {
         @include info-icon();
         @include font("IntervalNextReg");
         background: color('background');
+        width: auto;
+        height: auto;
     }
 
     &__content {
