@@ -1,17 +1,18 @@
 @mixin tooltip() {
+    position: relative;
     width: 20px;
 
     &__icon {
         @include info-icon();
         @include font("IntervalNextReg");
-        background: color('background', 'negative');
+        background: color('background');
     }
 
     &__content {
-        position: relative;
+        position: absolute;
         left: 28px;
-        top: -21px;
-        display: none;
+        top: 0;
+        visibility: hidden;
         padding: 20px;
         background: color('background', 'negative');
         color: color('text', 'highlight');
@@ -20,7 +21,7 @@
 
     &--active &__content, 
     &:hover &__content {
-        display: block;
+        visibility: visible;
     }
 
     &--negative &__content {
