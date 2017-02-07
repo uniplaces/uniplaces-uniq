@@ -127,6 +127,11 @@ $palette: (
     'border': #d1d5da,
     'active': #66d5ff,
     'item-hover': #dbf5ff
+  ),
+  'medium-gray': ( //OLD colors. Do not use this string map. This will be removed after old UNIQ deprecation
+    'primary': #cccccc,
+    'medium': #e0e0e0,
+    'light': #eaeaea
   )
 );
 
