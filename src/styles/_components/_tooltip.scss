@@ -4,30 +4,31 @@
     height: auto;
 
     &__icon {
-        @include info-icon();
-        @include font("IntervalNextReg");
         background: color('background');
         width: auto;
         height: auto;
     }
 
-    &__content {
+    &__text {
+        @include font('IntervalNextReg');
+        font-size: em(14px);
         position: absolute;
         left: 28px;
+        line-height: 1.29;
         top: 0;
         visibility: hidden;
-        padding: 20px;
+        padding: 16px 20px 20px 20px;
         background: color('background', 'negative');
         color: color('text', 'highlight');
         box-shadow: 0 8px 10px 0 rgba(31, 36, 50, 0.45);
     }
 
-    &--active &__content, 
-    &:hover &__content {
+    &--active &__text, 
+    &:hover &__text {
         visibility: visible;
     }
 
-    &--negative &__content {
+    &--negative &__text {
         background: color('background');
         color: color('text');
         border: 2px solid color('borders');
