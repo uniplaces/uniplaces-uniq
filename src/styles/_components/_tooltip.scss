@@ -1,4 +1,4 @@
-@mixin tooltip() {
+@mixin tooltip($top : '0', $left : '28px', $right: 'initial') {
     position: relative;
     width: auto;
     height: auto;
@@ -13,9 +13,10 @@
         @include font('IntervalNextReg');
         font-size: em(14px);
         position: absolute;
-        left: 28px;
+        left: $left;
+        right: $right;
         line-height: 1.29;
-        top: 0;
+        top: $top;
         visibility: hidden;
         padding: 16px 20px 20px 20px;
         background: color('background', 'negative');
