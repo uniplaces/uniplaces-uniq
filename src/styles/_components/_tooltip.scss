@@ -1,4 +1,4 @@
-@mixin tooltip($top : '0', $left : '28px', $right: 'initial') {
+@mixin tooltip($top : 0, $left : 28px, $right: initial) {
     position: relative;
     width: auto;
     height: auto;
