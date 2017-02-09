@@ -9,6 +9,7 @@ $button-text-sizes: (
 );
 
 $sizes: (
+  'extra-small': 34px,
   'small': 44px,
   'medium': 48px,
   'large': 56px,
@@ -33,7 +34,7 @@ $sizes: (
     border: none;
     outline: none;
     will-change: background-color;
-    
+
     font-size: map-get($button-text-sizes, $size);
 
     text-align: center;
