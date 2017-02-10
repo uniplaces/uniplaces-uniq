@@ -9,8 +9,8 @@
         background-color: color('status-tag', 'critical-background');
     }
 
-    &--pending {
-        color: color('status-tag', 'pending-text');
-        background-color: color('status-tag', 'pending-background');
+    &--info {
+        color: color('status-tag', 'info-text');
+        background-color: color('status-tag', 'info-background');
     }
 }
