@@ -9,6 +9,7 @@
         float: none;
     }
 }
+
 @mixin micro-clearfix() {
   &:after,
   &:before {
@@ -17,20 +18,24 @@
     clear: both;
   }
 }
+
 @mixin limited-full-width() {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
 }
+
 // hack - improve scrolling performance on mobile android browsers and mobile safari
 @mixin backface-hack() {
 	backface-visibility: hidden;
 }
+
 @mixin text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 @mixin visually-hidden {
   margin: -1px;
   padding: 0;
