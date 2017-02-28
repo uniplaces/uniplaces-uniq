@@ -35,7 +35,9 @@ $palette: (
     'modal': #6b6b6b,
     'header': #545d69,
     'close': #b2b9c2,
-    'secondary': rgba(0, 60, 88, 0.7)
+    'secondary': rgba(0, 60, 88, 0.7),
+    'sorting-items': #788392,
+    'helper-copy': #788392
   ),
   'anchor' : (
     'negative' : #fff,
@@ -127,6 +129,15 @@ $palette: (
     'border': #d1d5da,
     'active': #66d5ff,
     'item-hover': #dbf5ff
+  ),
+  'arrows':(
+    'item-panel': #949da9,
+    'item-panel-hover': #00222f,
+    'toggle-accordion': #788392,
+    'sort-item': #788392
+  ),
+  'background-areas':(
+    'ap-manage-enquires': #f5f9fc
   ),
   'medium-gray': ( //OLD colors. Do not use this string map. This will be removed after old UNIQ deprecation
     'primary': #cccccc,
