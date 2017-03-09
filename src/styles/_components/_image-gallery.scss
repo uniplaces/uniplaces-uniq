@@ -14,9 +14,9 @@
     &__wrapper {
         @include flex();
         @include flex-wrap();
-        @include flex-column;
-        @include align-items-center();
-        @include justify-content-center();
+        @include flex-row();
+        @include align-items-start();
+        @include justify-content-start();
         height: 334px;
         overflow: hidden;
         overflow-y: scroll;
@@ -165,7 +165,7 @@
             }
         }
     }
-    
+
     &__remove {
         @include flex();
         @include align-items-center();
