@@ -12,7 +12,7 @@ $header-height: 60px;
         @include align-items-center();
         @include justify-content-end();
         position: relative;
-        height: calc($header-height - 20px);
+        height: calc(#{$header-height} - 20px);
 
         @include breakpoint(small) {
             padding: 0 14px;
