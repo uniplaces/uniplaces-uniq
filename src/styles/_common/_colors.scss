@@ -73,12 +73,16 @@ $palette: (
     'remove': #f5f9fc
   ),
   'feedback': (
+    'primary': #a1e5ff,
+    'primary-translucent': rgba(161, 229, 255, 0.9),
     'success': #44c482,
     'success-light': #9bdfb8,
+    'success-light-translucent': rgba(155, 223, 184, 0.9),
     'warning': #fff2b6,
-    'error': #ff6b6b,
+    'error': #ff8d8d,
+    'error-translucent': rgba(255, 141, 141, 0.9),
     'info': #00adef,
-    'text': #224251
+    'text': #00222f
   ),
   'pill': (
     'success': #44c482,
