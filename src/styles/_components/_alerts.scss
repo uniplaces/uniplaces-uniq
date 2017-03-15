@@ -1,10 +1,11 @@
 @mixin alert() {
     //note: all the icons svgs are available in the images!
-    @include column(12);
-    @include justify-content-center();
+    position: relative;
     @include flex();
+    @include justify-content-center();
     @include align-items-center();
-    padding: 15px 60px;
+    width: 100%;
+    padding: 20px;
     background-color: color('feedback');
     will-change: background-color;
     font-size: em(15px);
@@ -39,7 +40,7 @@
     svg {
         width: 25px;
         height: 25px;
-        margin-right: 16px;
+        margin-right: 32px;
         fill: color('feedback', 'text');
     }
 
