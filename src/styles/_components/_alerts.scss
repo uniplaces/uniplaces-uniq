@@ -60,13 +60,21 @@
     }
 
     &__close {
-        width: 30px;
-        height: 30px;
+        @include flex();
+        @include align-items-center();
+        width: 44px;
+        height: 80%;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 16px;
+        top: 10%;
         cursor: pointer;
-        background: url("../images/cross.svg") center/12px no-repeat;
+        background: url("../images/cross.svg") center/14px no-repeat;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            margin: 0 auto;
+        }
     }
 }
 
