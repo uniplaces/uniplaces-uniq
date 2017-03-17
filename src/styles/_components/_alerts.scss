@@ -1,23 +1,36 @@
 @mixin alert() {
+    //note: all the icons svgs are available in the images!
+    position: relative;
     @include flex();
+    @include justify-content-center();
     @include align-items-center();
-    padding: 15px 60px;
-    background-color: color('feedback', 'info');
+    width: 100%;
+    padding: 20px;
+    background-color: color('feedback');
     will-change: background-color;
+    font-size: em(15px);
+    @include font("IntervalNextBook");
+    color: color('feedback', 'text');
 
     &--success {
         background-color: color('feedback', 'success-light');
+        //with fixed please use background-color: color('feedback', 'success-light-translucent');
     }
+
     &--warning {
         background-color: color('feedback', 'warning');
+        //with fixed please use background-color: color('feedback', 'warning-translucent');
     }
+
     &--error {
         background-color: color('feedback', 'error');
+        //with fixed please use background-color: color('feedback', 'error-translucent');
     }
-    &--fixed-top {
+
+    &--fixed {
         position: fixed;
         width: 100%;
-        top: 65px;
+        top: 0;
         left: 0;
         z-index: 3;
         margin-top: 0;
@@ -27,24 +40,41 @@
     svg {
         width: 25px;
         height: 25px;
-        margin-right: 16px;
+        margin-right: 32px;
         fill: color('feedback', 'text');
     }
+
     &__wrapper {
+        max-width: 1000px;
+        width: auto;
+    }
+
+    &__title {
+        font-size: em(16px);
+        @include font("IntervalNextReg");
+        color: color('feedback', 'text');
+    }
+
+    &__content {
+        line-height: 18px;
+    }
+
+    &__close {
         @include flex();
         @include align-items-center();
-        @include column(12);
-        @include limited-full-width();
-    }
-    &__title {
-        font-size: em(17px);
-        font-weight: bold;
-        color: color('text', 'title');
-    }
-    &__content {
-        font-size: em(16px);
-        line-height: 18px;
-        color: color('feedback', 'text');
+        width: 44px;
+        height: 80%;
+        position: absolute;
+        right: 16px;
+        top: 10%;
+        cursor: pointer;
+        background: url("../images/cross.svg") center/14px no-repeat;
+
+        svg {
+            width: 14px;
+            height: 14px;
+            margin: 0 auto;
+        }
     }
 }
 
