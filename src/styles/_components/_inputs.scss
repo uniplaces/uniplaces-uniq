@@ -296,6 +296,17 @@ $checkbox-size: 32px;
             background-color: color('primary');
         }
     }
+
+    &--disabled {
+        label {
+            cursor: default;
+            color: color('radio-button', 'disabled-text');
+
+            &:before {
+                border-color: color('radio-button', 'disabled-border');
+            }
+        }
+    }
 }
 
 @mixin mobile-number() {
