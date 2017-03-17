@@ -136,6 +136,10 @@
             opacity: 1;
         }
     }
+    
+    &--dark &__row__cell__header {
+        color: color('footer', 'text-light');
+    }
 
     @include breakpoint(medium) {
         a:last-of-type {
