@@ -5,10 +5,11 @@
     @include justify-content-center();
     @include align-items-center();
     width: 100%;
-    padding: 20px;
+    padding: 16px;
     background-color: color('feedback');
     will-change: background-color;
     font-size: em(15px);
+    line-height: 18px;
     @include font("IntervalNextBook");
     color: color('feedback', 'text');
 
@@ -42,6 +43,12 @@
         height: 25px;
         margin-right: 32px;
         fill: color('feedback', 'text');
+    }
+
+    a,
+    a:hover {
+        color: color('feedback', 'text');
+        text-decoration: underline;
     }
 
     &__wrapper {
