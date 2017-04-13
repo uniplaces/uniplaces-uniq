@@ -12,9 +12,13 @@ $small: em(9px);
     color: color('text','title');
 }
 
-@mixin headline() {
+@mixin headline($isBig:false) {
     @include font("IntervalNextReg");
-    font-size: $headline;
+    @if $isBig {
+        font-size: em(38px);
+    } @else {
+        font-size: $headline;
+    }
     color: color('text','title');
 
     &--light {
@@ -75,4 +79,10 @@ $small: em(9px);
     &--alternative {
         color: color('anchor', 'alternative');
     }
+}
+
+@mixin label() {
+    font-size: em(16px);
+    @include font("IntervalNextReg");
+    color: color("input", "label");
 }
