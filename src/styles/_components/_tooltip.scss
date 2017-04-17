@@ -34,4 +34,20 @@
         color: color('text');
         border: 2px solid color('borders');
     }
+
+    &--alternative &__text {
+        width: 100%;
+        max-width: 210px;
+        box-shadow: none;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: calc(35% - 10px);
+            left: -5px;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent color('background', 'negative') transparent transparent;
+        }
+    }
 }
