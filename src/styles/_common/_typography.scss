@@ -86,3 +86,16 @@ $small: em(9px);
     @include font("IntervalNextReg");
     color: color("input", "label");
 }
+
+@mixin input-placeholder() {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder {@content}
+    ::-moz-placeholder {@content}
+    :-ms-input-placeholder {@content}
+}
+
+@include input-placeholder {
+    @include font("IntervalNextBook");
+    font-size: em(20px);
+    color: color('primary','divider');
+}
