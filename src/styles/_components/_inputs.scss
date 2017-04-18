@@ -187,6 +187,12 @@ $checkbox-size: 32px;
     border-radius: 4px;
     font-size: em(18px);
 
+    @include input-placeholder {
+        @include font("IntervalNextBook");
+        font-size: em(20px);
+        color: color('primary','divider');
+    }
+
     & + &-counter {
         @include body();
         max-width: 410px;
