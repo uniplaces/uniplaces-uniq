@@ -307,3 +307,7 @@ body {
 .tooltip-container {
     height: 200px;
 }
+
+.multi-selector {
+    @include multi-selector();
+}
