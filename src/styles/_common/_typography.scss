@@ -89,13 +89,6 @@ $small: em(9px);
 
 @mixin input-placeholder() {
     ::-webkit-input-placeholder {@content}
-    :-moz-placeholder {@content}
-    ::-moz-placeholder {@content}
     :-ms-input-placeholder {@content}
-}
-
-@include input-placeholder {
-    @include font("IntervalNextBook");
-    font-size: em(20px);
-    color: color('primary','divider');
+    ::-ms-input-placeholder {@content}
 }
