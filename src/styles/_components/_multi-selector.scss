@@ -1,17 +1,17 @@
 @mixin multi-selector() {
+    @include flex();
     width: 100%;
     height: 48px;
-    border: 2px solid color('borders','primary');
+    border: 2px solid color('borders');
     border-radius: 4px;
-    @include flex();
 
     & > div {
         width: 50%;
-        background-color: color('background','primary');
+        background-color: color('background');
         position: relative;
 
         &:not(:first-child) {
-            border-left: 2px solid color('borders','primary');
+            border-left: 2px solid color('borders');
         }
     }
 
