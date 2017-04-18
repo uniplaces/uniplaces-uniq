@@ -86,3 +86,9 @@ $small: em(9px);
     @include font("IntervalNextReg");
     color: color("input", "label");
 }
+
+@mixin input-placeholder() {
+    ::-webkit-input-placeholder {@content}
+    :-ms-input-placeholder {@content}
+    ::-ms-input-placeholder {@content}
+}
