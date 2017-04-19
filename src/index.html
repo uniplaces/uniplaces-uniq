@@ -197,58 +197,28 @@
 
             <div class="subheader">Which amenities does your property have?</div>
             <div class="input-container input-container--bordered input-container--focused">
-                <div class="checkbox checkbox--checked">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">WiFi</label>
+                <input type="checkbox" id="wifi" class="checkbox">
+                <label for="wifi">WiFi</label>
             </div>
             <div class="input-container input-container--bordered">
-                <div class="checkbox">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">Cable TV</label>
+                <input type="checkbox" id="cabletv" class="checkbox">
+                <label for="cabletv">Cable TV</label>
             </div>
             <div class="input-container input-container--bordered">
-                <div class="checkbox">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">Heating</label>
+                <input type="checkbox" id="heating" class="checkbox">
+                <label for="heating">Heating</label>
             </div>
             <div class="input-container input-container--bordered">
-                <div class="checkbox">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">Air conditioning</label>
+                <input type="checkbox" id="air-conditioning" class="checkbox">
+                <label for="air-conditioning">Air conditioning</label>
             </div>
             <div class="input-container input-container--bordered">
-                <div class="checkbox">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">Outdoor area (terrace, balcony)</label>
+                <input type="checkbox" id="outdoor" class="checkbox">
+                <label for="outdoor">Outdoor area (terrace, balcony)</label>
             </div>
             <div class="input-container input-container--bordered">
-                <div class="checkbox">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       width="15px" height="11.9px" viewBox="0 0 15 11.9" style="enable-background:new 0 0 15 11.9;" xml:space="preserve">
-              <polygon class="st0" points="12.9,0.2 5.5,8 2.4,5 0.7,6.7 5.5,11.5 14.7,1.9 " fill="#FFFFFF"/>
-              </svg>
-                </div>
-                <label for="">Elevator</label>
+                <input type="checkbox" id="elevator" class="checkbox">
+                <label for="elevator">Elevator</label>
             </div>
 
             <div class="subheader">Does the property have gas installation?</div>
@@ -802,9 +772,6 @@ You can always add more offers later</div>
     (function () {
         $('#toggle-menu').on('click', function () {
             $(this).toggleClass('header__wrapper__mobile-buttons--active');
-        });
-        $('.checkbox').on('click', function () {
-            $(this).toggleClass('checkbox--checked');
         });
         $('#userToggleDropdown').on('click', function () {
             $('#userDropdown').toggleClass('header__nav__dropdown--active');
