@@ -4,11 +4,17 @@
     height: 48px;
     border: 2px solid color('borders');
     border-radius: 4px;
+    overflow: auto;
 
     & > div {
+        @include flex();
+        @include align-items-center();
+        @include justify-content-center();
+        flex-grow: 1;
         width: 50%;
         background-color: color('background');
         position: relative;
+        padding: 0 16px;
 
         &:not(:first-child) {
             border-left: 2px solid color('borders');
@@ -23,9 +29,10 @@
         font-size: em(20px);
         line-height: 1;
         color: color('buttons','disabled-text');
-        width: 100%;
+        width: auto;
         height: 100%;
         cursor: pointer;
+        white-space: nowrap;
     }
 
     input[type="radio"] {
@@ -33,17 +40,16 @@
 
         &:checked + label {
             color: color('text','subheader');
-        }
 
-        &:checked ~ svg {
-            display: block;
+            & > svg {
+              display: block;
+            }
         }
     }
 
     svg {
-        position: absolute;
         display: none;
-        top: calc(50% - 6px);
-        left: percentage(32/184);
+        margin-right: 12px;
+        fill: color("input", "label");
     }
 }
