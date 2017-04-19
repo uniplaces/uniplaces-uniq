@@ -69,7 +69,7 @@
 
             &__header {
                 @include subheader();
-                @include font("IntervalNext");
+                @include font("IntervalNextMed");
                 font-weight: 600;
                 padding-bottom: 18px;
             }
