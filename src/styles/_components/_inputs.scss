@@ -234,9 +234,10 @@ $checkbox-size: 32px;
         svg {
             display: none;
             position: absolute;
-            left: 9px;
+            left: 8px;
             top: calc(50% - 6px);
             fill: color('primary', 'highlight');
+            width: 17px;
         }
     }
 
