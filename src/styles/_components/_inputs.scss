@@ -227,7 +227,7 @@ $checkbox-size: 32px;
             height: $checkbox-size;
             border: 2px solid color('input', 'border');
             background: color('primary', 'highlight');
-            border-radius: 2px;
+            border-radius: 4px;
             margin-right: 20px;
         }
 
@@ -252,7 +252,7 @@ $checkbox-size: 32px;
             &:before {
                 background: color('primary');
                 border: 2px solid color('primary');
-                border-radius: 2px!important;
+                border-radius: 4px;
             }
         }
     }
@@ -270,7 +270,7 @@ $checkbox-size: 32px;
         + label {
             pointer-events: none;
             cursor: default;
-            opacity: 0.5;
+            opacity: 0.3;
         }
     }
 
