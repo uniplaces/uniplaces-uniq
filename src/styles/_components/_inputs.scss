@@ -52,6 +52,16 @@ $checkbox-size: 32px;
     will-change: border;
     -webkit-appearance: none;
 
+    &[type='number'] {
+      -moz-appearance:textfield;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
     @include input-placeholder {
         @include font("IntervalNextBook");
         color: color('input', 'placeholder');
