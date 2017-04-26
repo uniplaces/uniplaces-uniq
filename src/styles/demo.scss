@@ -52,7 +52,7 @@ body {
             padding: 0 14px;
         }
     }
-    
+
     aside {
         @include column(4);
     }
@@ -64,20 +64,16 @@ body {
     bottom: 0;
     left: 0;
     z-index: 2;
-    
+
     @include breakpoint(small) {
         border: 0;
-        
+
         .button {
             min-width: 50%;
             height: 100%;
             border-radius: 0;
         }
     }
-}
-
-.input-right-icon {
-    @include input-right-icon();
 }
 
 .anchor {
@@ -106,7 +102,7 @@ body {
     @include title();
     margin-top: 46px;
     margin-bottom: 20px;
-    
+
     @include breakpoint(small) {
         margin-top: 46px;
     }
@@ -138,8 +134,6 @@ body {
     @include input();
     @include height-modifiers();
     display: block;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
 }
 
 .input-button {
@@ -162,7 +156,7 @@ body {
 .textarea {
     @include textarea();
     width: 100%;
-    
+
     &-counter {
         margin-bottom: 46px;
     }
@@ -192,7 +186,7 @@ body {
     @include space-between();
     @include limited-full-width();
     margin-bottom: 46px;
-    
+
     &__title {
         @include headline();
         width: 100%;

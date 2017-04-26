@@ -46,13 +46,21 @@ $checkbox-size: 32px;
     @include font("IntervalNextBook");
     font-size: em(18px);
     color: color('text', 'input');
-    padding: 0 14px;
-
-    // padding-right to allow inputs to have a right icon (ex: validation icons)
-    padding-right: 44px;
+    padding: 0 20px;
+    border-radius: 4px;
 
     will-change: border;
     -webkit-appearance: none;
+
+    &[type='number'] {
+      -moz-appearance:textfield;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
 
     @include input-placeholder {
         @include font("IntervalNextBook");
@@ -67,8 +75,8 @@ $checkbox-size: 32px;
     &--range {
         position: relative;
         width: calc(100% - 134px);
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
         border: 2px solid color('borders');
         border-right: 0;
         -webkit-appearance: none;
@@ -95,38 +103,6 @@ $checkbox-size: 32px;
     &--success {
         border: 2px solid color('feedback', 'success');
     }
-}
-
-@mixin input-right-icon() {
-    padding: 0;
-    margin-right: 0;
-    transform: translate3d(-100%, 0, 0) translate3d(-14px, 0, 0);
-    border: 0;
-
-    svg {
-        fill: currentColor;
-        width: 17px;
-        height: 13px;
-    }
-
-    &--warning {
-        svg {
-            fill: color('feedback', 'warning');
-        }
-    }
-
-    &--error {
-        svg {
-            fill: color('feedback', 'error');
-        }
-    }
-
-    &--success {
-        svg {
-            fill: color('feedback', 'success');
-        }
-    }
-
 }
 
 @mixin input-button(){
@@ -455,8 +431,8 @@ $checkbox-size: 32px;
         @include input();
         width: calc(100% - 130px);
         border: 2px solid color('input', 'border');
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
     }
 
     &--error {
