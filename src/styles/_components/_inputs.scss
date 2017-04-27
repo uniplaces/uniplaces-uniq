@@ -163,8 +163,7 @@ $checkbox-size: 32px;
 
     @include input-placeholder {
         @include font("IntervalNextBook");
-        font-size: em(20px);
-        color: color('primary','divider');
+        color: color('input', 'placeholder');
     }
 
     & + &-counter {
