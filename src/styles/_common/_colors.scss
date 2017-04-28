@@ -29,7 +29,7 @@ $palette: (
     'title': #303030,
     'subtitle': #888,
     'subheader': #224251,
-    'body': #575757,
+    'body': #575757, // This color is deprecated, please use 'body-vero' for body text
     'highlight': #fff,
     'input': #888,
     'modal': #6b6b6b,
@@ -37,7 +37,8 @@ $palette: (
     'close': #b2b9c2,
     'secondary': rgba(0, 60, 88, 0.7),
     'sorting-items': #788392,
-    'helper-copy': #788392
+    'helper-copy': #788392,
+    'body-vero': #667485
   ),
   'anchor' : (
     'negative' : #fff,
