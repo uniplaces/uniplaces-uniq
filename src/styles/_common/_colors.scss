@@ -154,6 +154,18 @@ $palette: (
     'primary': #cccccc,
     'medium': #e0e0e0,
     'light': #eaeaea
+  ),
+  'calendar': (
+    'background': #ffffff,
+    'border': #ccd2d4,
+    'button-bg': #f5f9fc,
+    'disabled-button-bg': #ffffff,
+    'hover-day-bg': #66d5ff,
+    'disabled-day-bg': #f0f1f3,
+    'day-borders': #d1d5da,
+    'text': #224251,
+    'disabled-text': #d1d5da,
+    'shadow': rgba(31, 37, 50, 0.32)
   )
 );
 
