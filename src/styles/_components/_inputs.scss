@@ -582,9 +582,10 @@ $checkbox-size: 32px;
     height: $input-height;
     @include height-modifiers();
     font-size: em(18px);
-    color: color('text', 'input');
+    background: color("dropdown", "background");
+    color: color("dropdown");
     padding: 0 46px 0 14px;
-    border: 2px solid color('borders');
+    border: 2px solid color("dropdown", "border");
     border-radius: 4px;
 
     will-change: border;
@@ -593,7 +594,7 @@ $checkbox-size: 32px;
 
     &:-moz-focusring {
         color: transparent;
-        text-shadow: 0 0 0 color('text', 'input');
+        text-shadow: 0 0 0 color("text", "input");
     }
 
     &-wrapper {
@@ -608,7 +609,7 @@ $checkbox-size: 32px;
             width: 8px;
             height: 2px;
             top: 50%;
-            background-color:  color('text', 'input');
+            background-color: color("dropdown");
         }
 
         &:before {
@@ -623,7 +624,7 @@ $checkbox-size: 32px;
     }
 
     &:focus {
-        border: 2px solid color('input', 'border-focus');
+        border: 2px solid color("dropdown", "active");
         outline: none;
     }
 }

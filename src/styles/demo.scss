@@ -305,3 +305,7 @@ body {
 .multi-selector {
     @include multi-selector();
 }
+
+.select {
+  @include select();
+}
