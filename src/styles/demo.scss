@@ -228,16 +228,6 @@ body {
 .mobile-number {
     @include mobile-number();
     margin-bottom: 64px;
-
-    .select-wrapper {
-      height: 100%;
-      width: 50%;
-
-      &:before,
-      &:after {
-        z-index: 10;
-      }
-    }
 }
 
 ::selection {

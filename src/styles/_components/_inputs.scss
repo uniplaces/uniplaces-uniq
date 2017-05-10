@@ -37,12 +37,8 @@ $checkbox-size: 32px;
     }
 }
 
-@mixin input() {
-    // height-modifiers must be above height so modifiers override the default height
-    height: $input-height;
-    @include height-modifiers();
-
-    border: 0;
+//basic-input is meant to be used were we don't want to produce any modifiers
+@mixin basic-input() {
     @include font("IntervalNextBook");
     font-size: em(18px);
     color: color('text', 'input');
@@ -53,13 +49,13 @@ $checkbox-size: 32px;
     -webkit-appearance: none;
 
     &[type='number'] {
-      -moz-appearance:textfield;
+        -moz-appearance:textfield;
     }
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     @include input-placeholder {
@@ -71,6 +67,14 @@ $checkbox-size: 32px;
         border: 2px solid color('input', 'border-focus');
         outline: none;
     }
+}
+
+@mixin input() {
+    @include basic-input();
+    // height-modifiers must be above height so modifiers override the default height
+    height: $input-height;
+    @include height-modifiers();
+    border: 0;
 
     &--range {
         position: relative;
@@ -288,12 +292,14 @@ $checkbox-size: 32px;
             top: 0;
             left: 0;
         }
+
         &:before {
             width: $checkbox-size;
             height: $checkbox-size;
             border: 2px solid color('input', 'border');
             will-change: border;
         }
+
         &:after {
             width: 20px;
             height: 20px;
@@ -336,28 +342,43 @@ $checkbox-size: 32px;
     height: $input-height;
     @include height-modifiers();
 
-    select {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      padding: 0 38px 0 14px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      white-space: nowrap;
+    &__select-wrapper {
+        @include select-wrapper();
+        height: 100%;
+        width: auto;
+
+        &:before,
+        &:after {
+            z-index: 10;
+        }
+
+        select,
+        & > div {
+            @include basic-select();
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 0 38px 0 14px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            white-space: nowrap;
+        }
     }
 
     input {
+        @include basic-input();
+        width: 100%;
+        height: 100%;
+        border: 2px solid color('input', 'border');
         border-bottom-left-radius: 0;
         border-top-left-radius: 0;
-        padding-right: 0;
         border-left: 0;
-        width: 50%;
-        height: 100%;
 
         &:focus {
-          margin-left: -2px;
-          z-index: 1;
-          width: calc(50% + 2px);
+            margin-left: -2px;
+            border: 2px solid color("input", "border-focus");
+            z-index: 1;
+            width: calc(100% + 2px);
         }
     }
 
@@ -369,7 +390,7 @@ $checkbox-size: 32px;
                 border: 2px solid color('feedback', 'error');
             }
         }
-        
+
         & + label {
             margin-top: 16px;
         }
@@ -506,54 +527,63 @@ $checkbox-size: 32px;
     }
 }
 
+//basic-select is meant to be used were we don't want to produce any modifiers
+@mixin basic-select() {
+  font-size: em(18px);
+  background: color("dropdown", "background");
+  color: color("dropdown");
+  padding: 0 46px 0 14px;
+  border: 2px solid color("dropdown", "border");
+  border-radius: 4px;
+
+  will-change: border;
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 color("text", "input");
+  }
+
+  &:focus {
+      border: 2px solid color("dropdown", "active");
+      outline: none;
+  }
+}
+
+@mixin select-wrapper {
+    display: inline-block;
+    position: relative;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 8px;
+        height: 2px;
+        top: 51%;
+        background-color: color("dropdown");
+    }
+
+    &:before {
+        right: 20px;
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        right: 16px;
+        transform: rotate(135deg);
+    }
+}
+
 @mixin select() {
+    @include basic-select();
     height: $input-height;
     @include height-modifiers();
-    font-size: em(18px);
-    background: color("dropdown", "background");
-    color: color("dropdown");
-    padding: 0 46px 0 14px;
-    border: 2px solid color("dropdown", "border");
-    border-radius: 4px;
-
-    will-change: border;
-    -webkit-appearance: none;
-    appearance: none;
-
-    &:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 color("text", "input");
-    }
 
     &-wrapper {
-        display: inline-block;
-        position: relative;
-
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 8px;
-            height: 2px;
-            top: 50%;
-            background-color: color("dropdown");
-        }
-
-        &:before {
-            right: 20px;
-            transform: rotate(45deg);
-        }
-
-        &:after {
-            right: 15px;
-            transform: rotate(-45deg);
-        }
-    }
-
-    &:focus {
-        border: 2px solid color("dropdown", "active");
-        outline: none;
+        @include select-wrapper();
     }
 }
 
