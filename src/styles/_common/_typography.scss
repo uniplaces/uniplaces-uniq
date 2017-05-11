@@ -65,7 +65,7 @@ $small: em(9px);
     @include font("IntervalNextReg");
     color: color('primary');
     text-decoration: none;
-    
+
     &:hover {
         cursor: pointer;
         text-decoration: underline;
@@ -78,6 +78,52 @@ $small: em(9px);
     }
     &--alternative {
         color: color('anchor', 'alternative');
+    }
+}
+
+@mixin anchor-show-more($border-color: color('primary'), $bg-color: color('primary', 'highlight')) {
+    @include anchor();
+    padding-right: 1em;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        right: -1em;
+        border-top: 0.438em solid $border-color;
+        border-left: 0.438em solid transparent;
+        border-right: 0.438em solid transparent;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: -0.938em;
+        top: 0.5em;
+        border-top: 0.375em solid $bg-color;
+        border-left: 0.375em solid transparent;
+        border-right: 0.375em solid transparent;
+    }
+
+    &--visible {
+        &:before {
+            top: 0.5em;
+            right: -0.938em;
+            border-bottom: 0.438em solid $border-color;
+            border-left: 0.438em solid transparent;
+            border-right: 0.438em solid transparent;
+            border-top: none;
+        }
+        &:after {
+            right: -0.875em;
+            top: 0.563em;
+            border-bottom: 0.375em solid $bg-color;
+            border-left: 0.375em solid transparent;
+            border-right: 0.375em solid transparent;
+            border-top: none;
+        }
     }
 }
 
