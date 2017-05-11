@@ -403,74 +403,16 @@
             <div class="textarea-counter">300 characters</div>
 
             <div class="subheader">Add mobile number</div>
-            <div class="input-container">
-                <div class="mobile-number">
-                    <div class="mobile-number__country-code">
-                        <img src="images/flag.svg" alt=""> +351
-
-                        <div class="mobile-number__country-code__dropdown">
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="">
-                                +49
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt=""> +33
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt=""> +34
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt=""> +39
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
-                                     alt=""> +32
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                                     alt=""> +44
-                            </div>
-                        </div>
-                    </div>
-                    <input type="text" placeholder="Mobile number">
-                </div>
-            </div>
-
-            <div class="subheader">Add mobile number</div>
-            <div class="input-container">
-                <div class="mobile-number mobile-number--error">
-                    <div class="mobile-number__country-code">
-                        <img src="images/flag.svg" alt=""> +351
-
-                        <div class="mobile-number__country-code__dropdown">
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" alt="">
-                                +49
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt=""> +33
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt=""> +34
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt=""> +39
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg"
-                                     alt=""> +32
-                            </div>
-                            <div class="mobile-number__country-code__dropdown__item">
-                                <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                                     alt=""> +44
-                            </div>
-                        </div>
-                    </div>
-                    <input type="text" placeholder="Mobile number" value="987654321">
-                </div>
-                <label class="information__content information__content--error">
-                    The number doesn’t seem right. Please try again.
-                </label>
+            <div class="mobile-number">
+              <div class="mobile-number__select-wrapper">
+                <select>
+                  <option value="pt">Portugal (+351)</option>
+                  <option value="es">Spain (+34)</option>
+                  <option value="en">United Kingdom (+44)</option>
+                  <option value="it">Italy (+39)</option>
+                </select>
+              </div>
+              <input type="text" placeholder="Mobile number">
             </div>
 
             <div class="subheader">What is the rent price?</div>

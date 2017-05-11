@@ -227,10 +227,7 @@ body {
 
 .mobile-number {
     @include mobile-number();
-
-    &:last-child {
-        margin-bottom: 64px;
-    }
+    margin-bottom: 64px;
 }
 
 ::selection {
