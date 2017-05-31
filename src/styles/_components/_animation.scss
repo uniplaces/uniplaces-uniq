@@ -48,6 +48,15 @@ $transition: $animation-duration $cubic-bezier;
     }
 }
 
+@keyframes loading {
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
 @mixin fade-in($duration: $animation-duration, $bezier: $cubic-bezier) {
     @include backface-hack();
     opacity: 0;
@@ -72,4 +81,15 @@ $transition: $animation-duration $cubic-bezier;
 @mixin slide-in($duration: $animation-duration, $bezier: $cubic-bezier) {
     will-change: transform;
     animation: slideIn $duration $bezier forwards;
+}
+
+@mixin loading() {
+  animation: loading 1s linear infinite;
+  animation-fill-mode: forwards;
+  background: color('loading', 'initial');
+  background: linear-gradient(to right, color('loading', 'initial') 8%, color('loading', 'final') 18%, color('loading', 'initial') 33%);
+  background-size: 400% 400%;
+  color: transparent;
+  border: 0;
+  outline: 0;
 }
