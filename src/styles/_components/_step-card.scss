@@ -8,7 +8,7 @@
     min-height: 210px;
     padding: 32px;
     margin-right: 20px;
-    background-color: rgba(color("primary", "primary"), 0.15);
+    background-color: rgba(color("primary"), 0.15);
     text-align: center;
 
     @include breakpoint(small) {
@@ -21,12 +21,31 @@
         margin-right: 0;
     }
 
+    &__icon {
+        @include flex();
+        height: 107px;
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        svg {
+            width: 100%;
+            max-height: 90px;
+        }
+
+        @include breakpoint(small) {
+            display: none;
+        }
+    }
+
     &__step {
         width: 100%;
-        margin-bottom: 50px;
         @include font("IntervalNextReg");
+        margin-bottom: 30px;
         font-size: em(20px);
-        color: color("primary", "primary");
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+        color: color("primary");
         text-transform: uppercase;
     }
 
@@ -66,10 +85,6 @@
     &--disabled {
         background-color: transparent;
 
-        .uni-step-card__step{
-            color: color("text", "subtitle");
-        }
-
         & > div {
             opacity: .3;
         }
@@ -86,17 +101,25 @@
     &--passed {
         background-color: color("background");
         border-top: 3px solid color("borders", "light");
+
+        & > div {
+            opacity: 1;
+        }
+
+        .uni-step-card__step {
+            font-size: em(16px);
+            color: color("text", "subtitle");
+        }
     }
 
     &--passed &__title,
     &--passed &__step {
-        opacity: .3;
+        opacity: 1;
     }
 
     &--passed &__title {
         @include font("IntervalNextBook");
-        font-size: em(17px);
-        color: color("text", "subtitle");
+        font-size: em(21px);
     }
 
     &--passed &__hint,
