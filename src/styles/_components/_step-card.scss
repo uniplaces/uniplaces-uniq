@@ -8,8 +8,9 @@
     min-height: 210px;
     padding: 32px;
     margin-right: 20px;
-    background-color: color('background', 'modal');
-    
+    background-color: rgba(color('primary', 'primary'), 0.15);
+    text-align: center;
+
     @include breakpoint(small) {
         width: 100%;
         min-height: 0;
@@ -22,10 +23,10 @@
 
     &__step {
         width: 100%;
-        margin-bottom: 8px;
+        margin-bottom: 50px;
         @include font("IntervalNextReg");
-        font-size: em(12px);
-        color: color('text', 'subtitle');
+        font-size: em(20px);
+        color: color('primary', 'primary');
         text-transform: uppercase;
     }
 
@@ -33,7 +34,7 @@
         width: 100%;
         margin-bottom: 6px;
         @include font("IntervalNextReg");
-        font-size: em(22px);
+        font-size: em(23px);
         color: color('text', 'title');
     }
 
@@ -42,7 +43,7 @@
         margin-bottom: 14px;
         @include font("IntervalNextBook");
         font-size: em(16px);
-        color: color('text', 'subheading');
+        color: color('text', 'header');
     }
 
     &__progress-bar {
@@ -50,7 +51,7 @@
         width: 100%;
         height: 8px;
         margin: 15px 0;
-        
+
         &-label {
             font-size: em(15px);
             color: color('text', 'body');
@@ -64,7 +65,11 @@
 
     &--disabled {
         background-color: transparent;
-        
+
+        .uni-step-card__step{
+            color: color('text', 'subtitle');
+        }
+
         & > div {
             opacity: .3;
         }
