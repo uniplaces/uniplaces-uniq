@@ -8,7 +8,7 @@
     min-height: 210px;
     padding: 32px;
     margin-right: 20px;
-    background-color: rgba(color('primary', 'primary'), 0.15);
+    background-color: rgba(color("primary", "primary"), 0.15);
     text-align: center;
 
     @include breakpoint(small) {
@@ -26,7 +26,7 @@
         margin-bottom: 50px;
         @include font("IntervalNextReg");
         font-size: em(20px);
-        color: color('primary', 'primary');
+        color: color("primary", "primary");
         text-transform: uppercase;
     }
 
@@ -35,7 +35,7 @@
         margin-bottom: 6px;
         @include font("IntervalNextReg");
         font-size: em(23px);
-        color: color('text', 'title');
+        color: color("text", "title");
     }
 
     &__hint {
@@ -43,7 +43,7 @@
         margin-bottom: 14px;
         @include font("IntervalNextBook");
         font-size: em(16px);
-        color: color('text', 'header');
+        color: color("text", "header");
     }
 
     &__progress-bar {
@@ -54,7 +54,7 @@
 
         &-label {
             font-size: em(15px);
-            color: color('text', 'body');
+            color: color("text", "body");
         }
     }
 
@@ -67,7 +67,7 @@
         background-color: transparent;
 
         .uni-step-card__step{
-            color: color('text', 'subtitle');
+            color: color("text", "subtitle");
         }
 
         & > div {
@@ -84,8 +84,8 @@
     }
 
     &--passed {
-        background-color: color('background');
-        border-top: 3px solid color('borders', 'light');
+        background-color: color("background");
+        border-top: 3px solid color("borders", "light");
     }
 
     &--passed &__title,
@@ -96,7 +96,7 @@
     &--passed &__title {
         @include font("IntervalNextBook");
         font-size: em(17px);
-        color: color('text', 'subtitle');
+        color: color("text", "subtitle");
     }
 
     &--passed &__hint,
