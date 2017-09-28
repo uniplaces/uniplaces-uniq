@@ -8,8 +8,9 @@
     min-height: 210px;
     padding: 32px;
     margin-right: 20px;
-    background-color: color('background', 'modal');
-    
+    background-color: rgba(color("primary"), 0.15);
+    text-align: center;
+
     @include breakpoint(small) {
         width: 100%;
         min-height: 0;
@@ -20,12 +21,31 @@
         margin-right: 0;
     }
 
+    &__icon {
+        @include flex();
+        height: 107px;
+        align-items: flex-end;
+        margin-bottom: 30px;
+
+        svg {
+            width: 100%;
+            max-height: 90px;
+        }
+
+        @include breakpoint(small) {
+            display: none;
+        }
+    }
+
     &__step {
         width: 100%;
-        margin-bottom: 8px;
         @include font("IntervalNextReg");
-        font-size: em(12px);
-        color: color('text', 'subtitle');
+        margin-bottom: 30px;
+        font-size: em(20px);
+        line-height: 20px;
+        display: inline-block;
+        vertical-align: bottom;
+        color: color("primary");
         text-transform: uppercase;
     }
 
@@ -33,8 +53,8 @@
         width: 100%;
         margin-bottom: 6px;
         @include font("IntervalNextReg");
-        font-size: em(22px);
-        color: color('text', 'title');
+        font-size: em(23px);
+        color: color("text", "title");
     }
 
     &__hint {
@@ -42,7 +62,7 @@
         margin-bottom: 14px;
         @include font("IntervalNextBook");
         font-size: em(16px);
-        color: color('text', 'subheading');
+        color: color("text", "header");
     }
 
     &__progress-bar {
@@ -50,10 +70,10 @@
         width: 100%;
         height: 8px;
         margin: 15px 0;
-        
+
         &-label {
             font-size: em(15px);
-            color: color('text', 'body');
+            color: color("text", "body");
         }
     }
 
@@ -64,7 +84,7 @@
 
     &--disabled {
         background-color: transparent;
-        
+
         & > div {
             opacity: .3;
         }
@@ -79,19 +99,27 @@
     }
 
     &--passed {
-        background-color: color('background');
-        border-top: 3px solid color('borders', 'light');
+        background-color: color("background");
+        border-top: 3px solid color("borders", "light");
+
+        & > div {
+            opacity: 1;
+        }
+
+        .uni-step-card__step {
+            font-size: em(16px);
+            color: color("text", "subtitle");
+        }
     }
 
     &--passed &__title,
     &--passed &__step {
-        opacity: .3;
+        opacity: 1;
     }
 
     &--passed &__title {
         @include font("IntervalNextBook");
-        font-size: em(17px);
-        color: color('text', 'subtitle');
+        font-size: em(21px);
     }
 
     &--passed &__hint,
