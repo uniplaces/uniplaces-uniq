@@ -1,9 +1,11 @@
+$uni-progress-color: #66d5ff;
+
 @mixin progress-bar() {
     @include backface-hack();
     position: relative;
     display: block;
     width: 100%;
-    height: 5px;
+    height: 8px;
     overflow: hidden;
     background-color: color('background', 'progress-bar');
     
@@ -14,9 +16,20 @@
         width: 0px;
         height: 100%;
         border-radius: 2px;
-        background-color: color('primary');
+        background-color: $uni-progress-color;
         transition: width .3s ease-out;
         z-index: 2;
         will-change: width;
+    }
+
+    &__step {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 2px;
+        height: 8px;
+        top: 0;
+        background-color: $uni-progress-color;
+        opacity: 0.5;
     }
 }
