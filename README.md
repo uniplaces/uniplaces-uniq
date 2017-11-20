@@ -8,22 +8,8 @@ Sass/SCSS built and lightly opinionated this style and JS bundle contains basic 
 ## Install
 
 ```shell
-bower install uniq
+npm install uniplaces-uniq
 ```
-
-or
-
-```shell
-bower install uniq --save
-```
-
-## Update
-
-```shell
-bower update uniq
-```
-
-Will update to the version present in the `bower.json` file.
 
 ## Documentation
 
