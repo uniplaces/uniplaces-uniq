@@ -1,6 +1,6 @@
 {
   "name": "uniq",
-  "version": "2.4.16",
+  "version": "2.4.17",
   "description": "Internal CSS Framework/Toolkit used @ Uniplaces",
   "main": [
     "src/styles/**/*",
