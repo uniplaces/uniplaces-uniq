@@ -260,6 +260,32 @@ $checkbox-size: 32px;
             }
         }
     }
+
+    &--small {
+        + label {
+            padding-left: $checkbox-size !important;
+            color: #667485;
+            font-size: em(14px);
+
+            &::before {
+                width: 20px;
+                height: 20px;
+            }
+
+            & > svg {
+                width: 12px;
+                height: 9px;
+                top: calc(50% - 4px);
+                left: 5px !important;
+            }
+        }
+
+        &:checked {
+            + label {
+                color: color("primary");
+            }
+        }
+    }
 }
 
 @mixin radio-button() {
