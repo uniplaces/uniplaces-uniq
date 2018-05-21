@@ -207,10 +207,6 @@ body {
     }
 }
 
-.step-card {
-    @include step-card();
-}
-
 .image-gallery {
     @include image-gallery();
     margin-bottom: 46px;
