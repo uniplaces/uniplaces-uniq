@@ -93,11 +93,6 @@ body {
     z-index: 3;
 }
 
-.info-box {
-    @include info-box();
-
-}
-
 .title {
     @include title();
     margin-top: 46px;
@@ -210,10 +205,6 @@ body {
             padding: 0 14px;
         }
     }
-}
-
-.step-card {
-    @include step-card();
 }
 
 .image-gallery {
