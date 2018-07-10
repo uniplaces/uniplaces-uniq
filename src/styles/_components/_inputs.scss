@@ -47,6 +47,7 @@ $checkbox-size: 32px;
 
     will-change: border;
     -webkit-appearance: none;
+    -moz-appearance: none;
 
     &[type='number'] {
         -moz-appearance:textfield;
@@ -388,6 +389,8 @@ $checkbox-size: 32px;
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
             white-space: nowrap;
+            -webkit-appearance: none;
+            -moz-appearance: none;
         }
     }
 
@@ -564,6 +567,7 @@ $checkbox-size: 32px;
 
   will-change: border;
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   &:-moz-focusring {
@@ -607,6 +611,13 @@ $checkbox-size: 32px;
     @include basic-select();
     height: $input-height;
     @include height-modifiers();
+    
+    &,
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 
     &-wrapper {
         @include select-wrapper();
