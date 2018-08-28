@@ -254,42 +254,12 @@ $header-height: 60px;
         position: relative;
         display: none;
         z-index: 3;
-        padding-right: 20px;
         @include font("IntervalNextReg");
         font-size: em(15px);
         text-transform: uppercase;
 
-        &:before,
-        &:after {
-            content: " ";
-            position: absolute;
-            display: block;
-            top: 11px;
-            right: 0;
-
-            width: 8px;
-            height: 1px;
-
-            background-color: color('feedback', 'text');
-        }
-
-        &:before {
-            transform: rotate(-45deg);
-        }
-
-        &:after {
-            right: 5px;
-            transform: rotate(45deg);
-        }
-
-        &--active {
-            &:before {
-                transform: rotate(45deg);
-            }
-
-            &:after {
-                transform: rotate(-45deg);
-            }
+        svg {
+            fill: #0083e4;
         }
 
         @include breakpoint(small) {
@@ -360,15 +330,14 @@ $header-height: 60px;
 
         &__button {
             display: table;
-            padding: 24px 0;
-            @include font("IntervalNextBook");
-            font-size: em(24px);
-            color: color('feedback', 'text');
+            padding: 12px 24px;
+            font-size: em(16px);
+            color: #253036;
         }
 
         &__separator {
             height: 1px;
-            margin: 6px 0;
+            margin: 32px 0;
             background-color: color('primary', 'divider');
         }
 
@@ -376,7 +345,6 @@ $header-height: 60px;
             position: relative;
             margin-bottom: 0;
             padding-bottom: 32px;
-            border-bottom: 1px solid color('primary', 'divider');
 
             &:before,
             &:after {
