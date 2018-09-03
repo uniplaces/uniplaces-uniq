@@ -404,6 +404,13 @@ $header-height: 60px;
                     color: color('primary');
                 }
             }
+
+            a,
+            button,
+            [role="button"] {
+                font-size: em(16px);
+                color: #545d69;
+            }
         }
     }
 
