@@ -1,11 +1,9 @@
-// Generated on 2016-02-12 using generator-jekyllrb 1.4.1
 'use strict';
 
 // TODO: Add SCSS Linter
 
 // Directory reference:
 //   css: styles
-//   javascript: scripts
 //   images: images
 //   fonts: fonts
 
@@ -25,10 +23,6 @@ module.exports = function (grunt) {
       sass: {
         files: ['<%= uniq.app %>/styles/**/*.{scss,sass}'],
         tasks: ['sass:server', 'autoprefixer:dev']
-      },
-      babel: {
-        files: ['!<%= uniq.app %>/scripts/**/*.js', '<%=  uniq.app %>/scripts/**/*.es6.js'],
-        tasks: ['babel:dist']
       }
     },
     browserSync: {
@@ -38,8 +32,6 @@ module.exports = function (grunt) {
             '<%= uniq.app %>/*.html',
             '<%= uniq.app %>/styles/**/*.{css}',
             '.tmp/css/**/*.css',
-            '!<%= uniq.app %>/scripts/*.es6.js',
-            '<%= uniq.app %>/scripts/*.js',
             '<%= uniq.app %>/img/**/*.{gif,jpg,jpeg,png,svg,webp}'
           ]
         },
@@ -163,21 +155,6 @@ module.exports = function (grunt) {
           dest: '<%= uniq.dist %>'
         }]
       }
-    },
-    babel: {
-        options: {
-            sourceMap: true,
-            presets: ['es2015']
-        },
-        dist: {
-            files: [{
-                expand: true,
-                cwd: '<%= uniq.app %>/scripts/',
-                src: ['**/*.es6.js'],
-                dest: '<%= uniq.app %>/scripts/',
-                ext: '.js'
-            }]
-        }
     },
     concurrent: {
       server: [
