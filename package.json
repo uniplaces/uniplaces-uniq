@@ -1,6 +1,6 @@
 {
   "name": "uniplaces-uniq",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "Internal CSS Framework/Toolkit used @ Uniplaces",
   "main": "uniq.js",
   "scripts": {
