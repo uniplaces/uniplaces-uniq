@@ -113,7 +113,7 @@
         color: color('text', 'secondary');
         text-align: left;
 
-        border-bottom: 1px solid color('background', 'progress-bar');
+        border-bottom: 1px solid #f0f1f3;
     }
 
     &__aux {
@@ -144,7 +144,7 @@
             top: 9px;
             left: 0;
             z-index: 1;
-            background-color: color('background', 'progress-bar');
+            background-color: color('footer', 'divider');
         }
 
         &__content {
@@ -167,7 +167,7 @@
         margin-bottom: 24px;
         padding-bottom: 44px;
         text-align: center;
-        border-bottom: 1px solid color('background', 'progress-bar');
+        border-bottom: 1px solid #f0f1f3;
 
         @include breakpoint(small) {
             padding-bottom: 24px;
