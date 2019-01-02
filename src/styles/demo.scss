@@ -85,14 +85,6 @@ body {
     max-width: 200px;
 }
 
-.progress-bar {
-    @include progress-bar();
-    position: fixed;
-    top: $header-height;
-    left: 0;
-    z-index: 3;
-}
-
 .title {
     @include title();
     margin-top: 46px;

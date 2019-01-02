@@ -41,6 +41,7 @@
     }
 
     &__button {
+        @include font("IntervalNextReg");
         position: relative;
         width: 100%;
         height: 48px;
@@ -48,7 +49,6 @@
         padding: 0 60px;
         border-radius: 2px;
         background-color: color('primary', 'highlight');
-        @include font("IntervalNextReg");
         font-size: em(20px);
         text-align: center;
 
@@ -113,7 +113,7 @@
         color: color('text', 'secondary');
         text-align: left;
 
-        border-bottom: 1px solid color('background', 'progress-bar');
+        border-bottom: 1px solid #f0f1f3;
     }
 
     &__aux {
@@ -144,7 +144,7 @@
             top: 9px;
             left: 0;
             z-index: 1;
-            background-color: color('background', 'progress-bar');
+            background-color: #f0f1f3;
         }
 
         &__content {
@@ -167,7 +167,7 @@
         margin-bottom: 24px;
         padding-bottom: 44px;
         text-align: center;
-        border-bottom: 1px solid color('background', 'progress-bar');
+        border-bottom: 1px solid #f0f1f3;
 
         @include breakpoint(small) {
             padding-bottom: 24px;
